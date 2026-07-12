@@ -8,9 +8,7 @@ export default function Mapy() {
 
       <main className="bg-[#FAF6ED] min-h-screen">
 
-
         <section className="bg-gradient-to-b from-[#EED9A6] to-[#FAF6ED] py-20">
-
           <div className="mx-auto max-w-5xl px-6 text-center">
 
             <h1 className="text-5xl font-bold text-[#3F4A24]">
@@ -23,16 +21,12 @@ export default function Mapy() {
             </p>
 
           </div>
-
         </section>
-
-
 
 
         <section className="py-16">
 
           <div className="mx-auto max-w-6xl px-6 space-y-8">
-
 
 
             <div className="rounded-2xl bg-white p-8 shadow">
@@ -49,8 +43,6 @@ export default function Mapy() {
             </div>
 
 
-
-
             <div className="rounded-2xl bg-white p-8 shadow">
 
               <h2 className="text-3xl font-bold text-[#B07A16]">
@@ -65,8 +57,6 @@ export default function Mapy() {
             </div>
 
 
-
-
             <div className="rounded-2xl bg-white p-8 shadow">
 
               <h2 className="text-3xl font-bold text-[#B07A16]">
@@ -74,7 +64,7 @@ export default function Mapy() {
               </h2>
 
               <img
-                src="/images/fotografie/vmapa-natarcie-1945.jpg.jpeg"
+                src="/images/fotografie/vmapa-natarcie-1945.jpg"
                 alt="Mapa działań wojennych 1945"
                 className="mt-6 w-full rounded-xl"
               />
@@ -86,15 +76,11 @@ export default function Mapy() {
             </div>
 
 
-
-
           </div>
 
         </section>
 
-
       </main>
-
 
       <Footer />
 
