@@ -8,29 +8,16 @@ export default function Home() {
 
       <main>
 
-        {/* Zdjęcie otwierające - miejsce na tablicę Krzekotów */}
-        <section className="relative">
-
-          <div className="h-[420px] bg-[url('/images/fotografie/tablica-krzekotow.jpg')] bg-cover bg-center">
-
-            <div className="flex h-full items-center justify-center bg-black/30">
-
-              <div className="text-center text-white">
-
-                <h1 className="text-5xl font-bold tracking-wide">
-                  KRZEKOTÓW
-                </h1>
-
-                <p className="mt-4 text-2xl">
-                  Historia i Pamięć
-                </p>
-
-              </div>
-
-            </div>
-
+        {/* Zdjęcie główne */}
+        <section>
+          <div
+            className="h-[450px] bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('/images/fotografie/krzekotow-wita.jpg')",
+            }}
+          >
           </div>
-
         </section>
 
 
@@ -44,15 +31,14 @@ export default function Home() {
             </div>
 
             <h2 className="mt-6 text-3xl font-bold text-green-900">
-              Wieś ludzi i ziemi
+              Wieś ludzi, ziemi i tradycji
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-stone-700">
               Krzekotów od pokoleń związany jest z rolnictwem,
-              pracą mieszkańców i tradycją przekazywaną kolejnym
-              pokoleniom. Tworzymy cyfrowe archiwum, które zachowuje
-              historię miejsca, wspomnienia ludzi i wydarzenia
-              tworzące wspólnotę.
+              pracą mieszkańców i szacunkiem do ziemi.
+              To miejsce tworzone przez ludzi, którzy swoją
+              codziennością budowali historię tej wsi.
             </p>
 
           </div>
@@ -60,7 +46,7 @@ export default function Home() {
         </section>
 
 
-        {/* Najważniejsze działy */}
+        {/* Główne działy */}
         <section className="bg-white py-16">
 
           <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
@@ -68,16 +54,15 @@ export default function Home() {
 
             <a
               href="/historia"
-              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-lg"
+              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-xl"
             >
-
               <h3 className="text-2xl font-bold text-green-900">
                 📜 Historia
               </h3>
 
               <p className="mt-4 text-stone-700">
-                Dzieje Krzekotowa, dawne czasy,
-                dokumenty i zachowane ślady przeszłości.
+                Dzieje Krzekotowa, dokumenty i ślady
+                przeszłości zachowane dla kolejnych pokoleń.
               </p>
 
             </a>
@@ -85,16 +70,15 @@ export default function Home() {
 
             <a
               href="/mieszkancy"
-              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-lg"
+              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-xl"
             >
-
               <h3 className="text-2xl font-bold text-green-900">
                 👥 Mieszkańcy
               </h3>
 
               <p className="mt-4 text-stone-700">
-                Rodziny, wspomnienia i historie ludzi,
-                którzy tworzyli i tworzą Krzekotów.
+                Ludzie, rodziny i wspomnienia,
+                które tworzą historię miejscowości.
               </p>
 
             </a>
@@ -102,16 +86,15 @@ export default function Home() {
 
             <a
               href="/zycie-wspolczesne"
-              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-lg"
+              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-xl"
             >
-
               <h3 className="text-2xl font-bold text-green-900">
                 🏡 Życie współczesne
               </h3>
 
               <p className="mt-4 text-stone-700">
-                Wydarzenia, tradycje i działalność
-                mieszkańców oraz KGW Żurawianki.
+                Wydarzenia, tradycje i życie mieszkańców
+                dzisiejszego Krzekotowa.
               </p>
 
             </a>
@@ -123,14 +106,13 @@ export default function Home() {
 
 
         {/* Hasło końcowe */}
-        <section className="bg-green-900 py-12 text-center text-white">
+        <section className="bg-green-900 py-12 text-center">
 
           <p className="text-2xl italic text-amber-100">
             Ocalić przeszłość. Budować pamięć.
           </p>
 
         </section>
-
 
       </main>
 
