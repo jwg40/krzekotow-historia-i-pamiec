@@ -12,16 +12,19 @@ export default function Home() {
 
           <div className="mx-auto max-w-6xl px-6 text-center">
 
-            <h2 className="text-5xl font-bold text-green-900">
-              Krzekotów
+            <div className="text-6xl">
+              🌾
+            </div>
+
+            <h2 className="mt-6 text-4xl font-bold text-green-900">
+              Wieś z historią zapisaną w ziemi i pamięci ludzi
             </h2>
 
-            <p className="mt-4 text-2xl text-stone-700">
-              Historia i Pamięć
-            </p>
-
-            <p className="mt-6 text-lg italic text-stone-600">
-              Ocalić przeszłość. Budować pamięć.
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-stone-700">
+              Krzekotów od pokoleń związany jest z rolnictwem,
+              pracą na roli i życiem mieszkańców.
+              Ta strona zachowuje historię miejsca,
+              wspomnienia ludzi oraz wydarzenia tworzące wspólnotę.
             </p>
 
           </div>
@@ -31,42 +34,62 @@ export default function Home() {
 
         <section className="bg-white py-16">
 
-          <div className="mx-auto max-w-5xl px-6">
+          <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
 
-            <h3 className="mb-6 text-3xl font-bold text-green-900">
-              Wieś z historią
-            </h3>
+            <a
+              href="/historia"
+              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-lg"
+            >
+              <h3 className="text-2xl font-bold text-green-900">
+                Historia
+              </h3>
 
-            <p className="text-lg leading-relaxed text-stone-700">
-              Krzekotów to miejscowość związana od pokoleń z rolnictwem,
-              pracą na ziemi i tradycją mieszkańców.
-              Tworzymy cyfrowe archiwum, które zachowuje wspomnienia,
-              fotografie, dokumenty oraz historie ludzi tworzących tę wieś.
-            </p>
+              <p className="mt-4 text-stone-700">
+                Dzieje Krzekotowa, dawne czasy,
+                wydarzenia i zachowane ślady przeszłości.
+              </p>
+            </a>
+
+
+            <a
+              href="/mieszkancy"
+              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-lg"
+            >
+              <h3 className="text-2xl font-bold text-green-900">
+                Mieszkańcy
+              </h3>
+
+              <p className="mt-4 text-stone-700">
+                Ludzie, rodziny, wspomnienia
+                i historie tworzące wieś.
+              </p>
+            </a>
+
+
+            <a
+              href="/zycie-wspolczesne"
+              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-lg"
+            >
+              <h3 className="text-2xl font-bold text-green-900">
+                Życie współczesne
+              </h3>
+
+              <p className="mt-4 text-stone-700">
+                Aktualne wydarzenia, mieszkańcy
+                i działalność KGW Żurawianki.
+              </p>
+            </a>
 
           </div>
 
         </section>
 
 
-        <section className="bg-green-900 py-16 text-white">
+        <section className="bg-green-900 py-12 text-center text-white">
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
-
-            <div className="text-6xl">
-              🌾
-            </div>
-
-            <h3 className="mt-4 text-3xl font-bold">
-              Symbol Krzekotowa
-            </h3>
-
-            <p className="mt-4 text-lg text-amber-100">
-              Snopek zboża — znak pracy, tradycji i związku mieszkańców
-              z ziemią.
-            </p>
-
-          </div>
+          <p className="text-2xl italic">
+            Ocalić przeszłość. Budować pamięć.
+          </p>
 
         </section>
 
