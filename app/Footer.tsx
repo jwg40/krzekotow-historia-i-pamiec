@@ -1,36 +1,27 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#3F4A24] text-white">
+    <footer className="bg-stone-900 py-8 text-center text-stone-300">
 
-      <div className="mx-auto max-w-6xl px-6 py-8">
+      <div className="mx-auto max-w-5xl px-6">
 
-        <div className="text-center">
+        <a
+          href="/"
+          className="mb-4 inline-block text-amber-200 hover:text-white"
+        >
+          ← Wróć do strony głównej
+        </a>
 
-          <a
-            href="/"
-            className="inline-block mb-6 rounded-lg bg-amber-100 px-5 py-2 text-[#3F4A24] font-semibold hover:bg-amber-200"
-          >
-            ← Wróć do strony głównej
-          </a>
+        <p className="text-lg">
+          Cyfrowe Archiwum Krzekotowa
+        </p>
 
+        <p className="mt-2 text-sm text-stone-400">
+          Archiwum historii, fotografii, dokumentów i wspomnień mieszkańców.
+        </p>
 
-          <p className="text-lg italic text-amber-200">
-            Ocalić przeszłość. Budować pamięć.
-          </p>
-
-
-          <p className="mt-4 text-sm text-stone-300">
-            Archiwum historii, fotografii, dokumentów
-            i wspomnień mieszkańców.
-          </p>
-
-
-          <p className="mt-6 text-xs text-stone-400">
-            © {new Date().getFullYear()}
-          </p>
-
-
-        </div>
+        <p className="mt-4 text-sm text-stone-500">
+          © 2026 Cyfrowe Archiwum Krzekotowa
+        </p>
 
       </div>
 
