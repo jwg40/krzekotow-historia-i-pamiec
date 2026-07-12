@@ -1,22 +1,19 @@
 export const zdjecia = [
   {
-    src: "/images/kgw/wydarzenia/pierwsze-wydarzenie.jpg",
+    id: 1,
+    tytul: "Logo KGW Żurawianki",
+    opis: "Symbol Koła Gospodyń Wiejskich Żurawianki w Krzekotowie.",
     rok: "2026",
-    tytul: "Wydarzenia KGW Żurawianki",
-    opis: "Miejsce na opis wydarzenia."
+    kategoria: "logo",
+    plik: "/images/kgw/logo/logo-zurawianki.jpg",
   },
 
   {
-    src: "/images/kgw/tradycje/tradycja.jpg",
+    id: 2,
+    tytul: "Pierwsze materiały archiwalne",
+    opis: "Miejsce na fotografie wydarzeń, spotkań i działalności KGW Żurawianki.",
     rok: "2026",
-    tytul: "Tradycje i rękodzieło",
-    opis: "Miejsce na opis tradycji."
+    kategoria: "archiwum",
+    plik: "",
   },
-
-  {
-    src: "/images/kgw/spotkania/spotkanie.jpg",
-    rok: "2026",
-    tytul: "Spotkania mieszkańców",
-    opis: "Wspólne działania KGW Żurawianki."
-  }
 ];
