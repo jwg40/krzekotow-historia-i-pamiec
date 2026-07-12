@@ -7,19 +7,23 @@ export default function Galeria() {
       zdjecia: [
         {
           plik: "stara-brama-swietlica.jpg",
-          opis: "Stara brama – miejsce przed wojną i dziś",
+          opis:
+            "Stara brama dawnego Krzekotowa. To samo miejsce widoczne przed wojną i współcześnie – świadek przemian miejscowości.",
         },
         {
           plik: "inicjaly-slup-1.jpg",
-          opis: "Historyczny słupek z inicjałami",
+          opis:
+            "Zachowany historyczny słupek z inicjałami – jeden z nielicznych materialnych śladów dawnego Krzekotowa.",
         },
         {
           plik: "inicjaly-slup-2.jpg",
-          opis: "Historyczny słupek – szczegół",
+          opis:
+            "Szczegół historycznego słupka z zachowanymi znakami i napisami.",
         },
         {
           plik: "lista-1945.jpg",
-          opis: "Lista mieszkańców z 1945 roku",
+          opis:
+            "Dokument związany z mieszkańcami Krzekotowa z okresu powojennego.",
         },
       ],
     },
@@ -27,19 +31,22 @@ export default function Galeria() {
     {
       tytul: "Krzekotów – historia na mapach",
       opis:
-        "Mapy pokazujące Krzekotów w różnych okresach historycznych.",
+        "Mapy pokazujące miejscowość w różnych okresach historycznych.",
       zdjecia: [
         {
           plik: "vmapa-natarcie-1945.jpg",
-          opis: "Mapa działań wojennych 1945 roku",
+          opis:
+            "Mapa działań wojennych w rejonie Krzekotowa w 1945 roku.",
         },
         {
           plik: "mapa-krzekotowa.jpg",
-          opis: "Mapa Krzekotowa",
+          opis:
+            "Mapa przedstawiająca położenie i układ miejscowości.",
         },
         {
           plik: "mapa-dzis.jpg",
-          opis: "Współczesna mapa Krzekotowa",
+          opis:
+            "Współczesna mapa Krzekotowa.",
         },
       ],
     },
@@ -51,19 +58,23 @@ export default function Galeria() {
       zdjecia: [
         {
           plik: "krzekotow-wita.jpg",
-          opis: "Tablica miejscowości Krzekotów",
+          opis:
+            "Tablica miejscowości Krzekotów – współczesny znak lokalnej tożsamości.",
         },
         {
           plik: "swietlica-nowa.jpg",
-          opis: "Nowa świetlica wiejska",
+          opis:
+            "Nowa świetlica wiejska – miejsce współczesnego życia mieszkańców.",
         },
         {
           plik: "stodola-dzis.jpg",
-          opis: "Stodoła – widok współczesny",
+          opis:
+            "Stodoła – współczesny widok miejsca związanego z historią miejscowości.",
         },
         {
           plik: "krzekotow-1.jpg",
-          opis: "Krzekotów współcześnie",
+          opis:
+            "Krzekotów współcześnie.",
         },
       ],
     },
@@ -71,7 +82,7 @@ export default function Galeria() {
     {
       tytul: "Życie mieszkańców i wydarzenia",
       opis:
-        "Miejsce na przyszłe fotografie uroczystości, spotkań i wydarzeń mieszkańców.",
+        "Miejsce na przyszłe fotografie uroczystości, spotkań i wydarzeń mieszkańców Krzekotowa.",
       zdjecia: [],
     },
   ];
@@ -88,7 +99,6 @@ export default function Galeria() {
           Fotografie dokumentujące historię, miejsca i życie mieszkańców Krzekotowa.
         </p>
 
-
         {sekcje.map((sekcja) => (
           <section key={sekcja.tytul} className="mb-14">
 
@@ -100,13 +110,10 @@ export default function Galeria() {
               {sekcja.opis}
             </p>
 
-
             {sekcja.zdjecia.length > 0 ? (
-
               <div className="grid gap-8 md:grid-cols-3">
 
                 {sekcja.zdjecia.map((zdjecie) => (
-
                   <div
                     key={zdjecie.plik}
                     className="overflow-hidden rounded-xl bg-white shadow"
@@ -123,17 +130,13 @@ export default function Galeria() {
                     </p>
 
                   </div>
-
                 ))}
 
               </div>
-
             ) : (
-
               <div className="rounded-xl bg-white p-8 text-center text-stone-500 shadow">
                 Wkrótce pojawią się tutaj kolejne fotografie.
               </div>
-
             )}
 
           </section>
