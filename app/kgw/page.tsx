@@ -1,4 +1,4 @@
-export default function KGW() {
+export default function KGWPage() {
   return (
     <main className="bg-white min-h-screen">
 
@@ -7,8 +7,8 @@ export default function KGW() {
 
           <img
             src="/images/fotografie/logo-zurawianki.jpg"
-            alt="KGW Krzekotów Żurawianki"
-            className="mx-auto w-48 rounded-xl shadow-lg mb-6"
+            alt="KGW Żurawianki Krzekotów"
+            className="mx-auto mb-6 w-48 rounded-xl shadow-lg"
           />
 
           <h1 className="text-4xl font-bold">
@@ -23,52 +23,48 @@ export default function KGW() {
       </section>
 
 
-      <section className="max-w-5xl mx-auto px-6 py-12">
+      <section className="max-w-5xl mx-auto px-6 py-10">
 
-        <h2 className="text-3xl font-bold text-stone-800 mb-6">
+        <h2 className="text-3xl font-bold text-stone-800 mb-5">
           Koło Gospodyń Wiejskich Żurawianki
         </h2>
 
-
-        <p className="text-lg leading-relaxed text-stone-700">
-          Ta część Cyfrowego Archiwum Krzekotowa poświęcona jest
-          działalności KGW Żurawianki.
-          Znajdą się tutaj fotografie, wydarzenia, spotkania,
-          tradycje oraz wspomnienia mieszkańców.
+        <p className="text-lg text-stone-700 leading-relaxed">
+          KGW Żurawianki jest ważną częścią współczesnej historii
+          Krzekotowa. Poprzez swoją działalność, spotkania,
+          wydarzenia i kultywowanie tradycji tworzy obraz dzisiejszej
+          społeczności naszej miejscowości.
         </p>
 
 
         <div className="mt-10 grid md:grid-cols-3 gap-6">
 
-          <a
-            href="/kgw/wydarzenia"
-            className="bg-amber-100 p-6 rounded-xl shadow hover:shadow-lg"
-          >
-            <h3 className="text-xl font-bold">
+          <div className="bg-stone-100 rounded-xl p-6 text-center">
+            <h3 className="font-bold text-xl">
               Wydarzenia
             </h3>
-            <p>
-              Kronika działalności KGW.
-            </p>
-          </a>
-
-
-          <div className="bg-amber-100 p-6 rounded-xl shadow">
-            <h3 className="text-xl font-bold">
-              Tradycje
-            </h3>
-            <p>
-              Obrzędy, kuchnia i zwyczaje.
+            <p className="mt-2">
+              Relacje i kronika działalności KGW.
             </p>
           </div>
 
 
-          <div className="bg-amber-100 p-6 rounded-xl shadow">
-            <h3 className="text-xl font-bold">
+          <div className="bg-stone-100 rounded-xl p-6 text-center">
+            <h3 className="font-bold text-xl">
+              Tradycje
+            </h3>
+            <p className="mt-2">
+              Zwyczaje, przepisy i lokalne dziedzictwo.
+            </p>
+          </div>
+
+
+          <div className="bg-stone-100 rounded-xl p-6 text-center">
+            <h3 className="font-bold text-xl">
               Spotkania
             </h3>
-            <p>
-              Ludzie tworzący historię.
+            <p className="mt-2">
+              Ludzie tworzący historię Krzekotowa.
             </p>
           </div>
 
