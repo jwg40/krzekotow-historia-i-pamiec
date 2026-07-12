@@ -1,3 +1,5 @@
+import Footer from "../Footer";
+
 export default function Galeria() {
   const sekcje = [
     {
@@ -88,61 +90,65 @@ export default function Galeria() {
   ];
 
   return (
-    <main className="min-h-screen bg-stone-100 py-12">
-      <div className="mx-auto max-w-6xl px-6">
+    <>
+      <main className="min-h-screen bg-stone-100 py-12">
+        <div className="mx-auto max-w-6xl px-6">
 
-        <h1 className="mb-4 text-center text-4xl font-bold text-stone-800">
-          Galeria Krzekotowa
-        </h1>
+          <h1 className="mb-4 text-center text-4xl font-bold text-stone-800">
+            Galeria Krzekotowa
+          </h1>
 
-        <p className="mb-12 text-center text-stone-600">
-          Fotografie dokumentujące historię, miejsca i życie mieszkańców Krzekotowa.
-        </p>
+          <p className="mb-12 text-center text-stone-600">
+            Fotografie dokumentujące historię, miejsca i życie mieszkańców Krzekotowa.
+          </p>
 
-        {sekcje.map((sekcja) => (
-          <section key={sekcja.tytul} className="mb-14">
+          {sekcje.map((sekcja) => (
+            <section key={sekcja.tytul} className="mb-14">
 
-            <h2 className="mb-2 text-3xl font-bold text-stone-800">
-              {sekcja.tytul}
-            </h2>
+              <h2 className="mb-2 text-3xl font-bold text-stone-800">
+                {sekcja.tytul}
+              </h2>
 
-            <p className="mb-6 text-stone-600">
-              {sekcja.opis}
-            </p>
+              <p className="mb-6 text-stone-600">
+                {sekcja.opis}
+              </p>
 
-            {sekcja.zdjecia.length > 0 ? (
-              <div className="grid gap-8 md:grid-cols-3">
+              {sekcja.zdjecia.length > 0 ? (
+                <div className="grid gap-8 md:grid-cols-3">
 
-                {sekcja.zdjecia.map((zdjecie) => (
-                  <div
-                    key={zdjecie.plik}
-                    className="overflow-hidden rounded-xl bg-white shadow"
-                  >
+                  {sekcja.zdjecia.map((zdjecie) => (
+                    <div
+                      key={zdjecie.plik}
+                      className="overflow-hidden rounded-xl bg-white shadow"
+                    >
 
-                    <img
-                      src={`/images/fotografie/${zdjecie.plik}`}
-                      alt={zdjecie.opis}
-                      className="h-64 w-full object-cover"
-                    />
+                      <img
+                        src={`/images/fotografie/${zdjecie.plik}`}
+                        alt={zdjecie.opis}
+                        className="h-64 w-full object-cover"
+                      />
 
-                    <p className="p-4 text-center text-stone-700">
-                      {zdjecie.opis}
-                    </p>
+                      <p className="p-4 text-center text-stone-700">
+                        {zdjecie.opis}
+                      </p>
 
-                  </div>
-                ))}
+                    </div>
+                  ))}
 
-              </div>
-            ) : (
-              <div className="rounded-xl bg-white p-8 text-center text-stone-500 shadow">
-                Wkrótce pojawią się tutaj kolejne fotografie.
-              </div>
-            )}
+                </div>
+              ) : (
+                <div className="rounded-xl bg-white p-8 text-center text-stone-500 shadow">
+                  Wkrótce pojawią się tutaj kolejne fotografie.
+                </div>
+              )}
 
-          </section>
-        ))}
+            </section>
+          ))}
 
-      </div>
-    </main>
+        </div>
+      </main>
+
+      <Footer />
+    </>
   );
 }
