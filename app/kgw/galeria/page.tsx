@@ -1,3 +1,5 @@
+import { zdjeciaKGW } from "./zdjecia";
+
 export default function GaleriaKGW() {
   return (
     <main className="bg-stone-50 min-h-screen">
@@ -10,7 +12,7 @@ export default function GaleriaKGW() {
           </h1>
 
           <p className="mt-4 text-xl text-[#F2C14E]">
-            Zdjęcia, wspomnienia i wydarzenia mieszkańców
+            Fotografie współczesnego Krzekotowa
           </p>
 
         </div>
@@ -19,89 +21,45 @@ export default function GaleriaKGW() {
 
       <section className="max-w-5xl mx-auto px-6 py-12">
 
+        {zdjeciaKGW.map((galeria, index) => (
 
-        <div className="grid md:grid-cols-3 gap-6">
+          <div
+            key={index}
+            className="bg-white rounded-2xl shadow p-8 mb-8"
+          >
 
-
-          <div className="bg-white rounded-xl shadow p-6">
-
-            <h2 className="text-2xl font-bold text-stone-800">
-              Wydarzenia
+            <h2 className="text-3xl font-bold">
+              {galeria.kategoria}
             </h2>
 
             <p className="mt-3 text-stone-700">
-              Festyny, uroczystości, spotkania i wspólne działania.
+              {galeria.opis}
             </p>
 
-            <p className="mt-4 text-sm text-stone-500">
-              Folder:
-              <br />
-              public/images/kgw/wydarzenia
-            </p>
+
+            <div className="grid md:grid-cols-3 gap-5 mt-6">
+
+              {galeria.zdjecia.map((zdjecie, i) => (
+
+                <img
+                  key={i}
+                  src={zdjecie}
+                  alt={galeria.kategoria}
+                  className="rounded-xl shadow w-full h-56 object-cover"
+                />
+
+              ))}
+
+            </div>
+
 
           </div>
 
-
-
-          <div className="bg-white rounded-xl shadow p-6">
-
-            <h2 className="text-2xl font-bold text-stone-800">
-              Tradycje
-            </h2>
-
-            <p className="mt-3 text-stone-700">
-              Zwyczaje, rękodzieło, kuchnia i lokalne dziedzictwo.
-            </p>
-
-            <p className="mt-4 text-sm text-stone-500">
-              Folder:
-              <br />
-              public/images/kgw/tradycje
-            </p>
-
-          </div>
-
-
-
-          <div className="bg-white rounded-xl shadow p-6">
-
-            <h2 className="text-2xl font-bold text-stone-800">
-              Spotkania
-            </h2>
-
-            <p className="mt-3 text-stone-700">
-              Ludzie tworzący historię KGW Żurawianki.
-            </p>
-
-            <p className="mt-4 text-sm text-stone-500">
-              Folder:
-              <br />
-              public/images/kgw/spotkania
-            </p>
-
-          </div>
-
-
-        </div>
-
-
-
-        <div className="mt-10 bg-amber-50 rounded-2xl p-8">
-
-          <h2 className="text-2xl font-bold text-stone-800">
-            Galeria w przygotowaniu
-          </h2>
-
-          <p className="mt-4 text-stone-700">
-            W tym miejscu pojawią się fotografie KGW Żurawianki.
-            Zdjęcia zostaną ułożone chronologicznie wraz z opisami
-            wydarzeń.
-          </p>
-
-        </div>
+        ))}
 
 
       </section>
+
 
     </main>
   );
