@@ -18,7 +18,7 @@ export default function Kontakt() {
 
             <p className="mt-6 text-xl text-stone-600">
               Masz zdjęcia, dokumenty lub wspomnienia związane
-              z Krzekotowem? Podziel się nimi z archiwum.
+              z Krzekotowem? Pomóż zachować lokalną historię.
             </p>
 
           </div>
@@ -38,21 +38,33 @@ export default function Kontakt() {
 
               <p className="mt-4 text-lg text-stone-600 leading-relaxed">
                 Cyfrowe Archiwum Krzekotowa powstaje dzięki
-                zachowanym fotografiom, dokumentom oraz
-                wspomnieniom mieszkańców i ich rodzin.
+                fotografiom, dokumentom oraz wspomnieniom osób
+                związanych z miejscowością.
+              </p>
+
+
+              <p className="mt-4 text-lg text-stone-600 leading-relaxed">
+                Każdy przekazany materiał może pomóc zachować
+                historię miejsca i ludzi dla przyszłych pokoleń.
               </p>
 
 
               <div className="mt-8 rounded-xl bg-stone-100 p-6">
 
                 <h3 className="text-xl font-bold text-stone-800">
-                  Kontakt
+                  Przekazywanie materiałów
                 </h3>
 
-                <p className="mt-3 text-stone-600">
-                  W tym miejscu zostaną dodane dane kontaktowe
-                  oraz informacje dla osób chcących przekazać
-                  materiały historyczne.
+                <p className="mt-3 text-stone-600 leading-relaxed">
+                  W tym miejscu zostaną dodane informacje kontaktowe
+                  dla osób chcących przekazać fotografie, dokumenty
+                  lub wspomnienia związane z Krzekotowem.
+                </p>
+
+                <p className="mt-3 text-stone-600 leading-relaxed">
+                  Publikacja materiałów będzie odbywać się
+                  z poszanowaniem prywatności oraz po uzyskaniu
+                  odpowiedniej zgody.
                 </p>
 
               </div>
