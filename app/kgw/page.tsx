@@ -1,76 +1,46 @@
 export default function KGWPage() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-stone-50 min-h-screen py-12">
 
-      <section className="bg-[#4B5D2A] text-white py-12">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+      <div className="mx-auto max-w-5xl px-6">
+
+        <section className="bg-white rounded-2xl shadow-lg p-8 text-center">
 
           <img
             src="/images/fotografie/logo-zurawianki.jpg"
-            alt="KGW Żurawianki Krzekotów"
-            className="mx-auto mb-6 w-48 rounded-xl shadow-lg"
+            alt="Logo KGW Żurawianki"
+            className="mx-auto w-64 mb-8"
           />
 
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-4xl font-bold text-stone-800">
             KGW Krzekotów Żurawianki
           </h1>
 
-          <p className="mt-4 text-xl text-[#F2C14E]">
-            Współczesne życie Krzekotowa
+          <p className="mt-4 text-lg text-stone-600">
+            Koło Gospodyń Wiejskich Żurawianki
+            <br />
+            współczesna historia Krzekotowa
           </p>
 
-        </div>
-      </section>
+        </section>
 
 
-      <section className="max-w-5xl mx-auto px-6 py-10">
+        <section className="mt-10 bg-white rounded-2xl shadow p-8">
 
-        <h2 className="text-3xl font-bold text-stone-800 mb-5">
-          Koło Gospodyń Wiejskich Żurawianki
-        </h2>
+          <h2 className="text-2xl font-bold mb-4">
+            O nas
+          </h2>
 
-        <p className="text-lg text-stone-700 leading-relaxed">
-          KGW Żurawianki jest ważną częścią współczesnej historii
-          Krzekotowa. Poprzez swoją działalność, spotkania,
-          wydarzenia i kultywowanie tradycji tworzy obraz dzisiejszej
-          społeczności naszej miejscowości.
-        </p>
+          <p>
+            Ta część Cyfrowego Archiwum Krzekotowa poświęcona jest
+            działalności KGW Żurawianki, wydarzeniom, spotkaniom,
+            tradycjom i inicjatywom mieszkańców.
+          </p>
 
-
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
-
-          <div className="bg-stone-100 rounded-xl p-6 text-center">
-            <h3 className="font-bold text-xl">
-              Wydarzenia
-            </h3>
-            <p className="mt-2">
-              Relacje i kronika działalności KGW.
-            </p>
-          </div>
+        </section>
 
 
-          <div className="bg-stone-100 rounded-xl p-6 text-center">
-            <h3 className="font-bold text-xl">
-              Tradycje
-            </h3>
-            <p className="mt-2">
-              Zwyczaje, przepisy i lokalne dziedzictwo.
-            </p>
-          </div>
-
-
-          <div className="bg-stone-100 rounded-xl p-6 text-center">
-            <h3 className="font-bold text-xl">
-              Spotkania
-            </h3>
-            <p className="mt-2">
-              Ludzie tworzący historię Krzekotowa.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
+      </div>
 
     </main>
   );

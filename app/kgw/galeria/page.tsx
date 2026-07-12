@@ -1,46 +1,45 @@
-import Image from "next/image";
-
 export default function GaleriaKGW() {
   return (
-    <main className="min-h-screen bg-stone-50 py-12">
+    <main className="bg-stone-50 min-h-screen py-12">
 
       <div className="mx-auto max-w-5xl px-6">
 
-        <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-center mb-10">
+          Galeria KGW Żurawianki
+        </h1>
 
-          <Image
-            src="/images/fotografie/logo-zurawianki.jpg"
-            alt="KGW Żurawianki Krzekotów"
-            width={220}
-            height={220}
-            className="mx-auto rounded-full shadow-lg"
-          />
+        <div className="grid md:grid-cols-3 gap-6">
 
-          <h1 className="mt-6 text-4xl font-bold text-stone-800">
-            Galeria KGW Żurawianki
-          </h1>
+          <section className="bg-white rounded-xl shadow p-6 text-center">
+            <h2 className="text-xl font-bold mb-3">
+              Wydarzenia
+            </h2>
+            <p>
+              Zdjęcia z wydarzeń, festynów i uroczystości.
+            </p>
+          </section>
 
-          <p className="mt-3 text-lg text-stone-600">
-            Zdjęcia, wydarzenia i wspomnienia mieszkańców Krzekotowa
-          </p>
+
+          <section className="bg-white rounded-xl shadow p-6 text-center">
+            <h2 className="text-xl font-bold mb-3">
+              Tradycje
+            </h2>
+            <p>
+              Lokalne zwyczaje, rękodzieło i tradycje mieszkańców.
+            </p>
+          </section>
+
+
+          <section className="bg-white rounded-xl shadow p-6 text-center">
+            <h2 className="text-xl font-bold mb-3">
+              Spotkania
+            </h2>
+            <p>
+              Wspólne działania KGW Żurawianki.
+            </p>
+          </section>
 
         </div>
-
-
-        <section className="bg-white rounded-xl shadow p-8">
-
-          <h2 className="text-2xl font-bold mb-4 text-[#4B5D2A]">
-            Wspólne chwile
-          </h2>
-
-          <p className="text-stone-700">
-            W tym miejscu będą prezentowane fotografie ze spotkań,
-            uroczystości, wydarzeń i inicjatyw Koła Gospodyń Wiejskich
-            Żurawianki.
-          </p>
-
-        </section>
-
 
       </div>
 
