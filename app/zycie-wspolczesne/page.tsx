@@ -8,7 +8,6 @@ export default function ZycieWspolczesne() {
 
       <main className="bg-[#FAF6ED] min-h-screen">
 
-
         <section className="bg-gradient-to-b from-[#EED9A6] to-[#FAF6ED] py-20">
 
           <div className="mx-auto max-w-5xl px-6 text-center">
@@ -27,8 +26,6 @@ export default function ZycieWspolczesne() {
         </section>
 
 
-
-
         <section className="py-16">
 
           <div className="mx-auto max-w-6xl px-6 space-y-8">
@@ -41,55 +38,43 @@ export default function ZycieWspolczesne() {
               </h2>
 
               <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
                 Współczesny Krzekotów to miejsce,
-                w którym tradycja spotyka się z codziennym życiem mieszkańców.
-                To ciągłość historii budowanej przez kolejne pokolenia.
-
+                w którym historia spotyka się z codziennym życiem mieszkańców.
+                Tradycja, pamięć o przeszłości oraz nowe inicjatywy tworzą
+                obraz miejscowości kolejnych pokoleń.
               </p>
 
             </div>
-
-
 
 
             <div className="rounded-2xl bg-white p-8 shadow">
 
               <h2 className="text-3xl font-bold text-[#B07A16]">
-                Koło Gospodyń Wiejskich Żurawianki
+                Wspólne działania mieszkańców
               </h2>
 
               <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Koło Gospodyń Wiejskich Żurawianki jest ważną częścią
-                współczesnego życia miejscowości.
-                Działalność koła łączy mieszkańców, pielęgnuje tradycje
-                oraz tworzy nowe wspomnienia.
-
+                W tej części będą prezentowane wydarzenia,
+                spotkania, inicjatywy społeczne oraz działania mieszkańców
+                związane ze współczesnym życiem Krzekotowa.
               </p>
 
             </div>
-
-
 
 
             <div className="rounded-2xl bg-white p-8 shadow">
 
               <h2 className="text-3xl font-bold text-[#B07A16]">
-                Tradycja i wspólne działania
+                Tradycja i wydarzenia
               </h2>
 
               <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Spotkania, wydarzenia lokalne, przygotowanie tradycyjnych
-                potraw i udział w życiu miejscowości są kontynuacją
-                dawnych zwyczajów mieszkańców Krzekotowa.
-
+                Uroczystości, spotkania, tradycyjne potrawy,
+                lokalne zwyczaje i wspólne przedsięwzięcia są ważną częścią
+                życia współczesnej społeczności.
               </p>
 
             </div>
-
-
 
 
             <div className="rounded-2xl bg-[#4B5D2A] p-8 text-white">
@@ -99,14 +84,11 @@ export default function ZycieWspolczesne() {
               </h2>
 
               <p className="mt-4 text-lg leading-relaxed">
-
-                Każdy mieszkaniec, każda rodzina i każde wydarzenie
-                są częścią historii, która trwa również dzisiaj.
-
+                Każde wydarzenie, każda inicjatywa i każde wspólne działanie
+                mieszkańców stają się częścią historii Krzekotowa.
               </p>
 
             </div>
-
 
 
           </div>
@@ -115,7 +97,6 @@ export default function ZycieWspolczesne() {
 
 
       </main>
-
 
       <Footer />
 
