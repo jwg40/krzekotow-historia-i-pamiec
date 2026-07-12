@@ -18,8 +18,8 @@ export default function Historia() {
 
           <p className="mb-10 text-center text-lg text-stone-600">
             Miejsce, ludzie i wydarzenia, które tworzyły historię Krzekotowa.
-            Ta część archiwum będzie rozwijana na podstawie dokumentów,
-            map, fotografii oraz zachowanych wspomnień mieszkańców.
+            Archiwum będzie rozwijane na podstawie dokumentów,
+            map, fotografii i wspomnień mieszkańców.
           </p>
 
 
@@ -32,19 +32,18 @@ export default function Historia() {
 
             <p className="text-stone-700 leading-relaxed">
               Najstarsze dzieje Krzekotowa związane są z historią osadnictwa
-              na tych terenach oraz przemianami administracyjnymi i
-              gospodarczymi, które zachodziły na przestrzeni wieków.
+              oraz przemianami zachodzącymi na tych terenach przez kolejne
+              stulecia.
 
               <br /><br />
 
-              Obraz dawnej miejscowości możemy dziś odtwarzać przede wszystkim
-              na podstawie zachowanych map, dokumentów oraz śladów widocznych
-              w terenie.
+              Obraz dawnej miejscowości odtwarzamy na podstawie map,
+              dokumentów oraz zachowanych śladów w terenie.
 
               <br /><br />
 
-              Najstarsze materiały kartograficzne będą stopniowo prezentowane
-              w tej części archiwum.
+              Ta część archiwum będzie stopniowo uzupełniana
+              wraz z odkrywaniem kolejnych źródeł.
             </p>
 
           </section>
@@ -58,21 +57,28 @@ export default function Historia() {
               Krzekotów przed 1945 rokiem
             </h2>
 
+
+            <img
+              src="/images/fotografie/stara-brama-swietlica.jpg"
+              alt="Stara brama dawnego Krzekotowa"
+              className="mb-6 w-full rounded-xl"
+            />
+
+
             <p className="text-stone-700 leading-relaxed">
-              Przed 1945 rokiem Krzekotów był miejscowością z własną zabudową,
-              gospodarstwami oraz społecznością mieszkańców.
+              Przed 1945 rokiem Krzekotów był miejscowością z własną
+              zabudową, gospodarstwami oraz społecznością mieszkańców.
 
               <br /><br />
 
-              Zachowane fotografie z okresu przedwojennego i wojennego
-              przedstawiają fragmenty dawnej miejscowości. Szczególną wartość
-              mają zdjęcia starej bramy oraz historycznego słupka z
-              zachowanymi znakami i inicjałami.
+              Zachowana fotografia starej bramy przedstawia miejsce,
+              które istnieje również współcześnie. Jest to wyjątkowy ślad
+              pokazujący ciągłość miejsca pomiędzy dawnym i obecnym Krzekotowem.
 
               <br /><br />
 
-              Są to jedne z nielicznych zachowanych materialnych śladów
-              dawnego Krzekotowa.
+              Do tego okresu należą również zachowane fotografie
+              historycznego słupka z inicjałami.
             </p>
 
           </section>
@@ -86,20 +92,27 @@ export default function Historia() {
               II wojna światowa i rok 1945
             </h2>
 
+
+            <img
+              src="/images/fotografie/vmapa-natarcie-1945.jpg"
+              alt="Mapa działań wojennych w 1945 roku"
+              className="mb-6 w-full rounded-xl"
+            />
+
+
             <p className="text-stone-700 leading-relaxed">
-              Okres II wojny światowej oraz rok 1945 były czasem wielkich
-              zmian dla Krzekotowa i całego regionu.
+              Okres II wojny światowej oraz rok 1945 były czasem
+              przełomowych wydarzeń.
 
               <br /><br />
 
-              Zakończenie wojny przyniosło zmiany polityczne,
-              administracyjne oraz społeczne. Dawna społeczność miejscowości
-              ustąpiła miejsca nowemu etapowi historii.
+              Zakończenie wojny przyniosło zmiany granic, administracji
+              oraz całkowitą zmianę sytuacji mieszkańców.
 
               <br /><br />
 
-              Zachowane mapy związane z działaniami wojennymi pomagają
-              odtworzyć wydarzenia tego okresu.
+              Zachowane mapy pomagają odtworzyć wydarzenia związane
+              z tym trudnym okresem.
             </p>
 
           </section>
@@ -114,17 +127,17 @@ export default function Historia() {
             </h2>
 
             <p className="text-stone-700 leading-relaxed">
-              Po 1945 roku rozpoczął się nowy rozdział historii miejscowości.
+              Po 1945 roku rozpoczął się nowy etap historii miejscowości.
 
               <br /><br />
 
-              Przybyli nowi mieszkańcy, którzy tworzyli swoją społeczność,
-              odbudowywali życie codzienne i rozwijali miejscowość.
+              Nowi mieszkańcy tworzyli społeczność, odbudowywali gospodarstwa
+              i kształtowali powojenny obraz Krzekotowa.
 
               <br /><br />
 
-              Historia powojenna Krzekotowa to przede wszystkim historie ludzi,
-              rodzin, pracy oraz wspólnego życia mieszkańców.
+              Ta część będzie uzupełniana o wspomnienia mieszkańców
+              oraz dokumenty rodzinne.
             </p>
 
           </section>
@@ -138,19 +151,22 @@ export default function Historia() {
               Krzekotów współczesny
             </h2>
 
+
+            <img
+              src="/images/fotografie/krzekotow-wita.jpg"
+              alt="Tablica miejscowości Krzekotów"
+              className="mb-6 w-full rounded-xl"
+            />
+
+
             <p className="text-stone-700 leading-relaxed">
-              Dzisiejszy Krzekotów łączy pamięć o przeszłości
-              z codziennym życiem mieszkańców.
+              Dzisiejszy Krzekotów zachowuje pamięć o swojej historii,
+              jednocześnie tworząc nowy rozdział życia miejscowości.
 
               <br /><br />
 
-              Współczesne fotografie, wydarzenia lokalne oraz działania
-              mieszkańców pokazują, że historia miejscowości nadal trwa.
-
-              <br /><br />
-
-              Cyfrowe Archiwum Krzekotowa ma zachować tę pamięć dla obecnych
-              i przyszłych pokoleń.
+              Fotografie, wydarzenia i wspólne działania mieszkańców
+              pokazują, że historia Krzekotowa nadal trwa.
             </p>
 
           </section>
