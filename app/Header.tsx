@@ -57,12 +57,12 @@ export default function Header() {
               Mieszkańcy
             </a>
 
-            <a href="/kgw" className="hover:text-[#F2C14E]">
-              KGW Żurawianki
-            </a>
-
             <a href="/zycie-wspolczesne" className="hover:text-[#F2C14E]">
               Życie współczesne
+            </a>
+
+            <a href="/kgw" className="hover:text-[#F2C14E]">
+              KGW Żurawianki
             </a>
 
             <a href="/kontakt" className="hover:text-[#F2C14E]">
@@ -70,6 +70,7 @@ export default function Header() {
             </a>
 
           </nav>
+
 
         </div>
 
