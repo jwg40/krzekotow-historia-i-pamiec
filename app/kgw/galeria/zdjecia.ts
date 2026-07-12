@@ -1,26 +1,22 @@
-export const zdjeciaKGW = [
+export const zdjecia = [
   {
-    kategoria: "Wydarzenia",
-    opis: "Najważniejsze wydarzenia KGW Żurawianki",
-    zdjecia: [
-      "/images/kgw/wydarzenia/zdjecie1.jpg",
-      "/images/kgw/wydarzenia/zdjecie2.jpg"
-    ]
+    src: "/images/kgw/wydarzenia/pierwsze-wydarzenie.jpg",
+    rok: "2026",
+    tytul: "Wydarzenia KGW Żurawianki",
+    opis: "Miejsce na opis wydarzenia."
   },
 
   {
-    kategoria: "Tradycje",
-    opis: "Tradycje i lokalne zwyczaje",
-    zdjecia: [
-      "/images/kgw/tradycje/zdjecie1.jpg"
-    ]
+    src: "/images/kgw/tradycje/tradycja.jpg",
+    rok: "2026",
+    tytul: "Tradycje i rękodzieło",
+    opis: "Miejsce na opis tradycji."
   },
 
   {
-    kategoria: "Spotkania",
-    opis: "Spotkania mieszkańców Krzekotowa",
-    zdjecia: [
-      "/images/kgw/spotkania/zdjecie1.jpg"
-    ]
+    src: "/images/kgw/spotkania/spotkanie.jpg",
+    rok: "2026",
+    tytul: "Spotkania mieszkańców",
+    opis: "Wspólne działania KGW Żurawianki."
   }
 ];
