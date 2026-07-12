@@ -1,65 +1,48 @@
-import { zdjeciaKGW } from "./zdjecia";
+import Image from "next/image";
 
 export default function GaleriaKGW() {
   return (
-    <main className="bg-stone-50 min-h-screen">
+    <main className="min-h-screen bg-stone-50 py-12">
 
-      <section className="bg-[#4B5D2A] text-white py-12">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+      <div className="mx-auto max-w-5xl px-6">
 
-          <h1 className="text-4xl font-bold">
+        <div className="text-center mb-10">
+
+          <Image
+            src="/images/fotografie/logo-zurawianki.jpg"
+            alt="KGW Żurawianki Krzekotów"
+            width={220}
+            height={220}
+            className="mx-auto rounded-full shadow-lg"
+          />
+
+          <h1 className="mt-6 text-4xl font-bold text-stone-800">
             Galeria KGW Żurawianki
           </h1>
 
-          <p className="mt-4 text-xl text-[#F2C14E]">
-            Fotografie współczesnego Krzekotowa
+          <p className="mt-3 text-lg text-stone-600">
+            Zdjęcia, wydarzenia i wspomnienia mieszkańców Krzekotowa
           </p>
 
         </div>
-      </section>
 
 
-      <section className="max-w-5xl mx-auto px-6 py-12">
+        <section className="bg-white rounded-xl shadow p-8">
 
-        {zdjeciaKGW.map((galeria, index) => (
+          <h2 className="text-2xl font-bold mb-4 text-[#4B5D2A]">
+            Wspólne chwile
+          </h2>
 
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow p-8 mb-8"
-          >
+          <p className="text-stone-700">
+            W tym miejscu będą prezentowane fotografie ze spotkań,
+            uroczystości, wydarzeń i inicjatyw Koła Gospodyń Wiejskich
+            Żurawianki.
+          </p>
 
-            <h2 className="text-3xl font-bold">
-              {galeria.kategoria}
-            </h2>
-
-            <p className="mt-3 text-stone-700">
-              {galeria.opis}
-            </p>
+        </section>
 
 
-            <div className="grid md:grid-cols-3 gap-5 mt-6">
-
-              {galeria.zdjecia.map((zdjecie, i) => (
-
-                <img
-                  key={i}
-                  src={zdjecie}
-                  alt={galeria.kategoria}
-                  className="rounded-xl shadow w-full h-56 object-cover"
-                />
-
-              ))}
-
-            </div>
-
-
-          </div>
-
-        ))}
-
-
-      </section>
-
+      </div>
 
     </main>
   );
