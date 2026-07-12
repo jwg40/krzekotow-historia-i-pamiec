@@ -1,3 +1,5 @@
+import { wydarzeniaKGW } from "./dane";
+
 export default function WydarzeniaKGW() {
   return (
     <main className="bg-stone-50 min-h-screen">
@@ -6,11 +8,11 @@ export default function WydarzeniaKGW() {
         <div className="max-w-5xl mx-auto px-6 text-center">
 
           <h1 className="text-4xl font-bold">
-            Kronika wydarzeń KGW Żurawianki
+            Kronika KGW Żurawianki
           </h1>
 
           <p className="mt-4 text-xl text-[#F2C14E]">
-            Wspólne chwile mieszkańców Krzekotowa
+            Wydarzenia, ludzie i wspólne chwile
           </p>
 
         </div>
@@ -19,104 +21,57 @@ export default function WydarzeniaKGW() {
 
       <section className="max-w-5xl mx-auto px-6 py-12">
 
+        {wydarzeniaKGW.map((wydarzenie, index) => (
 
-        <div className="bg-white rounded-2xl shadow p-8 mb-8">
+          <article
+            key={index}
+            className="bg-white rounded-2xl shadow p-8 mb-8"
+          >
 
-          <h2 className="text-3xl font-bold text-stone-800">
-            2026
-          </h2>
+            <h2 className="text-3xl font-bold text-stone-800">
+              {wydarzenie.rok}
+            </h2>
 
-          <p className="mt-4 text-stone-700 text-lg">
-            Miejsce na najnowsze wydarzenia KGW Żurawianki.
-            Tutaj będziemy dodawać zdjęcia, opisy i wspomnienia.
-          </p>
+            <h3 className="text-2xl font-semibold mt-3">
+              {wydarzenie.tytul}
+            </h3>
 
-
-          <div className="mt-6 grid md:grid-cols-3 gap-5">
-
-            <div className="bg-stone-100 rounded-xl p-6 text-center">
-
-              <div className="text-4xl">
-                📷
-              </div>
-
-              <h3 className="font-bold mt-3">
-                Wydarzenie
-              </h3>
-
-              <p className="text-sm mt-2 text-stone-600">
-                Zdjęcie i opis zostaną dodane.
-              </p>
-
-            </div>
+            <p className="mt-4 text-stone-700">
+              {wydarzenie.opis}
+            </p>
 
 
-            <div className="bg-stone-100 rounded-xl p-6 text-center">
+            <div className="grid md:grid-cols-3 gap-5 mt-6">
 
-              <div className="text-4xl">
-                📷
-              </div>
+              {wydarzenie.zdjecia.map((zdjecie, i) => (
 
-              <h3 className="font-bold mt-3">
-                Spotkanie
-              </h3>
+                <img
+                  key={i}
+                  src={zdjecie}
+                  alt={wydarzenie.tytul}
+                  className="rounded-xl shadow"
+                />
 
-              <p className="text-sm mt-2 text-stone-600">
-                Historia wspólnych chwil.
-              </p>
+              ))}
 
             </div>
 
 
-            <div className="bg-stone-100 rounded-xl p-6 text-center">
+          </article>
 
-              <div className="text-4xl">
-                📷
-              </div>
-
-              <h3 className="font-bold mt-3">
-                Tradycja
-              </h3>
-
-              <p className="text-sm mt-2 text-stone-600">
-                Zachowanie lokalnych zwyczajów.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <div className="bg-white rounded-2xl shadow p-8 mb-8">
-
-          <h2 className="text-3xl font-bold text-stone-800">
-            Archiwum wcześniejszych lat
-          </h2>
-
-          <p className="mt-4 text-stone-700">
-            W tym miejscu będziemy uzupełniać historię działalności
-            KGW Żurawianki na podstawie zdjęć, opisów wydarzeń
-            i materiałów udostępnionych przez członkinie koła.
-          </p>
-
-        </div>
-
+        ))}
 
 
         <div className="bg-amber-50 rounded-2xl p-8">
 
-          <h2 className="text-2xl font-bold text-stone-800">
+          <h2 className="text-2xl font-bold">
             Źródło materiałów
           </h2>
 
-          <p className="mt-4 text-stone-700">
-            Materiały KGW Krzekotów Żurawianki publikowane są
-            za zgodą Koła Gospodyń Wiejskich.
-            Celem jest zachowanie pamięci o mieszkańcach,
-            wydarzeniach i tradycjach Krzekotowa.
+          <p className="mt-4">
+            Materiały zostały udostępnione za zgodą KGW
+            Krzekotów Żurawianki i stanowią część
+            Cyfrowego Archiwum Krzekotowa.
           </p>
 
         </div>
