@@ -10,9 +10,11 @@ export default function Historia() {
 
         <div className="mx-auto max-w-5xl px-6">
 
+
           <h1 className="mb-8 text-center text-4xl font-bold text-stone-800">
             Historia Krzekotowa
           </h1>
+
 
           <p className="mb-10 text-center text-lg text-stone-600">
             Miejsce, ludzie i wydarzenia, które tworzyły historię Krzekotowa.
@@ -29,24 +31,24 @@ export default function Historia() {
             </h2>
 
             <p className="text-stone-700 leading-relaxed">
-              Początki Krzekotowa związane są z historią osadnictwa
-              na terenach, które przez wieki zmieniały swoją przynależność
-              administracyjną i kulturową.
+              Najstarsze dzieje Krzekotowa związane są z historią osadnictwa
+              na tych terenach oraz przemianami administracyjnymi i
+              gospodarczymi, które zachodziły na przestrzeni wieków.
 
               <br /><br />
 
-              Dawna miejscowość rozwijała się wokół gospodarstw,
-              pól uprawnych oraz codziennego życia jej mieszkańców.
-              Ślady dawnej zabudowy, zachowane dokumenty i mapy pozwalają
-              stopniowo odtwarzać obraz Krzekotowa z minionych czasów.
+              Obraz dawnej miejscowości możemy dziś odtwarzać przede wszystkim
+              na podstawie zachowanych map, dokumentów oraz śladów widocznych
+              w terenie.
 
               <br /><br />
 
-              Szczegółowe informacje dotyczące początków miejscowości
-              zostaną uzupełnione na podstawie dostępnych źródeł historycznych.
+              Najstarsze materiały kartograficzne będą stopniowo prezentowane
+              w tej części archiwum.
             </p>
 
           </section>
+
 
 
 
@@ -57,44 +59,51 @@ export default function Historia() {
             </h2>
 
             <p className="text-stone-700 leading-relaxed">
-              Przed 1945 rokiem Krzekotów był miejscowością o własnej
-              strukturze zabudowy, gospodarstwach i społeczności mieszkańców.
+              Przed 1945 rokiem Krzekotów był miejscowością z własną zabudową,
+              gospodarstwami oraz społecznością mieszkańców.
 
               <br /><br />
 
-              Zachowane ślady dawnego układu miejscowości, między innymi
-              stara brama oraz historyczny słupek, są materialnym świadectwem
-              wcześniejszego istnienia tego miejsca.
+              Zachowane fotografie z okresu przedwojennego i wojennego
+              przedstawiają fragmenty dawnej miejscowości. Szczególną wartość
+              mają zdjęcia starej bramy oraz historycznego słupka z
+              zachowanymi znakami i inicjałami.
 
               <br /><br />
 
-              Fotografie, mapy i dokumenty pozwalają zachować pamięć
-              o dawnym wyglądzie miejscowości i jej mieszkańcach.
+              Są to jedne z nielicznych zachowanych materialnych śladów
+              dawnego Krzekotowa.
             </p>
 
           </section>
+
 
 
 
           <section className="mb-10 rounded-xl bg-white p-8 shadow">
 
             <h2 className="mb-4 text-2xl font-bold text-stone-800">
-              Rok 1945 – czas przemian
+              II wojna światowa i rok 1945
             </h2>
 
             <p className="text-stone-700 leading-relaxed">
-              Rok 1945 był jednym z najważniejszych momentów w historii
-              Krzekotowa.
+              Okres II wojny światowej oraz rok 1945 były czasem wielkich
+              zmian dla Krzekotowa i całego regionu.
 
               <br /><br />
 
-              Zakończenie II wojny światowej przyniosło ogromne zmiany:
-              polityczne, administracyjne oraz społeczne.
-              Dawny świat mieszkańców miejscowości został zastąpiony
-              nowym okresem historii.
+              Zakończenie wojny przyniosło zmiany polityczne,
+              administracyjne oraz społeczne. Dawna społeczność miejscowości
+              ustąpiła miejsca nowemu etapowi historii.
+
+              <br /><br />
+
+              Zachowane mapy związane z działaniami wojennymi pomagają
+              odtworzyć wydarzenia tego okresu.
             </p>
 
           </section>
+
 
 
 
@@ -105,18 +114,21 @@ export default function Historia() {
             </h2>
 
             <p className="text-stone-700 leading-relaxed">
-              Po wojnie rozpoczął się nowy etap życia miejscowości.
-              Przybyli nowi mieszkańcy, którzy tworzyli kolejną społeczność
-              i budowali swoją historię.
+              Po 1945 roku rozpoczął się nowy rozdział historii miejscowości.
 
               <br /><br />
 
-              Codzienna praca, rozwój gospodarstw, wydarzenia lokalne
-              i życie rodzinne stały się częścią powojennego dziedzictwa
-              Krzekotowa.
+              Przybyli nowi mieszkańcy, którzy tworzyli swoją społeczność,
+              odbudowywali życie codzienne i rozwijali miejscowość.
+
+              <br /><br />
+
+              Historia powojenna Krzekotowa to przede wszystkim historie ludzi,
+              rodzin, pracy oraz wspólnego życia mieszkańców.
             </p>
 
           </section>
+
 
 
 
@@ -127,14 +139,18 @@ export default function Historia() {
             </h2>
 
             <p className="text-stone-700 leading-relaxed">
-              Dzisiejszy Krzekotów jest miejscem, w którym przeszłość
-              spotyka się ze współczesnością.
+              Dzisiejszy Krzekotów łączy pamięć o przeszłości
+              z codziennym życiem mieszkańców.
 
               <br /><br />
 
-              Zachowane dokumenty, fotografie oraz wspomnienia mieszkańców
-              pozwalają chronić lokalną historię i przekazywać ją kolejnym
-              pokoleniom.
+              Współczesne fotografie, wydarzenia lokalne oraz działania
+              mieszkańców pokazują, że historia miejscowości nadal trwa.
+
+              <br /><br />
+
+              Cyfrowe Archiwum Krzekotowa ma zachować tę pamięć dla obecnych
+              i przyszłych pokoleń.
             </p>
 
           </section>
