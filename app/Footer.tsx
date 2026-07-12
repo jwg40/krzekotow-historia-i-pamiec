@@ -6,6 +6,13 @@ export default function Footer() {
 
         <div className="text-center">
 
+          <a
+            href="/"
+            className="inline-block mb-6 rounded-lg bg-amber-100 px-5 py-2 text-[#3F4A24] font-semibold hover:bg-amber-200"
+          >
+            ← Wróć do strony głównej
+          </a>
+
 
           <p className="text-lg italic text-amber-200">
             Ocalić przeszłość. Budować pamięć.

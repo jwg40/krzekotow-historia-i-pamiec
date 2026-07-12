@@ -1,161 +1,92 @@
-import Header from "../Header";
-import Footer from "../Footer";
-
 export default function Historia() {
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-stone-100 py-12">
+      <div className="mx-auto max-w-5xl px-6">
 
-      <main className="bg-[#FAF6ED] min-h-screen">
+        <h1 className="mb-8 text-center text-4xl font-bold text-stone-800">
+          Historia Krzekotowa
+        </h1>
+
+        <p className="mb-10 text-center text-lg text-stone-600">
+          Miejsce, ludzie i wydarzenia, które tworzyły historię Krzekotowa.
+          Ta część archiwum będzie stopniowo uzupełniana na podstawie dokumentów,
+          fotografii i wspomnień mieszkańców.
+        </p>
 
 
-        <section className="bg-gradient-to-b from-[#EED9A6] to-[#FAF6ED] py-20">
+        <section className="mb-10 rounded-xl bg-white p-8 shadow">
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+          <h2 className="mb-4 text-2xl font-bold text-stone-800">
+            Najdawniejsze dzieje
+          </h2>
 
-            <h1 className="text-5xl font-bold text-[#3F4A24]">
-              Historia Krzekotowa
-            </h1>
-
-            <p className="mt-6 text-xl text-stone-700">
-              Dzieje miejscowości, mieszkańców i przemian,
-              które kształtowały Krzekotów przez kolejne pokolenia.
-            </p>
-
-          </div>
+          <p className="text-stone-700">
+            Początki Krzekotowa, pochodzenie nazwy miejscowości oraz najstarsze
+            wzmianki historyczne. 
+            Ta część zostanie uzupełniona na podstawie dostępnych źródeł
+            historycznych.
+          </p>
 
         </section>
 
 
+        <section className="mb-10 rounded-xl bg-white p-8 shadow">
 
+          <h2 className="mb-4 text-2xl font-bold text-stone-800">
+            Krzekotów przed 1945 rokiem
+          </h2>
 
-        <section className="py-16">
-
-
-          <div className="mx-auto max-w-5xl px-6 space-y-8">
-
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-3xl font-bold text-[#B07A16]">
-                Początki Krzekotowa
-              </h2>
-
-              <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Historia miejscowości, jej nazwa,
-                początki osadnictwa oraz najstarsze informacje
-                dotyczące Krzekotowa.
-
-              </p>
-
-            </div>
-
-
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-3xl font-bold text-[#B07A16]">
-                Wieś i rolnictwo
-              </h2>
-
-              <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Rolnictwo przez wiele lat stanowiło podstawę
-                życia mieszkańców. Gospodarstwa, pola i codzienna
-                praca na ziemi tworzyły charakter miejscowości.
-
-              </p>
-
-            </div>
-
-
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-3xl font-bold text-[#B07A16]">
-                Krzekotów przed 1945 rokiem
-              </h2>
-
-              <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Dawna zabudowa, mieszkańcy oraz życie wsi
-                przed zmianami, które przyniósł koniec II wojny światowej.
-
-              </p>
-
-            </div>
-
-
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-3xl font-bold text-[#B07A16]">
-                Wojna i rok 1945
-              </h2>
-
-              <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Czas przełomu, przejścia frontu oraz wydarzeń,
-                które zmieniły dalsze losy miejscowości i jej mieszkańców.
-
-              </p>
-
-            </div>
-
-
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-3xl font-bold text-[#B07A16]">
-                Lata powojenne
-              </h2>
-
-              <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-
-                Odbudowa życia mieszkańców, nowe rodziny,
-                gospodarstwa i tworzenie powojennej społeczności.
-
-              </p>
-
-            </div>
-
-
-
-
-            <div className="rounded-2xl bg-[#4B5D2A] p-8 text-white">
-
-              <h2 className="text-3xl font-bold">
-                Krzekotów do lat 90.
-              </h2>
-
-              <p className="mt-4 text-lg leading-relaxed">
-
-                Przemiany wsi, rozwój miejscowości
-                i życie kolejnych pokoleń mieszkańców.
-
-              </p>
-
-            </div>
-
-
-
-          </div>
-
+          <p className="text-stone-700">
+            Historia dawnej miejscowości, jej mieszkańców, zabudowy oraz życia
+            codziennego przed zakończeniem II wojny światowej.
+          </p>
 
         </section>
 
 
-      </main>
+        <section className="mb-10 rounded-xl bg-white p-8 shadow">
+
+          <h2 className="mb-4 text-2xl font-bold text-stone-800">
+            Rok 1945 – czas przemian
+          </h2>
+
+          <p className="text-stone-700">
+            Okres końca wojny, zmian administracyjnych oraz przybycia nowych
+            mieszkańców. Czas, który rozpoczął nowy rozdział historii Krzekotowa.
+          </p>
+
+        </section>
 
 
-      <Footer />
+        <section className="mb-10 rounded-xl bg-white p-8 shadow">
 
-    </>
+          <h2 className="mb-4 text-2xl font-bold text-stone-800">
+            Krzekotów po wojnie
+          </h2>
+
+          <p className="text-stone-700">
+            Odbudowa życia mieszkańców, rozwój miejscowości, ważne wydarzenia
+            i wspomnienia kolejnych pokoleń.
+          </p>
+
+        </section>
+
+
+        <section className="mb-10 rounded-xl bg-white p-8 shadow">
+
+          <h2 className="mb-4 text-2xl font-bold text-stone-800">
+            Krzekotów współczesny
+          </h2>
+
+          <p className="text-stone-700">
+            Dzisiejsza miejscowość, jej mieszkańcy, tradycje i działania
+            zachowujące lokalną pamięć.
+          </p>
+
+        </section>
+
+
+      </div>
+    </main>
   );
 }
