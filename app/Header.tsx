@@ -6,11 +6,10 @@ export default function Header() {
 
         <div className="flex flex-col items-center gap-5">
 
-
           <a href="/" className="text-center">
 
             <div className="text-4xl mb-2">
-              🌾
+              🌿
             </div>
 
             <h1 className="text-4xl font-bold tracking-wide">
@@ -26,7 +25,6 @@ export default function Header() {
             </p>
 
           </a>
-
 
 
           <nav className="flex flex-wrap justify-center gap-5 text-sm">
@@ -59,6 +57,10 @@ export default function Header() {
               Mieszkańcy
             </a>
 
+            <a href="/kgw" className="hover:text-[#F2C14E]">
+              KGW Żurawianki
+            </a>
+
             <a href="/zycie-wspolczesne" className="hover:text-[#F2C14E]">
               Życie współczesne
             </a>
@@ -68,7 +70,6 @@ export default function Header() {
             </a>
 
           </nav>
-
 
         </div>
 
