@@ -8,7 +8,6 @@ export default function Mieszkancy() {
 
       <main className="bg-stone-50 min-h-screen">
 
-
         <section className="bg-gradient-to-b from-amber-100 to-white py-20">
 
           <div className="mx-auto max-w-5xl px-6 text-center">
@@ -26,7 +25,6 @@ export default function Mieszkancy() {
         </section>
 
 
-
         <section className="py-16">
 
           <div className="mx-auto max-w-6xl px-6 grid gap-8 md:grid-cols-3">
@@ -39,12 +37,12 @@ export default function Mieszkancy() {
               </h2>
 
               <p className="mt-4 text-stone-600 leading-relaxed">
-                Miejsce na informacje o rodzinach związanych
-                z miejscowością, ich historii i losach.
+                Historie rodzin związanych z Krzekotowem,
+                ich losy, wspomnienia oraz ślady pozostawione
+                w historii miejscowości.
               </p>
 
             </div>
-
 
 
             <div className="rounded-2xl bg-white p-8 shadow">
@@ -54,12 +52,11 @@ export default function Mieszkancy() {
               </h2>
 
               <p className="mt-4 text-stone-600 leading-relaxed">
-                Opowieści mieszkańców, wspomnienia rodzinne
-                i historie przekazywane przez pokolenia.
+                Opowieści, wspomnienia i wydarzenia przekazywane
+                przez kolejne pokolenia mieszkańców Krzekotowa.
               </p>
 
             </div>
-
 
 
             <div className="rounded-2xl bg-white p-8 shadow">
@@ -69,8 +66,8 @@ export default function Mieszkancy() {
               </h2>
 
               <p className="mt-4 text-stone-600 leading-relaxed">
-                Archiwalne zdjęcia mieszkańców i ważnych
-                wydarzeń lokalnych.
+                Archiwalne fotografie rodzinne oraz zdjęcia
+                dokumentujące życie lokalnej społeczności.
               </p>
 
             </div>
@@ -81,18 +78,15 @@ export default function Mieszkancy() {
         </section>
 
 
-
         <section className="pb-16">
 
           <div className="mx-auto max-w-5xl px-6">
 
             <div className="rounded-2xl bg-white p-8 shadow">
 
-
               <h2 className="text-3xl font-bold text-stone-800">
                 Zachowanie pamięci
               </h2>
-
 
               <p className="mt-5 text-lg text-stone-700 leading-relaxed">
                 Największą wartością każdej miejscowości są jej mieszkańcy.
@@ -100,13 +94,11 @@ export default function Mieszkancy() {
                 prawdziwe dziedzictwo Krzekotowa.
               </p>
 
-
               <p className="mt-5 text-lg text-stone-700 leading-relaxed">
-                Ta część archiwum będzie w przyszłości miejscem gromadzenia
-                wspomnień, fotografii oraz historii rodzin związanych
-                z Krzekotowem.
+                W tej części archiwum będą gromadzone wspomnienia,
+                fotografie i historie rodzin związanych z Krzekotowem,
+                z zachowaniem szacunku dla prywatności i obowiązujących zasad.
               </p>
-
 
             </div>
 
