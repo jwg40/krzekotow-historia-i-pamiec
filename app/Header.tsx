@@ -61,7 +61,7 @@ export default function Header() {
               Życie współczesne
             </a>
 
-            <a href="/kgw" className="hover:text-[#F2C14E]">
+            <a href="/kgw" className="text-[#F2C14E] hover:text-white font-semibold">
               KGW Żurawianki
             </a>
 
