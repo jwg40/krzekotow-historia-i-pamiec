@@ -1,131 +1,110 @@
-import Footer from "../Footer";
-
 export default function KGWPage() {
   return (
-    <>
-      <main className="min-h-screen bg-stone-50">
+    <main className="bg-stone-50 min-h-screen">
 
-        <section className="bg-gradient-to-b from-green-100 to-white py-12">
-          <div className="mx-auto max-w-5xl px-6 text-center">
+      <section className="bg-[#4B5D2A] text-white py-12">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
-            <div className="mx-auto mb-6 flex h-40 w-40 items-center justify-center rounded-full bg-white shadow">
+          <img
+            src="/images/kgw/logo/logo-zurawianki.jpg"
+            alt="KGW Krzekotów Żurawianki"
+            className="mx-auto w-48 h-auto rounded-xl shadow-lg bg-white p-3"
+          />
 
-              <span className="text-stone-400">
-                Logo KGW
-              </span>
+          <h1 className="text-4xl font-bold mt-8">
+            KGW Krzekotów Żurawianki
+          </h1>
 
-            </div>
+          <p className="mt-4 text-xl text-[#F2C14E]">
+            Współczesne życie Krzekotowa
+          </p>
+
+        </div>
+      </section>
 
 
-            <h1 className="text-5xl font-bold text-stone-800">
-              KGW Żurawianki
-            </h1>
+      <section className="max-w-5xl mx-auto px-6 py-12">
 
-            <p className="mt-4 text-xl text-stone-600">
-              Koło Gospodyń Wiejskich w Krzekotowie
+        <div className="bg-white rounded-2xl shadow p-8">
+
+          <h2 className="text-3xl font-bold text-stone-800 mb-5">
+            Koło Gospodyń Wiejskich Żurawianki
+          </h2>
+
+          <p className="text-lg leading-relaxed text-stone-700">
+            Ta część Cyfrowego Archiwum Krzekotowa poświęcona jest
+            współczesnemu życiu mieszkańców, lokalnym inicjatywom,
+            wydarzeniom i tradycjom pielęgnowanym przez KGW Żurawianki.
+          </p>
+
+          <p className="mt-5 text-lg leading-relaxed text-stone-700">
+            Dzięki zgodzie KGW Żurawianki możemy zachować fotografie,
+            relacje i wspomnienia z wydarzeń, które tworzą najnowszą
+            historię naszej miejscowości.
+          </p>
+
+        </div>
+
+
+        <div className="grid md:grid-cols-3 gap-6 mt-10">
+
+          <a
+            href="/kgw/wydarzenia"
+            className="bg-[#4B5D2A] text-white rounded-xl p-6 hover:scale-105 transition"
+          >
+            <h3 className="text-2xl font-bold">
+              Wydarzenia
+            </h3>
+            <p className="mt-3">
+              Kronika spotkań, imprez i wspólnych działań.
+            </p>
+          </a>
+
+
+          <div className="bg-white rounded-xl shadow p-6">
+
+            <h3 className="text-2xl font-bold text-stone-800">
+              Tradycje
+            </h3>
+
+            <p className="mt-3 text-stone-700">
+              Przepisy, zwyczaje i lokalne dziedzictwo.
             </p>
 
           </div>
-        </section>
 
 
+          <div className="bg-white rounded-xl shadow p-6">
 
-        <section className="mx-auto max-w-5xl px-6 py-12">
+            <h3 className="text-2xl font-bold text-stone-800">
+              Spotkania
+            </h3>
 
-
-          <div className="rounded-2xl bg-white p-8 shadow">
-
-            <h2 className="text-3xl font-bold text-green-800">
-              🌿 O KGW Żurawianki
-            </h2>
-
-            <p className="mt-4 leading-8 text-stone-700">
-              Koło Gospodyń Wiejskich Żurawianki jest ważną częścią
-              współczesnego życia Krzekotowa. Dzięki działalności
-              mieszkańców zachowane zostają tradycje, zwyczaje oraz
-              wspólna pamięć o wydarzeniach tworzących historię miejscowości.
+            <p className="mt-3 text-stone-700">
+              Ludzie, wspomnienia i wspólna działalność.
             </p>
 
           </div>
 
+        </div>
 
 
-          <div className="mt-8 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 bg-amber-50 rounded-2xl p-8">
 
+          <h2 className="text-2xl font-bold text-stone-800 mb-4">
+            Materiały KGW Żurawianki
+          </h2>
 
-            <div className="rounded-2xl bg-white p-6 shadow">
+          <p className="text-stone-700">
+            Zdjęcia i informacje zostały udostępnione za zgodą KGW
+            Żurawianki. Wszystkie materiały będą opisane i zachowane
+            jako część historii Krzekotowa.
+          </p>
 
-              <h3 className="text-2xl font-bold text-green-800">
-                📸 Galeria
-              </h3>
+        </div>
 
-              <p className="mt-3 text-stone-700">
-                Zdjęcia wydarzeń, spotkań i działalności KGW.
-              </p>
+      </section>
 
-            </div>
-
-
-
-            <div className="rounded-2xl bg-white p-6 shadow">
-
-              <h3 className="text-2xl font-bold text-green-800">
-                🍞 Tradycja
-              </h3>
-
-              <p className="mt-3 text-stone-700">
-                Przepisy, rękodzieło i lokalne zwyczaje.
-              </p>
-
-            </div>
-
-
-
-            <div className="rounded-2xl bg-white p-6 shadow">
-
-              <h3 className="text-2xl font-bold text-green-800">
-                📅 Kronika
-              </h3>
-
-              <p className="mt-3 text-stone-700">
-                Historia wydarzeń i inicjatyw KGW.
-              </p>
-
-              <a
-                href="/kgw/wydarzenia"
-                className="mt-5 inline-block rounded-xl bg-green-800 px-5 py-2 text-white hover:bg-green-700"
-              >
-                Zobacz wydarzenia
-              </a>
-
-            </div>
-
-
-          </div>
-
-
-
-          <section className="mt-10 rounded-2xl bg-amber-50 p-8">
-
-            <h2 className="text-3xl font-bold text-stone-800">
-              📚 Źródło współczesnej historii Krzekotowa
-            </h2>
-
-            <p className="mt-4 leading-8 text-stone-700">
-              Materiały KGW Żurawianki będą częścią Cyfrowego Archiwum
-              Krzekotowa i zostaną wykorzystane do zachowania pamięci
-              o mieszkańcach, wydarzeniach i lokalnych tradycjach.
-            </p>
-
-          </section>
-
-
-        </section>
-
-      </main>
-
-      <Footer />
-
-    </>
+    </main>
   );
 }
