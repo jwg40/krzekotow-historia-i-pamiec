@@ -1,87 +1,76 @@
-import Image from "next/image";
-
-export default function KGWPage() {
+export default function KGW() {
   return (
-    <main className="bg-stone-50 min-h-screen py-12">
+    <main className="bg-white min-h-screen">
 
-      <section className="mx-auto max-w-5xl px-6">
+      <section className="bg-[#4B5D2A] text-white py-12">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <img
+            src="/images/fotografie/logo-zurawianki.jpg"
+            alt="KGW Krzekotów Żurawianki"
+            className="mx-auto w-48 rounded-xl shadow-lg mb-6"
+          />
 
-          <div className="flex flex-col items-center text-center">
+          <h1 className="text-4xl font-bold">
+            KGW Krzekotów Żurawianki
+          </h1>
 
-            <Image
-              src="/images/fotografie/logo-zurawianki.jpg"
-              alt="KGW Krzekotów Żurawianki"
-              width={250}
-              height={250}
-              className="rounded-xl mb-6"
-            />
+          <p className="mt-4 text-xl text-[#F2C14E]">
+            Współczesne życie Krzekotowa
+          </p>
 
-            <h1 className="text-4xl font-bold text-stone-800">
-              KGW Krzekotów Żurawianki
-            </h1>
-
-            <p className="mt-4 text-lg text-stone-600">
-              Koło Gospodyń Wiejskich tworzące współczesną historię Krzekotowa.
-            </p>
-
-          </div>
+        </div>
+      </section>
 
 
-          <div className="mt-10 space-y-6 text-stone-700">
+      <section className="max-w-5xl mx-auto px-6 py-12">
 
+        <h2 className="text-3xl font-bold text-stone-800 mb-6">
+          Koło Gospodyń Wiejskich Żurawianki
+        </h2>
+
+
+        <p className="text-lg leading-relaxed text-stone-700">
+          Ta część Cyfrowego Archiwum Krzekotowa poświęcona jest
+          działalności KGW Żurawianki.
+          Znajdą się tutaj fotografie, wydarzenia, spotkania,
+          tradycje oraz wspomnienia mieszkańców.
+        </p>
+
+
+        <div className="mt-10 grid md:grid-cols-3 gap-6">
+
+          <a
+            href="/kgw/wydarzenia"
+            className="bg-amber-100 p-6 rounded-xl shadow hover:shadow-lg"
+          >
+            <h3 className="text-xl font-bold">
+              Wydarzenia
+            </h3>
             <p>
-              Ta część Cyfrowego Archiwum Krzekotowa poświęcona jest
-              działalności KGW Żurawianki – ludziom, wydarzeniom,
-              tradycjom oraz inicjatywom mieszkańców.
+              Kronika działalności KGW.
             </p>
+          </a>
 
+
+          <div className="bg-amber-100 p-6 rounded-xl shadow">
+            <h3 className="text-xl font-bold">
+              Tradycje
+            </h3>
             <p>
-              Dzięki zgodzie KGW Żurawianki możemy zachować fotografie,
-              opisy wydarzeń i wspomnienia, które pokazują współczesne życie
-              naszej miejscowości.
+              Obrzędy, kuchnia i zwyczaje.
             </p>
-
           </div>
 
 
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-
-            <a
-              href="/kgw/wydarzenia"
-              className="bg-[#4B5D2A] text-white rounded-xl p-6 text-center hover:bg-[#607536]"
-            >
-              <h2 className="text-xl font-bold">
-                Wydarzenia
-              </h2>
-              <p className="mt-2">
-                Kronika działalności KGW
-              </p>
-            </a>
-
-
-            <div className="bg-amber-100 rounded-xl p-6 text-center">
-              <h2 className="text-xl font-bold">
-                Tradycje
-              </h2>
-              <p className="mt-2">
-                Obrzędy, kuchnia i zwyczaje
-              </p>
-            </div>
-
-
-            <div className="bg-amber-100 rounded-xl p-6 text-center">
-              <h2 className="text-xl font-bold">
-                Spotkania
-              </h2>
-              <p className="mt-2">
-                Ludzie i wspólne chwile
-              </p>
-            </div>
-
+          <div className="bg-amber-100 p-6 rounded-xl shadow">
+            <h3 className="text-xl font-bold">
+              Spotkania
+            </h3>
+            <p>
+              Ludzie tworzący historię.
+            </p>
           </div>
-
 
         </div>
 
