@@ -6,182 +6,118 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="bg-[#FAF6ED] min-h-screen">
+      <main className="bg-stone-50">
+
+        <section className="relative overflow-hidden bg-gradient-to-b from-amber-100 via-stone-50 to-white">
+
+          <div className="mx-auto max-w-6xl px-6 py-20">
+
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+
+              <div>
+
+                <h2 className="text-5xl font-bold text-stone-800 leading-tight">
+                  Wieś, ludzie
+                  <br />
+                  i historia miejsca
+                </h2>
+
+                <p className="mt-6 text-xl text-stone-600 leading-relaxed">
+                  Krzekotów to historia ludzi związanych
+                  z ziemią, pracą rolniczą i codziennym życiem.
+                  To wspomnienia pokoleń, które tworzyły tę wieś.
+                </p>
+
+                <p className="mt-5 text-lg italic text-stone-700">
+                  Ocalić przeszłość. Budować pamięć.
+                </p>
+
+              </div>
 
 
-        <section className="bg-gradient-to-b from-[#EED9A6] to-[#FAF6ED] py-24">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
 
+                <img
+                  src="/images/mapa-krzekotow.jpg"
+                  alt="Mapa Krzekotowa"
+                  className="w-full h-auto"
+                />
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+              </div>
 
-
-            <h1 className="text-5xl font-bold text-[#3F4A24]">
-              Krzekotów
-            </h1>
-
-
-            <p className="mt-4 text-3xl text-[#B07A16]">
-              Wieś ludzi, ziemi i pamięci
-            </p>
-
-
-            <p className="mt-8 text-xl text-stone-700 leading-relaxed">
-
-              Historia miejscowości tworzona przez pokolenia
-              mieszkańców związanych z ziemią, pracą i wspólnym życiem.
-
-            </p>
-
+            </div>
 
           </div>
-
 
         </section>
 
 
 
-
-
         <section className="py-16">
-
 
           <div className="mx-auto max-w-6xl px-6">
 
-
-            <div className="rounded-2xl bg-white p-10 shadow">
-
-
-              <h2 className="text-3xl font-bold text-[#3F4A24] text-center">
-                Historia zapisana w miejscu i ludziach
-              </h2>
+            <h2 className="text-3xl font-bold text-stone-800 text-center">
+              Krzekotów. Historia i Pamięć
+            </h2>
 
 
-              <p className="mt-6 text-lg text-stone-700 text-center leading-relaxed">
-
-                Krzekotów to historia gospodarstw, rodzin,
-                codziennej pracy i wydarzeń, które przez lata
-                kształtowały charakter miejscowości.
-
-                To pamięć o tym, co było,
-                i troska o to, co pozostanie dla przyszłych pokoleń.
-
-              </p>
+            <div className="mt-10 grid md:grid-cols-3 gap-8">
 
 
-            </div>
+              <div className="bg-white rounded-2xl shadow p-6">
 
+                <h3 className="text-xl font-bold text-stone-800">
+                  Historia
+                </h3>
 
-          </div>
+                <p className="mt-3 text-stone-600">
+                  Dzieje miejscowości, wydarzenia,
+                  mieszkańcy i zachowane ślady przeszłości.
+                </p>
 
-
-        </section>
+              </div>
 
 
 
+              <div className="bg-white rounded-2xl shadow p-6">
 
+                <h3 className="text-xl font-bold text-stone-800">
+                  Mieszkańcy
+                </h3>
 
-        <section className="py-10">
+                <p className="mt-3 text-stone-600">
+                  Wspomnienia rodzin, fotografie
+                  i historie ludzi związanych z Krzekotowem.
+                </p>
 
-
-          <div className="mx-auto max-w-6xl px-6 grid gap-8 md:grid-cols-3">
-
-
-            <a
-              href="/historia"
-              className="rounded-2xl bg-white p-8 shadow hover:shadow-lg transition"
-            >
-
-              <h2 className="text-2xl font-bold text-[#B07A16]">
-                Historia
-              </h2>
-
-              <p className="mt-4 text-stone-600">
-                Dzieje Krzekotowa, przemiany i losy mieszkańców.
-              </p>
-
-            </a>
+              </div>
 
 
 
+              <div className="bg-white rounded-2xl shadow p-6">
 
+                <h3 className="text-xl font-bold text-stone-800">
+                  Krzekotów dziś
+                </h3>
 
-            <a
-              href="/galeria"
-              className="rounded-2xl bg-white p-8 shadow hover:shadow-lg transition"
-            >
+                <p className="mt-3 text-stone-600">
+                  Współczesne życie wsi,
+                  wydarzenia i działalność mieszkańców.
+                </p>
 
-              <h2 className="text-2xl font-bold text-[#B07A16]">
-                Galeria
-              </h2>
-
-              <p className="mt-4 text-stone-600">
-                Fotografie, mapy i dokumenty związane z miejscowością.
-              </p>
-
-            </a>
-
-
-
-
-
-            <a
-              href="/zycie-wspolczesne"
-              className="rounded-2xl bg-white p-8 shadow hover:shadow-lg transition"
-            >
-
-              <h2 className="text-2xl font-bold text-[#B07A16]">
-                Życie współczesne
-              </h2>
-
-              <p className="mt-4 text-stone-600">
-                Mieszkańcy, tradycja i działalność Krzekotowa dzisiaj.
-              </p>
-
-            </a>
-
-
-          </div>
-
-
-        </section>
-
-
-
-
-
-        <section className="py-16">
-
-
-          <div className="mx-auto max-w-5xl px-6">
-
-
-            <div className="rounded-2xl bg-[#4B5D2A] p-10 text-center text-white">
-
-
-              <h2 className="text-3xl font-bold">
-                Zapraszamy do współtworzenia historii
-              </h2>
-
-
-              <p className="mt-5 text-lg leading-relaxed">
-
-                Każde zdjęcie, dokument i wspomnienie mieszkańców
-                może stać się częścią historii Krzekotowa.
-
-              </p>
+              </div>
 
 
             </div>
 
-
           </div>
 
-
         </section>
+
 
 
       </main>
-
 
       <Footer />
 
