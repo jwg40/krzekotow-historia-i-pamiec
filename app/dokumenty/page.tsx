@@ -5,7 +5,6 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 export default function Dokumenty() {
-
   const [openImage, setOpenImage] = useState<string | null>(null);
 
   return (
@@ -32,7 +31,6 @@ export default function Dokumenty() {
         </section>
 
 
-
         <section className="py-16">
 
           <div className="mx-auto max-w-6xl px-6">
@@ -45,15 +43,13 @@ export default function Dokumenty() {
             <div className="grid gap-8 md:grid-cols-2">
 
 
-
               <div className="rounded-2xl bg-white p-6 shadow">
 
-
                 <img
-                  src="/images/fotografie/lista-1945.jpg.jpeg"
+                  src="/images/fotografie/lista-1945.jpg"
                   alt="Lista z 1945 roku"
                   onClick={() =>
-                    setOpenImage("/images/fotografie/lista-1945.jpg.jpeg")
+                    setOpenImage("/images/fotografie/lista-1945.jpg")
                   }
                   className="w-full rounded-xl cursor-pointer hover:scale-105 transition"
                 />
@@ -69,10 +65,7 @@ export default function Dokumenty() {
                   i okresem powojennym.
                 </p>
 
-
               </div>
-
-
 
 
               <div className="rounded-2xl bg-white p-8 shadow">
@@ -87,9 +80,7 @@ export default function Dokumenty() {
                   wykazy mieszkańców, kroniki i materiały archiwalne.
                 </p>
 
-
               </div>
-
 
 
             </div>
@@ -99,11 +90,10 @@ export default function Dokumenty() {
         </section>
 
 
-
         {openImage && (
 
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
+            className="fixed inset-0 z-50 flex items-center-justify-center bg-black/90 p-6"
             onClick={() => setOpenImage(null)}
           >
 
