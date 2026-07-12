@@ -4,9 +4,24 @@ export default function GaleriaKGW() {
 
       <div className="mx-auto max-w-5xl px-6">
 
-        <h1 className="text-4xl font-bold text-center mb-10">
-          Galeria KGW Żurawianki
-        </h1>
+        <div className="text-center mb-10">
+
+          <img
+            src="/images/fotografie/logo-zurawianki.jpg"
+            alt="Logo KGW Żurawianki"
+            className="mx-auto w-40 rounded-xl shadow mb-6"
+          />
+
+          <h1 className="text-4xl font-bold text-stone-800">
+            KGW Krzekotów Żurawianki
+          </h1>
+
+          <p className="text-xl mt-2 text-stone-600">
+            Galeria działalności Koła Gospodyń Wiejskich
+          </p>
+
+        </div>
+
 
         <div className="grid md:grid-cols-3 gap-6">
 
@@ -14,6 +29,7 @@ export default function GaleriaKGW() {
             <h2 className="text-xl font-bold mb-3">
               Wydarzenia
             </h2>
+
             <p>
               Zdjęcia z wydarzeń, festynów i uroczystości.
             </p>
@@ -24,6 +40,7 @@ export default function GaleriaKGW() {
             <h2 className="text-xl font-bold mb-3">
               Tradycje
             </h2>
+
             <p>
               Lokalne zwyczaje, rękodzieło i tradycje mieszkańców.
             </p>
@@ -34,6 +51,7 @@ export default function GaleriaKGW() {
             <h2 className="text-xl font-bold mb-3">
               Spotkania
             </h2>
+
             <p>
               Wspólne działania KGW Żurawianki.
             </p>
