@@ -11,16 +11,16 @@ export default function Footer() {
           ← Wróć do strony głównej
         </a>
 
-        <p className="text-lg">
+        <p className="mt-4">
           Cyfrowe Archiwum Krzekotowa
         </p>
 
-        <p className="mt-2 text-sm text-stone-400">
+        <p className="text-sm text-stone-400">
           Archiwum historii, fotografii, dokumentów i wspomnień mieszkańców.
         </p>
 
-        <p className="mt-4 text-sm text-stone-500">
-          © 2026 Cyfrowe Archiwum Krzekotowa
+        <p className="mt-4 text-sm">
+          © 2026
         </p>
 
       </div>
