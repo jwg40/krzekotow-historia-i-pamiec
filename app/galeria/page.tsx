@@ -1,126 +1,149 @@
-"use client";
-
-import { useState } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 
 export default function Galeria() {
-
-  const [openImage, setOpenImage] = useState<string | null>(null);
-
-
-  const sekcje = [
-
-    {
-      title: "🌾 Dawny Krzekotów",
-      opis:
-        "Fotografie miejsc i obiektów związanych z historią miejscowości.",
-
-      zdjecia: [
-
-        {
-          image: "/images/fotografie/stara-brama-swietlica.jpg.jpeg",
-          title: "Stara brama świetlicy",
-          opis:
-            "Pozostałość dawnej zabudowy Krzekotowa."
-        },
-
-        {
-          image: "/images/fotografie/stodola-dzis.jpg.jpeg",
-          title: "Stodoła dziś",
-          opis:
-            "Zachowany ślad dawnej zabudowy gospodarczej."
-        },
-
-        {
-          image: "/images/fotografie/swietlica-nowa.jpg.jpeg",
-          title: "Nowa świetlica",
-          opis:
-            "Współczesne miejsce spotkań mieszkańców."
-        }
-
-      ]
-    },
-
-
-
-    {
-      title: "📜 Mapy i dokumenty",
-      opis:
-        "Materiały źródłowe pomagające odtworzyć historię Krzekotowa.",
-
-      zdjecia: [
-
-        {
-          image: "/images/fotografie/mapa-krzekotowa.jpg.jpeg",
-          title: "Mapa Krzekotowa",
-          opis:
-            "Mapa związana z historią miejscowości."
-        },
-
-        {
-          image: "/images/fotografie/vmapa-natarcie-1945.jpg.jpeg",
-          title: "Mapa wydarzeń 1945 roku",
-          opis:
-            "Materiały dotyczące okresu wojennego."
-        },
-
-        {
-          image: "/images/fotografie/lista-1945.jpg.jpeg",
-          title: "Dokument z 1945 roku",
-          opis:
-            "Archiwalny dokument związany z historią miejscowości."
-        }
-
-      ]
-    },
-
-
-
-    {
-      title: "👨‍👩‍👧 Mieszkańcy",
-      opis:
-        "Miejsce na fotografie rodzinne i wspomnienia mieszkańców.",
-
-      zdjecia: []
-    },
-
-
-
-    {
-      title: "🎉 Życie współczesne i Żurawianki",
-      opis:
-        "Fotografie wydarzeń, spotkań i działalności mieszkańców.",
-
-      zdjecia: []
-    }
-
-  ];
-
-
-
   return (
     <>
       <Header />
 
-      <main className="bg-[#FAF6ED] min-h-screen">
+      <main className="bg-stone-50">
+
+        {/* Nagłówek */}
+        <section className="bg-green-900 py-14 text-center text-white">
+
+          <h1 className="text-4xl font-bold">
+            Galeria i Archiwum Fotografii
+          </h1>
+
+          <p className="mt-4 text-lg text-amber-200">
+            Obrazy, które zachowują historię Krzekotowa.
+          </p>
+
+        </section>
+
+        {/* Krzekotów dziś */}
+        <section className="mx-auto max-w-6xl px-6 py-16">
+
+          <h2 className="mb-8 border-l-4 border-green-800 pl-4 text-3xl font-bold text-green-900">
+            📍 Krzekotów dziś
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-2">
+
+            <article className="overflow-hidden rounded-xl bg-white shadow">
+
+              <img
+                src="/images/fotografie/krzekotow-wita.jpg"
+                alt="Tablica miejscowości Krzekotów"
+                className="h-72 w-full object-cover"
+              />
+
+              <div className="p-6">
+
+                <h3 className="text-xl font-bold">
+                  Tablica miejscowości
+                </h3>
+
+                <p className="mt-3 text-stone-700">
+                  Symboliczny początek Krzekotowa i pierwsze miejsce,
+                  które wita każdego odwiedzającego.
+                </p>
+
+              </div>
+
+            </article>
 
 
-        <section className="bg-gradient-to-b from-[#F5E6B8] to-[#FAF6ED] py-20">
+            <article className="overflow-hidden rounded-xl bg-white shadow">
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+              <img
+                src="/images/fotografie/mapa dzis.jpg"
+                alt="Współczesna mapa Krzekotowa"
+                className="h-72 w-full object-cover"
+              />
 
-            <div className="text-5xl mb-4">
-              📷
+              <div className="p-6">
+
+                <h3 className="text-xl font-bold">
+                  Współczesna mapa
+                </h3>
+
+                <p className="mt-3 text-stone-700">
+                  Aktualny układ miejscowości i jej otoczenia.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+        {/* Ocalałe fotografie */}
+        <section className="bg-white py-16">
+
+          <div className="mx-auto max-w-6xl px-6">
+
+            <h2 className="mb-8 border-l-4 border-amber-600 pl-4 text-3xl font-bold text-stone-800">
+              🏛 Ocalałe fotografie historyczne
+            </h2>
+
+            <p className="mb-10 text-lg text-stone-700">
+              Zachowały się jedynie nieliczne fotografie
+              przedwojennego Krzekotowa. Każda z nich stanowi
+              wyjątkowe świadectwo historii miejscowości.
+            </p>
+
+            <div className="grid gap-8 md:grid-cols-2">
+
+              <div className="rounded-xl border bg-stone-50 p-8 text-center">
+
+                <h3 className="text-xl font-bold">
+                  Dawna brama gospodarstwa
+                </h3>
+
+                <p className="mt-3 text-stone-600">
+                  Jedno z nielicznych zachowanych zdjęć
+                  przedwojennego Krzekotowa.
+                </p>
+
+              </div>
+
+              <div className="rounded-xl border bg-stone-50 p-8 text-center">
+
+                <h3 className="text-xl font-bold">
+                  Słupek z inicjałami
+                </h3>
+
+                <p className="mt-3 text-stone-600">
+                  Historyczny detal przypominający
+                  o dawnych mieszkańcach miejscowości.
+                </p>
+
+              </div>
+
             </div>
 
-            <h1 className="text-5xl font-bold text-[#3F4A24]">
-              Galeria Krzekotowa
-            </h1>
+          </div>
 
-            <p className="mt-6 text-xl text-stone-700">
-              Obrazy miejsc, ludzi i wydarzeń,
-              które tworzą historię Krzekotowa.
+        </section>
+
+
+        {/* Dawniej i dziś */}
+        <section className="bg-amber-50 py-16">
+
+          <div className="mx-auto max-w-6xl px-6">
+
+            <h2 className="mb-8 border-l-4 border-green-800 pl-4 text-3xl font-bold text-green-900">
+              ⏳ Dawniej i dziś
+            </h2>
+
+            <p className="text-lg text-stone-700">
+              W tej części archiwum będziemy zestawiać fotografie
+              wykonane w tym samym miejscu przed laty i współcześnie,
+              pokazując zmiany, jakie zaszły w Krzekotowie.
             </p>
 
           </div>
@@ -128,114 +151,29 @@ export default function Galeria() {
         </section>
 
 
+        {/* Kronika */}
+        <section className="bg-white py-16">
 
+          <div className="mx-auto max-w-6xl px-6">
 
-        <section className="py-16">
+            <h2 className="mb-8 border-l-4 border-green-800 pl-4 text-3xl font-bold text-green-900">
+              🎉 Kronika współczesnego Krzekotowa
+            </h2>
 
-
-          <div className="mx-auto max-w-6xl px-6 space-y-16">
-
-
-            {sekcje.map((sekcja, index) => (
-
-              <div key={index}>
-
-
-                <h2 className="text-3xl font-bold text-[#B07A16]">
-                  {sekcja.title}
-                </h2>
-
-
-                <p className="mt-3 mb-8 text-stone-700">
-                  {sekcja.opis}
-                </p>
-
-
-
-                <div className="grid gap-8 md:grid-cols-3">
-
-
-                  {sekcja.zdjecia.map((foto, i) => (
-
-                    <div
-                      key={i}
-                      className="rounded-2xl bg-white p-5 shadow"
-                    >
-
-                      <img
-                        src={foto.image}
-                        alt={foto.title}
-                        onClick={() => setOpenImage(foto.image)}
-                        className="w-full rounded-xl cursor-pointer hover:scale-105 transition"
-                      />
-
-
-                      <h3 className="mt-4 text-xl font-bold text-[#3F4A24]">
-                        {foto.title}
-                      </h3>
-
-
-                      <p className="mt-2 text-stone-600">
-                        {foto.opis}
-                      </p>
-
-
-                    </div>
-
-                  ))}
-
-
-                  {sekcja.zdjecia.length === 0 && (
-
-                    <div className="rounded-2xl bg-white p-8 shadow">
-
-                      <p className="text-stone-600">
-                        Miejsce przygotowane na przyszłe materiały.
-                      </p>
-
-                    </div>
-
-                  )}
-
-
-                </div>
-
-
-              </div>
-
-            ))}
-
+            <p className="text-lg leading-relaxed text-stone-700">
+              W tym miejscu będą publikowane fotografie z dożynek,
+              działalności KGW Żurawianki, spotkań mieszkańców,
+              uroczystości oraz innych wydarzeń dokumentujących życie
+              współczesnego Krzekotowa.
+            </p>
 
           </div>
-
 
         </section>
 
-
-
-        {openImage && (
-
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6"
-            onClick={() => setOpenImage(null)}
-          >
-
-            <img
-              src={openImage}
-              alt="Powiększenie"
-              className="max-h-[90vh] max-w-[95vw] rounded-xl"
-            />
-
-          </div>
-
-        )}
-
-
       </main>
 
-
       <Footer />
-
     </>
   );
 }
