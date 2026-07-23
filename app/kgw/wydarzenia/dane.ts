@@ -1,21 +1,71 @@
-export const wydarzeniaKGW = [
+export type WydarzenieKGW = {
+  rok: string;
+  tytul: string;
+  opis: string;
+  folder: string;
+  zdjecia: string[];
+};
+
+
+export const wydarzeniaKGW: WydarzenieKGW[] = [
+
   {
-    rok: "2026",
-    tytul: "Nowe wydarzenia KGW Żurawianki",
+    rok: "2024",
+    tytul: "Świąteczne spotkanie Seniorów",
     opis:
-      "Miejsce na opis wydarzenia, spotkania lub inicjatywy mieszkańców Krzekotowa.",
+      "Magia Świąt, wspólne kolędowanie, rozmowy i wyjątkowa atmosfera spotkania Seniorów z KGW Żurawianki.",
+    folder: "/images/kgw/2024/swieta/",
     zdjecia: [
-      "/images/kgw/wydarzenia/brak-zdjecia.jpg"
+      "481099922_1051739983655971_8920999869200296076_n.jpg",
+      "482960356_1051739693656000_1917127604034364000_n.jpg",
+      "482961638_1051739610322675_4065728904898289587_n.jpg",
+      "482974425_1051739946989308_2863862131957522662_n.jpg",
+      "482987468_1051739943655975_2247204369090457607_n.jpg",
+      "482988926_1051740023655967_3816263412889387307_n.jpg",
+      "484067969_1051740046989298_6490714272181456088_n.jpg"
     ]
   },
 
+
   {
     rok: "2025",
-    tytul: "Wspólne działania mieszkańców",
+    tytul: "Kociołkowa biesiada",
     opis:
-      "Archiwalne wydarzenia KGW Żurawianki zostaną uzupełnione na podstawie dostępnych materiałów.",
+      "Spotkanie Seniorów w ramach projektu Danie Wspólnych Chwil z Fundacją Biedronki. Wspólne gotowanie, rozmowy i wyjątkowa atmosfera.",
+    folder: "/images/kgw/2025/kociolek 2025/",
     zdjecia: [
-      "/images/kgw/wydarzenia/brak-zdjecia.jpg"
+      "518261254_1153453000151335_4947905710177316529_n.jpg",
+      "520223517_1153452666818035_126632627580225646_n.jpg",
+      "520226922_1153453450151290_715748109310566752_n.jpg",
+      "520234548_1153453916817910_475562595206818481_n.jpg",
+      "520286200_1153454100151225_5499190537805072576_n.jpg",
+      "520379989_1153452416818060_329376811209687124_n.jpg",
+      "520395918_1153451906818111_3203858118363239866_n.jpg",
+      "520416316_1153453803484588_5586027291466617757_n.jpg",
+      "520474108_1153452823484686_5149061125901491633_n.jpg",
+      "522663219_1153453733484595_7276736049159430394_n.jpg"
+    ]
+  },
+
+
+  {
+    rok: "2025",
+    tytul: "Świąteczne spotkanie Seniorów",
+    opis:
+      "Kolędy, życzenia i wyjątkowe chwile wspólnego spotkania. Wydarzenie pełne muzyki, uśmiechu i świątecznej atmosfery.",
+    folder: "/images/kgw/2025/swieta 2025/",
+    zdjecia: [
+      "595684229_1276125624550738_5602421771646686234_n.jpg",
+      "596284882_1276125674550733_5815742193197996867_n.jpg",
+      "597165359_1276127284550572_535405725713940811_n.jpg",
+      "597268074_1276127191217248_3586687003874976283_n.jpg",
+      "597286637_1276126664550634_5040457322856917500_n.jpg",
+      "597319971_1276126487883985_4286744446198326036_n.jpg",
+      "597387416_1276125801217387_2053395766113991594_n.jpg",
+      "597387527_1276126584550642_2798520254389611099_n.jpg",
+      "597389495_1276126961217271_1778897251198926978_n.jpg",
+      "597400304_1276127487883885_1604706787635062451_n.jpg"
     ]
   }
+
 ];

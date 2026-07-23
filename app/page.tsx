@@ -1,133 +1,109 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-green-100 text-stone-800">
 
-      <main>
+      {/* Tytuł strony */}
+      <section className="max-w-5xl mx-auto px-6 pt-10 text-center">
 
-        {/* Zdjęcie główne */}
-        <section>
-          <div
-            className="h-[450px] bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('/images/fotografie/krzekotow-wita.jpg')",
-            }}
+        <h1 className="text-6xl md:text-7xl font-extrabold text-amber-800 tracking-tight">
+          Krzekotów
+        </h1>
+
+        <h2 className="text-3xl md:text-4xl font-bold text-green-900 mt-2 mb-8">
+          Historia miejsca i ludzi
+        </h2>
+
+      </section>
+
+
+      {/* Zdjęcie główne */}
+      <section className="max-w-5xl mx-auto px-6">
+
+        <div className="relative overflow-hidden rounded-2xl shadow-xl">
+          <Image
+            src="/images/fotografie/krzekotow-wita.jpg"
+            alt="Krzekotów"
+            width={1200}
+            height={700}
+            className="w-full h-[360px] object-cover"
+            priority
           />
-        </section>
+        </div>
+
+      </section>
 
 
-        {/* Wprowadzenie */}
-        <section className="bg-amber-50 py-16">
+      {/* Główne przesłanie */}
+      <section className="max-w-4xl mx-auto px-6 py-12 text-center">
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
-
-            <h1 className="text-5xl font-bold text-stone-800">
-              Cyfrowe Archiwum Krzekotowa
-            </h1>
-
-            <p className="mt-6 text-xl text-stone-700">
-              Historia miejscowości, fotografie, dokumenty
-              i wspomnienia mieszkańców.
-            </p>
-
-            <p className="mt-8 text-lg leading-relaxed text-stone-600">
-              To miejsce powstało, aby zachować pamięć o dawnym
-              i współczesnym Krzekotowie oraz ludziach,
-              którzy przez pokolenia tworzyli jego historię.
-            </p>
-
-          </div>
-
-        </section>
+        <p className="text-2xl md:text-3xl font-bold text-green-900 leading-relaxed mb-8">
+          Historia nie zawsze znajduje się w archiwach.
+          <br />
+          Czasem kryje się na strychu, w starym albumie albo
+          w opowieści przekazywanej z pokolenia na pokolenie.
+        </p>
 
 
-
-        {/* Główne działy */}
-
-        <section className="bg-white py-16">
-
-          <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-3">
-
-
-            <a
-              href="/historia"
-              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-xl"
-            >
-
-              <h2 className="text-2xl font-bold text-green-900">
-                📜 Historia
-              </h2>
-
-              <p className="mt-4 text-stone-700">
-                Dzieje Krzekotowa, najstarsze ślady,
-                okres przedwojenny i powojenne przemiany.
-              </p>
-
-            </a>
+        <p className="text-xl font-semibold text-stone-700 leading-relaxed mb-10">
+          Cyfrowe Archiwum Krzekotowa powstaje, aby zachować pamięć
+          o miejscu, jego mieszkańcach oraz wydarzeniach, które przez
+          wieki tworzyły historię tej niewielkiej miejscowości.
+        </p>
 
 
+        <Link
+          href="/kontakt"
+          className="inline-block bg-amber-700 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-amber-800 transition shadow-lg"
+        >
+          Podziel się swoją historią
+        </Link>
 
-            <a
-              href="/galeria"
-              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-xl"
-            >
-
-              <h2 className="text-2xl font-bold text-green-900">
-                📷 Galeria
-              </h2>
-
-              <p className="mt-4 text-stone-700">
-                Fotografie miejsc, dokumenty i obrazy
-                dawnego oraz współczesnego Krzekotowa.
-              </p>
-
-            </a>
+      </section>
 
 
+      {/* Zaproszenie */}
+      <section className="max-w-4xl mx-auto px-6 pb-12">
 
-            <a
-              href="/monografia"
-              className="rounded-2xl bg-amber-50 p-8 shadow hover:shadow-xl"
-            >
+        <div className="bg-white/90 rounded-2xl shadow-md p-8 border border-green-200">
 
-              <h2 className="text-2xl font-bold text-green-900">
-                📖 Monografia
-              </h2>
-
-              <p className="mt-4 text-stone-700">
-                Rozbudowana historia miejscowości,
-                mieszkańców i wydarzeń.
-              </p>
-
-            </a>
+          <h2 className="text-3xl font-bold text-amber-800 text-center mb-6">
+            Szukamy śladów przeszłości
+          </h2>
 
 
-          </div>
-
-        </section>
-
-
-
-        {/* Hasło końcowe */}
-
-        <section className="bg-green-900 py-12 text-center">
-
-          <p className="text-3xl italic text-amber-100">
-            Ocalić przeszłość. Budować pamięć.
+          <p className="text-lg leading-relaxed text-center">
+            Nie tylko zdjęcia i dokumenty tworzą historię miejsca.
           </p>
 
-        </section>
+
+          <p className="text-lg leading-relaxed text-center mt-4">
+            Czasem historię opowiadają przedmioty, które przez lata
+            towarzyszyły mieszkańcom Krzekotowa.
+          </p>
 
 
-      </main>
+          <p className="text-lg leading-relaxed text-center mt-4">
+            Stary klucz, narzędzie używane w gospodarstwie, książka
+            z rodzinną dedykacją, pamiątka przechowywana od pokoleń
+            albo zwykły przedmiot codziennego użytku – każdy z nich
+            może kryć własną opowieść.
+          </p>
 
 
-      <Footer />
+          <p className="mt-6 text-center text-lg font-bold text-green-900">
+            Masz zdjęcie, dokument, przedmiot lub wspomnienie związane
+            z Krzekotowem?
+            <br />
+            Pomóż zachować je dla przyszłych pokoleń.
+          </p>
 
-    </>
+        </div>
+
+      </section>
+
+    </main>
   );
 }

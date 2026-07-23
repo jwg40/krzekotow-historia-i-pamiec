@@ -1,183 +1,140 @@
-import Header from "../Header";
-import Footer from "../Footer";
+import Image from "next/image";
+
+const wydarzenia = [
+  {
+    rok: "1263",
+    tytul: "Pierwsza wzmianka o Crecotowo",
+    tekst:
+      "Najstarszy znany zapis nazwy miejscowości. Krzekotów istniał już w średniowieczu jako niewielka osada związana z rolnictwem i gospodarką leśną.",
+    zdjecie: "/images/historia/mapa-krzekotow.jpg",
+  },
+  {
+    rok: "XIII–XVI wiek",
+    tytul: "Osada wśród lasów",
+    tekst:
+      "Przez kolejne stulecia życie mieszkańców wyznaczały pola, lasy i bliskość Głogowa. Lasy dostarczały drewna i innych surowców.",
+  },
+  {
+    rok: "1582",
+    tytul: "Powstanie Groß Vorwerk",
+    tekst:
+      "Na terenach należących do miasta Głogowa powstał Wielki Folwark. Od tego momentu rozwój miejscowości został związany z dużym gospodarstwem rolnym.",
+  },
+  {
+    rok: "XVII–XVIII wiek",
+    tytul: "Życie wokół folwarku",
+    tekst:
+      "Groß Vorwerk stał się ważnym gospodarstwem dostarczającym żywność dla Głogowa. Codzienność mieszkańców wyznaczała praca na roli.",
+  },
+  {
+    rok: "1742",
+    tytul: "Śląsk pod panowaniem Prus",
+    tekst:
+      "Zmiana granic państwowych przyniosła nowe władze i administrację, jednak życie mieszkańców nadal opierało się na pracy w gospodarstwie.",
+  },
+  {
+    rok: "XIX wiek",
+    tytul: "Rozwój majątku",
+    tekst:
+      "Groß Vorwerk stał się nowoczesnym majątkiem ziemskim. Powstawały stajnie, obory, spichlerze i budynki mieszkalne.",
+  },
+  {
+    rok: "1890–1914",
+    tytul: "Największy rozwój Groß Vorwerk",
+    tekst:
+      "Majątek osiągnął najwyższy poziom organizacji. Z historią miejscowości szczególnie związana była rodzina Pfarr.",
+  },
+  {
+    rok: "1914–1918",
+    tytul: "I wojna światowa",
+    tekst:
+      "Powołania do armii i brak pracowników zmieniły życie mieszkańców. Gospodarstwo nadal jednak funkcjonowało.",
+  },
+  {
+    rok: "1939–1945",
+    tytul: "II wojna światowa",
+    tekst:
+      "Wojna zakończyła świat dawnego Groß Vorwerk. Mieszkańcy odczuli skutki mobilizacji i gospodarki wojennej.",
+  },
+  {
+    rok: "1945",
+    tytul: "Walki o Głogów",
+    tekst:
+      "W rejonie Krzekotowa i Wilkowa doszło do starcia z niemiecką grupą zwiadowczą próbującą wydostać się z okrążonego Głogowa.",
+  },
+  {
+    rok: "1945",
+    tytul: "Narodziny polskiego Krzekotowa",
+    tekst:
+      "Miejscowość otrzymała polską nazwę. Przybyli pierwsi polscy mieszkańcy, którzy rozpoczęli tworzenie nowej społeczności.",
+  },
+  {
+    rok: "Po 1989",
+    tytul: "Nowoczesny Krzekotów",
+    tekst:
+      "Rozwój samorządności, inwestycje i działalność mieszkańców stworzyły współczesny obraz miejscowości.",
+  },
+];
 
 export default function Historia() {
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-amber-50 px-6 py-12 text-stone-800">
 
-      <main className="min-h-screen bg-stone-100 py-12">
+      <section className="mx-auto max-w-4xl">
 
-        <div className="mx-auto max-w-5xl px-6">
+        <h1 className="mb-4 text-center text-4xl font-bold text-amber-800">
+          Historia Krzekotowa
+        </h1>
 
+        <p className="mb-12 text-center text-lg">
+          Oś czasu miejscowości – od średniowiecznego Crecotowo
+          do współczesnego Krzekotowa.
+        </p>
 
-          <h1 className="mb-8 text-center text-4xl font-bold text-stone-800">
-            Historia Krzekotowa
-          </h1>
 
+        <div className="relative border-l-4 border-amber-700">
 
-          <p className="mb-10 text-center text-lg text-stone-600">
-            Miejsce, ludzie i wydarzenia, które tworzyły historię Krzekotowa.
-            Archiwum będzie rozwijane na podstawie dokumentów,
-            map, fotografii i wspomnień mieszkańców.
-          </p>
+          {wydarzenia.map((item, index) => (
 
+            <article
+              key={index}
+              className="mb-12 ml-8 rounded-xl bg-white p-6 shadow-md"
+            >
 
+              <div className="absolute -ml-[46px] mt-2 h-6 w-6 rounded-full bg-amber-700"></div>
 
-          <section className="mb-10 rounded-xl bg-white p-8 shadow">
+              <h2 className="text-2xl font-bold text-amber-800">
+                {item.rok}
+              </h2>
 
-            <h2 className="mb-4 text-2xl font-bold text-stone-800">
-              Najdawniejsze dzieje
-            </h2>
+              <h3 className="mt-2 text-xl font-semibold">
+                {item.tytul}
+              </h3>
 
-            <p className="text-stone-700 leading-relaxed">
-              Najstarsze dzieje Krzekotowa związane są z historią osadnictwa
-              oraz przemianami zachodzącymi na tych terenach przez kolejne
-              stulecia.
+              <p className="mt-3 leading-relaxed">
+                {item.tekst}
+              </p>
 
-              <br /><br />
+              {item.zdjecie && (
+                <div className="mt-5">
+                  <Image
+                    src={item.zdjecie}
+                    width={700}
+                    height={400}
+                    alt={item.tytul}
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
 
-              Obraz dawnej miejscowości odtwarzamy na podstawie map,
-              dokumentów oraz zachowanych śladów w terenie.
+            </article>
 
-              <br /><br />
-
-              Ta część archiwum będzie stopniowo uzupełniana
-              wraz z odkrywaniem kolejnych źródeł.
-            </p>
-
-          </section>
-
-
-
-
-          <section className="mb-10 rounded-xl bg-white p-8 shadow">
-
-            <h2 className="mb-4 text-2xl font-bold text-stone-800">
-              Krzekotów przed 1945 rokiem
-            </h2>
-
-
-            <img
-              src="/images/fotografie/stara-brama-swietlica.jpg"
-              alt="Stara brama dawnego Krzekotowa"
-              className="mb-6 w-full rounded-xl"
-            />
-
-
-            <p className="text-stone-700 leading-relaxed">
-              Przed 1945 rokiem Krzekotów był miejscowością z własną
-              zabudową, gospodarstwami oraz społecznością mieszkańców.
-
-              <br /><br />
-
-              Zachowana fotografia starej bramy przedstawia miejsce,
-              które istnieje również współcześnie. Jest to wyjątkowy ślad
-              pokazujący ciągłość miejsca pomiędzy dawnym i obecnym Krzekotowem.
-
-              <br /><br />
-
-              Do tego okresu należą również zachowane fotografie
-              historycznego słupka z inicjałami.
-            </p>
-
-          </section>
-
-
-
-
-          <section className="mb-10 rounded-xl bg-white p-8 shadow">
-
-            <h2 className="mb-4 text-2xl font-bold text-stone-800">
-              II wojna światowa i rok 1945
-            </h2>
-
-
-            <img
-              src="/images/fotografie/vmapa-natarcie-1945.jpg"
-              alt="Mapa działań wojennych w 1945 roku"
-              className="mb-6 w-full rounded-xl"
-            />
-
-
-            <p className="text-stone-700 leading-relaxed">
-              Okres II wojny światowej oraz rok 1945 były czasem
-              przełomowych wydarzeń.
-
-              <br /><br />
-
-              Zakończenie wojny przyniosło zmiany granic, administracji
-              oraz całkowitą zmianę sytuacji mieszkańców.
-
-              <br /><br />
-
-              Zachowane mapy pomagają odtworzyć wydarzenia związane
-              z tym trudnym okresem.
-            </p>
-
-          </section>
-
-
-
-
-          <section className="mb-10 rounded-xl bg-white p-8 shadow">
-
-            <h2 className="mb-4 text-2xl font-bold text-stone-800">
-              Krzekotów po wojnie
-            </h2>
-
-            <p className="text-stone-700 leading-relaxed">
-              Po 1945 roku rozpoczął się nowy etap historii miejscowości.
-
-              <br /><br />
-
-              Nowi mieszkańcy tworzyli społeczność, odbudowywali gospodarstwa
-              i kształtowali powojenny obraz Krzekotowa.
-
-              <br /><br />
-
-              Ta część będzie uzupełniana o wspomnienia mieszkańców
-              oraz dokumenty rodzinne.
-            </p>
-
-          </section>
-
-
-
-
-          <section className="mb-10 rounded-xl bg-white p-8 shadow">
-
-            <h2 className="mb-4 text-2xl font-bold text-stone-800">
-              Krzekotów współczesny
-            </h2>
-
-
-            <img
-              src="/images/fotografie/krzekotow-wita.jpg"
-              alt="Tablica miejscowości Krzekotów"
-              className="mb-6 w-full rounded-xl"
-            />
-
-
-            <p className="text-stone-700 leading-relaxed">
-              Dzisiejszy Krzekotów zachowuje pamięć o swojej historii,
-              jednocześnie tworząc nowy rozdział życia miejscowości.
-
-              <br /><br />
-
-              Fotografie, wydarzenia i wspólne działania mieszkańców
-              pokazują, że historia Krzekotowa nadal trwa.
-            </p>
-
-          </section>
-
+          ))}
 
         </div>
 
-      </main>
+      </section>
 
-      <Footer />
-
-    </>
+    </main>
   );
 }

@@ -1,77 +1,69 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
-    <header className="bg-[#4B5D2A] text-white">
+    <header className="bg-green-100 border-b border-green-200 shadow-sm">
 
-      <div className="mx-auto max-w-6xl px-6 py-6">
+      <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between">
 
-        <div className="flex flex-col items-center gap-5">
+        {/* Logo / nazwa projektu */}
+        <Link href="/" className="mb-4 md:mb-0">
+          <div className="text-2xl font-extrabold text-amber-800 tracking-wide">
+            ARCHIWUM KRZEKOTOWA
+          </div>
 
-          <a href="/" className="text-center">
-
-            <div className="text-4xl mb-2">
-              🌿
-            </div>
-
-            <h1 className="text-4xl font-bold tracking-wide">
-              KRZEKOTÓW
-            </h1>
-
-            <p className="mt-1 text-xl text-[#F2C14E]">
-              Historia i Pamięć
-            </p>
-
-            <p className="mt-2 text-sm italic text-stone-100">
-              Ocalić przeszłość. Budować pamięć.
-            </p>
-
-          </a>
+          <div className="text-sm text-green-900 font-medium">
+            miejsce pamięci mieszkańców
+          </div>
+        </Link>
 
 
-          <nav className="flex flex-wrap justify-center gap-5 text-sm">
+        {/* Menu */}
+        <nav className="flex flex-wrap gap-5 text-green-900 font-semibold">
 
-            <a href="/" className="hover:text-[#F2C14E]">
-              Start
-            </a>
+          <Link
+            href="/"
+            className="hover:text-amber-700 transition"
+          >
+            Start
+          </Link>
 
-            <a href="/historia" className="hover:text-[#F2C14E]">
-              Historia
-            </a>
+          <Link
+            href="/os-czasu"
+            className="hover:text-amber-700 transition"
+          >
+            Oś czasu
+          </Link>
 
-            <a href="/galeria" className="hover:text-[#F2C14E]">
-              Galeria
-            </a>
+          <Link
+            href="/galeria"
+            className="hover:text-amber-700 transition"
+          >
+            Galeria
+          </Link>
 
-            <a href="/dokumenty" className="hover:text-[#F2C14E]">
-              Dokumenty
-            </a>
+          <Link
+            href="/mapy"
+            className="hover:text-amber-700 transition"
+          >
+            Mapy
+          </Link>
 
-            <a href="/mapy" className="hover:text-[#F2C14E]">
-              Mapy
-            </a>
+          <Link
+            href="/kgw"
+            className="hover:text-amber-700 transition"
+          >
+            KGW Żurawianki
+          </Link>
 
-            <a href="/kalendarium" className="hover:text-[#F2C14E]">
-              Kalendarium
-            </a>
+          <Link
+            href="/kontakt"
+            className="hover:text-amber-700 transition"
+          >
+            Kontakt
+          </Link>
 
-            <a href="/mieszkancy" className="hover:text-[#F2C14E]">
-              Mieszkańcy
-            </a>
-
-            <a href="/zycie-wspolczesne" className="hover:text-[#F2C14E]">
-              Życie współczesne
-            </a>
-
-            <a href="/kgw" className="text-[#F2C14E] hover:text-white font-semibold">
-              KGW Żurawianki
-            </a>
-
-            <a href="/kontakt" className="hover:text-[#F2C14E]">
-              Kontakt
-            </a>
-
-          </nav>
-
-        </div>
+        </nav>
 
       </div>
 

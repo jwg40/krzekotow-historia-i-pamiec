@@ -1,193 +1,125 @@
-import Header from "../Header";
-import Footer from "../Footer";
+"use client";
 
-export default function Galeria() {
+import { useState } from "react";
 
-  const sekcje = [
+export default function GaleriaPage() {
+
+  const [otwarte, setOtwarte] = useState<string | null>(null);
+
+
+  const zdjecia = [
     {
-      tytul: "Krzekotów przed 1945 rokiem – zachowane ślady",
-      opis:
-        "Fotografie i materialne ślady dawnej miejscowości zachowane do dziś.",
-      zdjecia: [
-        {
-          plik: "stara-brama-swietlica.jpg",
-          opis:
-            "Stara brama dawnego Krzekotowa – świadek przedwojennej zabudowy miejscowości.",
-        },
-        {
-          plik: "inicjaly-slup-1.jpg",
-          opis:
-            "Historyczny słupek z zachowanymi inicjałami – jeden z materialnych śladów dawnego Krzekotowa.",
-        },
-        {
-          plik: "inicjaly-slup-2.jpg",
-          opis:
-            "Zbliżenie zachowanych znaków i napisów na historycznym słupku.",
-        },
-      ],
+      src: "/images/fotografie/krzekotow-1.jpg",
+      tytul: "Tablica miejscowości",
     },
-
-
     {
-      tytul: "Krzekotów w okresie wojny i zmian 1945 roku",
-      opis:
-        "Materiały związane z końcem wojny oraz okresem przemian mieszkańców i miejscowości.",
-      zdjecia: [
-        {
-          plik: "lista-1945.jpg",
-          opis:
-            "Dokument związany z mieszkańcami Krzekotowa z okresu powojennego.",
-        },
-        {
-          plik: "vmapa-natarcie-1945.jpg",
-          opis:
-            "Mapa działań wojennych w rejonie Krzekotowa w 1945 roku.",
-        },
-      ],
+      src: "/images/fotografie/stara-brama-swietlica.jpg",
+      tytul: "Stara brama i świetlica",
     },
-
-
     {
-      tytul: "Krzekotów na mapach",
-      opis:
-        "Mapy przedstawiające miejscowość w różnych okresach historycznych.",
-      zdjecia: [
-        {
-          plik: "mapa-krzekotowa.jpg",
-          opis:
-            "Mapa przedstawiająca dawny układ miejscowości.",
-        },
-        {
-          plik: "mapa-dzis.jpg",
-          opis:
-            "Współczesna mapa Krzekotowa.",
-        },
-      ],
+      src: "/images/fotografie/stodola-dzis.jpg",
+      tytul: "Stodoła",
     },
-
-
     {
-      tytul: "Krzekotów współczesny",
-      opis:
-        "Widoki miejscowości oraz obiekty związane z jej obecnym życiem.",
-      zdjecia: [
-        {
-          plik: "krzekotow-wita.jpg",
-          opis:
-            "Tablica miejscowości Krzekotów – współczesny znak lokalnej tożsamości.",
-        },
-        {
-          plik: "swietlica-nowa.jpg",
-          opis:
-            "Nowa świetlica wiejska – miejsce współczesnego życia mieszkańców.",
-        },
-        {
-          plik: "stodola-dzis.jpg",
-          opis:
-            "Stodoła – zachowany element krajobrazu miejscowości.",
-        },
-        {
-          plik: "krzekotow-1.jpg",
-          opis:
-            "Krzekotów współcześnie.",
-        },
-      ],
+      src: "/images/fotografie/swietlica-nowa.jpg",
+      tytul: "Nowa świetlica",
     },
-
-
     {
-      tytul: "Życie mieszkańców i wydarzenia",
-      opis:
-        "Miejsce na fotografie spotkań, uroczystości i wydarzeń lokalnych.",
-      zdjecia: [],
+      src: "/images/fotografie/inicjaly-slup-1.jpg",
+      tytul: "Ślad dawnych mieszkańców",
+    },
+    {
+      src: "/images/fotografie/inicjaly-slup-2.jpg",
+      tytul: "Inicjały – szczegół",
+    },
+    {
+      src: "/images/fotografie/lista-1945.jpg",
+      tytul: "Dokument z 1945 roku",
+    },
+    {
+      src: "/images/fotografie/mapa-dzis.jpg",
+      tytul: "Mapa współczesna",
     },
   ];
 
 
   return (
-    <>
-      <Header />
-
-      <main className="min-h-screen bg-stone-100 py-12">
-
-        <div className="mx-auto max-w-6xl px-6">
+    <main className="min-h-screen bg-[#F8F5EF]">
 
 
-          <h1 className="mb-4 text-center text-4xl font-bold text-stone-800">
-            Galeria Krzekotowa
-          </h1>
+      <section className="bg-white py-16 text-center">
 
+        <h1 className="text-5xl font-bold text-stone-800">
+          Fotografie
+        </h1>
 
-          <p className="mb-12 text-center text-stone-600">
-            Fotografie dokumentujące historię, miejsca i życie mieszkańców Krzekotowa.
-          </p>
+        <p className="mt-5 text-xl text-stone-600">
+          Obrazy miejsc i śladów historii.
+        </p>
 
-
-          {sekcje.map((sekcja) => (
-
-            <section key={sekcja.tytul} className="mb-14">
-
-
-              <h2 className="mb-2 text-3xl font-bold text-stone-800">
-                {sekcja.tytul}
-              </h2>
-
-
-              <p className="mb-6 text-stone-600">
-                {sekcja.opis}
-              </p>
+      </section>
 
 
 
-              {sekcja.zdjecia.length > 0 ? (
-
-                <div className="grid gap-8 md:grid-cols-3">
-
-                  {sekcja.zdjecia.map((zdjecie) => (
-
-                    <div
-                      key={zdjecie.plik}
-                      className="overflow-hidden rounded-xl bg-white shadow"
-                    >
-
-                      <img
-                        src={`/images/fotografie/${zdjecie.plik}`}
-                        alt={zdjecie.opis}
-                        className="h-64 w-full object-cover"
-                      />
+      <section className="mx-auto max-w-7xl px-6 py-16">
 
 
-                      <p className="p-4 text-center text-stone-700">
-                        {zdjecie.opis}
-                      </p>
-
-                    </div>
-
-                  ))}
-
-                </div>
-
-              ) : (
-
-                <div className="rounded-xl bg-white p-8 text-center text-stone-500 shadow">
-                  Wkrótce pojawią się tutaj kolejne fotografie.
-                </div>
-
-              )}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
 
-            </section>
+          {zdjecia.map((foto) => (
+
+            <div
+              key={foto.src}
+              onClick={() => setOtwarte(foto.src)}
+              className="cursor-pointer overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            >
+
+              <img
+                src={foto.src}
+                alt={foto.tytul}
+                className="h-72 w-full object-cover"
+              />
+
+              <div className="p-5">
+
+                <h2 className="text-xl font-bold text-stone-800">
+                  {foto.tytul}
+                </h2>
+
+              </div>
+
+
+            </div>
 
           ))}
 
 
         </div>
 
-      </main>
+
+      </section>
 
 
-      <Footer />
 
-    </>
+      {otwarte && (
+
+        <div
+          onClick={() => setOtwarte(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6"
+        >
+
+          <img
+            src={otwarte}
+            alt="Powiększone zdjęcie"
+            className="max-h-[90vh] max-w-[95vw] rounded-2xl"
+          />
+
+        </div>
+
+      )}
+
+
+    </main>
   );
 }

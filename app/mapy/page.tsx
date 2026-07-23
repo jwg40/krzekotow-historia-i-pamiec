@@ -1,134 +1,99 @@
-"use client";
-
-import { useState } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-
-export default function Mapy() {
-
-  const [openImage, setOpenImage] = useState<string | null>(null);
-
-  const mapy = [
-    {
-      tytul: "Dawny układ Krzekotowa",
-      opis:
-        "Najstarsza zachowana mapa pokazująca dawny układ miejscowości i jej otoczenia.",
-      plik: "mapa-krzekotowa.jpg",
-    },
-
-    {
-      tytul: "Krzekotów w czasie wojny – 1945 rok",
-      opis:
-        "Mapa związana z działaniami wojennymi w rejonie Krzekotowa pod koniec II wojny światowej.",
-      plik: "vmapa-natarcie-1945.jpg",
-    },
-
-    {
-      tytul: "Krzekotów współczesny",
-      opis:
-        "Aktualny układ miejscowości, dróg, gospodarstw i miejsc ważnych dla mieszkańców.",
-      plik: "mapa-dzis.jpg",
-    },
-  ];
-
-
+export default function MapyPage() {
   return (
-    <>
-      <Header />
-
-      <main className="bg-[#FAF6ED] min-h-screen">
+    <main className="min-h-screen bg-[#F8F5EF]">
 
 
-        <section className="bg-gradient-to-b from-[#EED9A6] to-[#FAF6ED] py-20">
+      <section className="bg-white py-16 text-center">
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+        <h1 className="text-5xl font-bold text-stone-800">
+          Mapy
+        </h1>
 
-            <h1 className="text-5xl font-bold text-[#3F4A24]">
-              Mapy Krzekotowa
-            </h1>
+        <p className="mt-5 text-xl text-stone-600">
+          Zmiany miejsca na przestrzeni dziejów
+        </p>
 
-            <p className="mt-6 text-xl text-stone-700">
-              Historia miejscowości zapisana na mapach.
-              Od dawnych śladów po współczesny obraz Krzekotowa.
+      </section>
+
+
+      <section className="mx-auto max-w-6xl px-6 py-16 space-y-16">
+
+
+        <div className="overflow-hidden rounded-3xl bg-white shadow-md">
+
+          <img
+            src="/images/mapa-krzekotow.jpg"
+            alt="Dawny Krzekotów"
+            className="w-full"
+          />
+
+          <div className="p-8">
+
+            <h2 className="text-3xl font-bold text-stone-800">
+              Dawny Krzekotów
+            </h2>
+
+            <p className="mt-4 text-lg leading-8 text-stone-700">
+              Historyczna mapa przedstawiająca dawny układ miejscowości
+              oraz zabudowę z wcześniejszego okresu.
             </p>
 
           </div>
 
-        </section>
+        </div>
 
 
 
-        <section className="py-16">
+        <div className="overflow-hidden rounded-3xl bg-white shadow-md">
 
-          <div className="mx-auto max-w-6xl px-6 space-y-10">
+          <img
+            src="/images/fotografie/vmapa-natarcie-1945.jpg"
+            alt="Mapa działań 1945"
+            className="w-full"
+          />
 
+          <div className="p-8">
 
-            {mapy.map((mapa) => (
+            <h2 className="text-3xl font-bold text-stone-800">
+              Rok 1945
+            </h2>
 
-              <section
-                key={mapa.plik}
-                className="rounded-2xl bg-white p-8 shadow"
-              >
-
-                <h2 className="text-3xl font-bold text-[#B07A16]">
-                  {mapa.tytul}
-                </h2>
-
-
-                <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-                  {mapa.opis}
-                </p>
-
-
-                <img
-                  src={`/images/fotografie/${mapa.plik}`}
-                  alt={mapa.tytul}
-                  onClick={() =>
-                    setOpenImage(`/images/fotografie/${mapa.plik}`)
-                  }
-                  className="mt-6 w-full rounded-xl cursor-pointer hover:scale-[1.02] transition"
-                />
-
-
-                <p className="mt-4 text-sm text-stone-500 text-center">
-                  Kliknij mapę, aby powiększyć
-                </p>
-
-
-              </section>
-
-            ))}
-
+            <p className="mt-4 text-lg leading-8 text-stone-700">
+              Mapa związana z wydarzeniami końca II wojny światowej
+              w rejonie miejscowości.
+            </p>
 
           </div>
 
-        </section>
+        </div>
 
 
-        {openImage && (
 
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
-            onClick={() => setOpenImage(null)}
-          >
+        <div className="overflow-hidden rounded-3xl bg-white shadow-md">
 
-            <img
-              src={openImage}
-              alt="Powiększona mapa"
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-[90vh] max-w-[95vw] rounded-xl"
-            />
+          <img
+            src="/images/fotografie/mapa-dzis.jpg"
+            alt="Współczesny Krzekotów"
+            className="w-full"
+          />
+
+          <div className="p-8">
+
+            <h2 className="text-3xl font-bold text-stone-800">
+              Krzekotów współcześnie
+            </h2>
+
+            <p className="mt-4 text-lg leading-8 text-stone-700">
+              Współczesny obraz miejscowości i jej obecny układ.
+            </p>
 
           </div>
 
-        )}
+        </div>
 
 
-      </main>
+      </section>
 
-
-      <Footer />
-
-    </>
+    </main>
   );
 }

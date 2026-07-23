@@ -1,116 +1,79 @@
-import Header from "../Header";
-import Footer from "../Footer";
+export default function MieszkancyPage() {
+  const osoby = [
+    {
+      nazwisko: "Pierwsi osadnicy",
+      opis:
+        "Rodziny, które przybyły do Krzekotowa po zakończeniu II wojny światowej i rozpoczęły budowę nowego życia.",
+    },
+    {
+      nazwisko: "Najstarsi mieszkańcy",
+      opis:
+        "Osoby pamiętające pierwsze powojenne lata oraz rozwój miejscowości.",
+    },
+    {
+      nazwisko: "Rolnicy",
+      opis:
+        "Ludzie, którzy przez dziesięciolecia tworzyli gospodarczy charakter Krzekotowa.",
+    },
+    {
+      nazwisko: "Społecznicy",
+      opis:
+        "Mieszkańcy angażujący się w życie wsi, organizacje i wydarzenia lokalne.",
+    },
+    {
+      nazwisko: "Młode pokolenie",
+      opis:
+        "Ci, którzy dziś kontynuują historię Krzekotowa i dbają o jego przyszłość.",
+    },
+    {
+      nazwisko: "Wspomnienia",
+      opis:
+        "Relacje, fotografie i rodzinne historie przekazywane z pokolenia na pokolenie.",
+    },
+  ];
 
-export default function Mieszkancy() {
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-amber-50">
 
-      <main className="bg-stone-50 min-h-screen">
+      <section className="bg-green-900 py-20 text-center">
 
-        <section className="bg-gradient-to-b from-amber-100 to-white py-20">
+        <h1 className="text-5xl font-bold text-white">
+          Mieszkańcy Krzekotowa
+        </h1>
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+        <p className="mt-4 text-xl text-amber-100">
+          Ludzie, którzy tworzyli historię miejscowości
+        </p>
 
-            <h1 className="text-5xl font-bold text-stone-800">
-              Mieszkańcy Krzekotowa
-            </h1>
+      </section>
 
-            <p className="mt-6 text-xl text-stone-600">
-              Ludzie, rodziny i wspomnienia tworzące historię miejscowości.
-            </p>
+      <section className="mx-auto max-w-6xl px-6 py-16">
 
-          </div>
+        <div className="grid gap-8 md:grid-cols-2">
 
-        </section>
+          {osoby.map((osoba, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-green-800 text-4xl text-white">
+                👤
+              </div>
 
-
-        <section className="py-16">
-
-          <div className="mx-auto max-w-6xl px-6 grid gap-8 md:grid-cols-3">
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-2xl font-bold text-stone-800">
-                Rodziny Krzekotowa
+              <h2 className="text-2xl font-bold text-green-900">
+                {osoba.nazwisko}
               </h2>
 
-              <p className="mt-4 text-stone-600 leading-relaxed">
-                Historie rodzin związanych z Krzekotowem,
-                ich losy, wspomnienia oraz ślady pozostawione
-                w historii miejscowości.
+              <p className="mt-4 leading-7 text-stone-700">
+                {osoba.opis}
               </p>
-
             </div>
+          ))}
 
+        </div>
 
-            <div className="rounded-2xl bg-white p-8 shadow">
+      </section>
 
-              <h2 className="text-2xl font-bold text-stone-800">
-                Wspomnienia mieszkańców
-              </h2>
-
-              <p className="mt-4 text-stone-600 leading-relaxed">
-                Opowieści, wspomnienia i wydarzenia przekazywane
-                przez kolejne pokolenia mieszkańców Krzekotowa.
-              </p>
-
-            </div>
-
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-2xl font-bold text-stone-800">
-                Fotografie rodzinne
-              </h2>
-
-              <p className="mt-4 text-stone-600 leading-relaxed">
-                Archiwalne fotografie rodzinne oraz zdjęcia
-                dokumentujące życie lokalnej społeczności.
-              </p>
-
-            </div>
-
-
-          </div>
-
-        </section>
-
-
-        <section className="pb-16">
-
-          <div className="mx-auto max-w-5xl px-6">
-
-            <div className="rounded-2xl bg-white p-8 shadow">
-
-              <h2 className="text-3xl font-bold text-stone-800">
-                Zachowanie pamięci
-              </h2>
-
-              <p className="mt-5 text-lg text-stone-700 leading-relaxed">
-                Największą wartością każdej miejscowości są jej mieszkańcy.
-                To ich praca, codzienne życie i historie rodzinne tworzą
-                prawdziwe dziedzictwo Krzekotowa.
-              </p>
-
-              <p className="mt-5 text-lg text-stone-700 leading-relaxed">
-                W tej części archiwum będą gromadzone wspomnienia,
-                fotografie i historie rodzin związanych z Krzekotowem,
-                z zachowaniem szacunku dla prywatności i obowiązujących zasad.
-              </p>
-
-            </div>
-
-          </div>
-
-        </section>
-
-
-      </main>
-
-      <Footer />
-
-    </>
+    </main>
   );
 }

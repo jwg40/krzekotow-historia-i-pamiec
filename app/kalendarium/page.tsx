@@ -1,89 +1,87 @@
-import Header from "../Header";
-import Footer from "../Footer";
-
-export default function Kalendarium() {
+export default function KalendariumPage() {
   const wydarzenia = [
     {
-      tytul: "Dawne dzieje",
-      opis:
-        "Początki historii Krzekotowa związane są z rozwojem osadnictwa na tych terenach. Szczegółowe informacje będą uzupełniane na podstawie dokumentów, map i opracowań historycznych.",
+      rok: "1263",
+      tytul: "Pierwsza wzmianka",
+      opis: "W dokumencie pojawia się nazwa Crecotowo.",
     },
     {
-      tytul: "Krzekotów przed 1945 rokiem",
-      opis:
-        "Okres przedwojenny to czas funkcjonowania dawnej społeczności, gospodarstw oraz lokalnej zabudowy. Zachowane mapy i fotografie pozwalają odtworzyć wygląd miejscowości z tego okresu.",
+      rok: "XIV–XV w.",
+      tytul: "Rozwój osady",
+      opis: "Krzekotów funkcjonuje jako niewielka osada rolnicza.",
     },
     {
-      tytul: "1945 rok – czas przełomu",
-      opis:
-        "Rok 1945 przyniósł przejście frontu, zakończenie wojny oraz ogromne zmiany społeczne. Był to jeden z najważniejszych momentów w historii Krzekotowa.",
+      rok: "XVIII–XIX w.",
+      tytul: "Groß Vorwerk",
+      opis: "Powstaje duży folwark będący częścią okolicznych dóbr ziemskich.",
     },
     {
-      tytul: "Okres powojenny",
-      opis:
-        "Po wojnie rozpoczął się nowy etap życia miejscowości. Przybyli nowi mieszkańcy, odbudowywano gospodarstwa i tworzono nową społeczność.",
+      rok: "1939",
+      tytul: "II wojna światowa",
+      opis: "Mieszkańcy zostają objęci wydarzeniami wojennymi.",
     },
     {
-      tytul: "Współczesny Krzekotów",
-      opis:
-        "Dzisiejszy Krzekotów zachowuje ślady swojej historii. Fotografie, dokumenty i wspomnienia mieszkańców pozwalają zachować pamięć o kolejnych pokoleniach.",
+      rok: "1945",
+      tytul: "Zmiana granic",
+      opis: "Wieś przechodzi pod administrację polską i otrzymuje nazwę Krzekotów.",
+    },
+    {
+      rok: "1945–1950",
+      tytul: "Nowi mieszkańcy",
+      opis: "Do wsi przybywają polscy osadnicy z różnych regionów kraju.",
+    },
+    {
+      rok: "XXI wiek",
+      tytul: "Cyfrowe Archiwum",
+      opis: "Powstaje projekt dokumentujący historię Krzekotowa.",
     },
   ];
 
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-amber-50">
 
-      <main className="bg-stone-50 min-h-screen">
+      <section className="bg-green-900 py-20 text-center">
+        <h1 className="text-5xl font-bold text-white">
+          Kalendarium Krzekotowa
+        </h1>
 
-        <section className="bg-gradient-to-b from-amber-100 to-white py-20">
+        <p className="mt-5 text-xl text-amber-100">
+          Najważniejsze wydarzenia w dziejach miejscowości
+        </p>
+      </section>
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+      <section className="mx-auto max-w-5xl px-6 py-16">
 
-            <h1 className="text-5xl font-bold text-stone-800">
-              Kalendarium Krzekotowa
-            </h1>
+        <div className="border-l-4 border-green-800">
 
-            <p className="mt-6 text-xl text-stone-600">
-              Najważniejsze wydarzenia z historii miejscowości.
-            </p>
+          {wydarzenia.map((wpis, index) => (
+            <div key={index} className="relative mb-12 ml-8">
 
-          </div>
+              <div className="absolute -left-11 top-2 h-6 w-6 rounded-full border-4 border-green-800 bg-white"></div>
 
-        </section>
+              <div className="rounded-2xl bg-white p-8 shadow">
 
+                <span className="rounded-full bg-green-800 px-4 py-1 text-sm font-bold text-white">
+                  {wpis.rok}
+                </span>
 
-        <section className="py-16">
-
-          <div className="mx-auto max-w-5xl px-6 space-y-8">
-
-            {wydarzenia.map((wydarzenie) => (
-
-              <div
-                key={wydarzenie.tytul}
-                className="rounded-2xl bg-white p-8 shadow"
-              >
-
-                <h2 className="text-3xl font-bold text-amber-700">
-                  {wydarzenie.tytul}
+                <h2 className="mt-4 text-2xl font-bold text-green-900">
+                  {wpis.tytul}
                 </h2>
 
-                <p className="mt-4 text-lg text-stone-700 leading-relaxed">
-                  {wydarzenie.opis}
+                <p className="mt-4 leading-7 text-stone-700">
+                  {wpis.opis}
                 </p>
 
               </div>
 
-            ))}
+            </div>
+          ))}
 
-          </div>
+        </div>
 
-        </section>
+      </section>
 
-      </main>
-
-      <Footer />
-
-    </>
+    </main>
   );
 }

@@ -1,156 +1,89 @@
-"use client";
-
-import { useState } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-
-export default function Dokumenty() {
-
-  const [openImage, setOpenImage] = useState<string | null>(null);
-
-
+export default function DokumentyPage() {
   const dokumenty = [
     {
-      tytul: "Lista z 1945 roku",
-      opis:
-        "Dokument związany z historią mieszkańców Krzekotowa w okresie powojennym.",
-      plik: "lista-1945.jpg",
-      kategoria: "Rok 1945",
+      tytul: "Pierwsza wzmianka o Crecotowo",
+      rok: "1263",
+      opis: "Najstarszy znany dokument wspominający miejscowość.",
+    },
+    {
+      tytul: "Mapy katastralne",
+      rok: "XIX w.",
+      opis: "Historyczne mapy przedstawiające układ folwarku Groß Vorwerk.",
+    },
+    {
+      tytul: "Księgi adresowe",
+      rok: "1900–1945",
+      opis: "Spisy mieszkańców i właścicieli gospodarstw.",
+    },
+    {
+      tytul: "Dokumenty powojenne",
+      rok: "1945–1950",
+      opis: "Pierwsze polskie dokumenty dotyczące Krzekotowa.",
+    },
+    {
+      tytul: "Fotografie z opisami",
+      rok: "XX wiek",
+      opis: "Zdjęcia wraz z informacjami o osobach i miejscach.",
+    },
+    {
+      tytul: "Materiały współczesne",
+      rok: "XXI w.",
+      opis: "Dokumentacja działalności mieszkańców i organizacji.",
     },
   ];
 
-
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-amber-50">
 
+      <section className="bg-green-900 py-20 text-center">
+        <h1 className="text-5xl font-bold text-white">
+          Dokumenty
+        </h1>
 
-      <main className="bg-stone-50 min-h-screen">
+        <p className="mt-5 text-xl text-amber-100">
+          Archiwum dokumentów dotyczących Krzekotowa
+        </p>
+      </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-16">
 
-        <section className="bg-gradiento-to-b from-amber-100 to-white py-20">
+        <div className="grid gap-8 md:grid-cols-2">
 
-          <div className="mx-auto max-w-5xl px-6 text-center">
+          {dokumenty.map((dokument, index) => (
 
-            <h1 className="text-5xl font-bold text-stone-800">
-              Dokumenty Krzekotowa
-            </h1>
+            <div
+              key={index}
+              className="rounded-3xl bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+            >
 
-
-            <p className="mt-6 text-xl text-stone-600">
-              Zbiór dokumentów, zapisów i materiałów źródłowych
-              związanych z historią miejscowości.
-            </p>
-
-          </div>
-
-        </section>
-
-
-
-        <section className="py-16">
-
-          <div className="mx-auto max-w-6xl px-6">
-
-
-            <h2 className="mb-8 text-3xl font-bold text-stone-800">
-              Archiwum dokumentów
-            </h2>
-
-
-
-            <div className="grid gap-8 md:grid-cols-3">
-
-
-              {dokumenty.map((dokument) => (
-
-                <div
-                  key={dokument.plik}
-                  className="rounded-2xl bg-white p-6 shadow"
-                >
-
-
-                  <img
-                    src={`/images/fotografie/${dokument.plik}`}
-                    alt={dokument.tytul}
-                    onClick={() =>
-                      setOpenImage(`/images/fotografie/${dokument.plik}`)
-                    }
-                    className="w-full rounded-xl cursor-pointer hover:scale-105 transition"
-                  />
-
-
-                  <p className="mt-4 text-sm text-amber-700 font-semibold">
-                    {dokument.kategoria}
-                  </p>
-
-
-                  <h3 className="mt-2 text-2xl font-bold text-stone-800">
-                    {dokument.tytul}
-                  </h3>
-
-
-                  <p className="mt-3 text-stone-600 leading-relaxed">
-                    {dokument.opis}
-                  </p>
-
-
-                </div>
-
-              ))}
-
-
-
-              <div className="rounded-2xl bg-white p-8 shadow">
-
-
-                <h3 className="text-2xl font-bold text-stone-800">
-                  Kolejne dokumenty
-                </h3>
-
-
-                <p className="mt-4 text-stone-600 leading-relaxed">
-                  W tym miejscu będą dodawane kolejne skany,
-                  wykazy mieszkańców, kroniki oraz materiały archiwalne.
-                </p>
-
-
+              <div className="mb-5 text-5xl">
+                📄
               </div>
 
+              <div className="inline-block rounded-full bg-green-900 px-4 py-1 text-sm font-bold text-white">
+                {dokument.rok}
+              </div>
+
+              <h2 className="mt-5 text-2xl font-bold text-green-900">
+                {dokument.tytul}
+              </h2>
+
+              <p className="mt-4 leading-7 text-stone-700">
+                {dokument.opis}
+              </p>
+
+              <button className="mt-8 rounded-xl bg-green-900 px-6 py-3 font-semibold text-white transition hover:bg-green-800">
+                Otwórz dokument
+              </button>
 
             </div>
 
+          ))}
 
-          </div>
+        </div>
 
-        </section>
+      </section>
 
-
-
-        {openImage && (
-
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
-            onClick={() => setOpenImage(null)}
-          >
-
-            <img
-              src={openImage}
-              alt="Powiększony dokument"
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-[90vh] max-w-[95vw] rounded-xl"
-            />
-
-          </div>
-
-        )}
-
-
-      </main>
-
-
-      <Footer />
-
-    </>
+    </main>
   );
 }

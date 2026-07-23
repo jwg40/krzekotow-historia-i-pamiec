@@ -1,0 +1,61 @@
+export default function Statystyki() {
+  const dane = [
+    {
+      liczba: "1263",
+      opis: "Pierwsza wzmianka",
+    },
+    {
+      liczba: "760+",
+      opis: "Lat historii",
+    },
+    {
+      liczba: "250+",
+      opis: "Fotografii",
+    },
+    {
+      liczba: "80+",
+      opis: "Dokumentów",
+    },
+    {
+      liczba: "40+",
+      opis: "Map",
+    },
+    {
+      liczba: "1000+",
+      opis: "Nazwisk mieszkańców",
+    },
+  ];
+
+  return (
+    <section className="bg-stone-100 py-20">
+
+      <div className="mx-auto max-w-7xl px-6">
+
+        <h2 className="mb-14 text-center text-4xl font-bold text-green-900">
+          Archiwum w liczbach
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-6">
+
+          {dane.map((item, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-white p-8 text-center shadow-lg transition hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div className="text-4xl font-bold text-green-900">
+                {item.liczba}
+              </div>
+
+              <div className="mt-3 text-stone-600">
+                {item.opis}
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
