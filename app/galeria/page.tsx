@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+
 export default function GaleriaPage() {
 
   const [otwarte, setOtwarte] = useState<string | null>(null);
@@ -44,24 +45,25 @@ export default function GaleriaPage() {
 
 
   return (
+
     <main className="min-h-screen bg-[#F8F5EF]">
 
 
-      <section className="bg-white py-16 text-center">
+      <section className="py-16 text-center">
 
         <h1 className="text-5xl font-bold text-stone-800">
           Fotografie
         </h1>
 
         <p className="mt-5 text-xl text-stone-600">
-          Obrazy miejsc i śladów historii.
+          Obrazy miejsc i śladów historii Krzekotowa.
         </p>
 
       </section>
 
 
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 py-10">
 
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -80,6 +82,7 @@ export default function GaleriaPage() {
                 alt={foto.tytul}
                 className="h-72 w-full object-cover"
               />
+
 
               <div className="p-5">
 
@@ -121,5 +124,6 @@ export default function GaleriaPage() {
 
 
     </main>
+
   );
 }

@@ -1,0 +1,334 @@
+.container {
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+
+  background:
+    linear-gradient(
+      rgba(250,245,230,0.88),
+      rgba(250,245,230,0.88)
+    ),
+    url("/images/historia/stara-mapa-tlo.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color:#3b2a16;
+}
+
+
+
+.back {
+
+  display:inline-block;
+
+  margin-bottom:30px;
+
+  color:#704214;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+}
+
+
+
+
+.header {
+
+  max-width:1100px;
+
+  margin:auto;
+
+  text-align:center;
+
+  padding:50px 20px;
+
+  font-family:Georgia, "Times New Roman", serif;
+
+}
+
+
+
+
+.header h1 {
+
+  font-family:Georgia, "Times New Roman", serif;
+
+  font-size:48px;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  color:#4a2c12;
+
+  text-shadow:
+
+    1px 1px 0 rgba(255,255,255,.5),
+
+    0 4px 8px rgba(0,0,0,.25);
+
+  margin-bottom:25px;
+
+}
+
+
+
+
+.header p {
+
+  font-family:Georgia, "Times New Roman", serif;
+
+  font-size:24px;
+
+  font-style:italic;
+
+  font-weight:600;
+
+  line-height:1.8;
+
+  color:#4a2c12;
+
+  max-width:950px;
+
+  margin:15px auto;
+
+  letter-spacing:0.3px;
+
+}
+
+
+
+
+.intro {
+
+  max-width:1000px;
+
+  margin:50px auto;
+
+  padding:35px;
+
+  background:rgba(255,255,255,.75);
+
+  border-radius:10px;
+
+  text-align:center;
+
+}
+
+
+
+
+.timeline {
+
+  max-width:1200px;
+
+  margin:70px auto 50px;
+
+  display:grid;
+
+  grid-template-columns:repeat(5,1fr);
+
+  gap:25px;
+
+  position:relative;
+
+}
+
+
+
+
+.axis,
+.dot,
+.arrow {
+
+  display:none;
+
+}
+
+
+
+
+.chest {
+
+  text-align:center;
+
+  text-decoration:none;
+
+  color:#3b2a16;
+
+  transition:.3s;
+
+}
+
+
+
+.chest:hover {
+
+  transform:translateY(-8px);
+
+}
+
+
+
+
+.year {
+
+  font-size:28px;
+
+  font-weight:800;
+
+  color:#704214;
+
+  margin-bottom:18px;
+
+  text-align:center;
+
+}
+
+
+
+
+.chestImage {
+
+  width:220px;
+
+  height:170px;
+
+  object-fit:contain;
+
+  display:block;
+
+  margin:0 auto;
+
+  filter:drop-shadow(0 10px 15px rgba(0,0,0,.3));
+
+}
+
+
+
+
+.chest img {
+
+  max-width:100%;
+
+}
+
+
+
+
+.chest h2 {
+
+  font-family:Georgia, "Times New Roman", serif;
+
+  font-size:22px;
+
+  margin-top:20px;
+
+  color:#4a2c12;
+
+}
+
+
+
+
+.chest p {
+
+  font-family:Georgia, "Times New Roman", serif;
+
+  font-size:16px;
+
+  line-height:1.6;
+
+}
+
+
+
+
+.chest span {
+
+  display:block;
+
+  margin-top:15px;
+
+  font-weight:700;
+
+  color:#704214;
+
+}
+
+
+
+
+
+@media(max-width:1000px){
+
+
+.timeline {
+
+  grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.chestImage {
+
+  width:220px;
+
+  height:170px;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.timeline {
+
+  grid-template-columns:1fr;
+
+}
+
+
+
+.header h1 {
+
+  font-size:34px;
+
+}
+
+
+
+.header p {
+
+  font-size:18px;
+
+}
+
+
+
+.year {
+
+  font-size:24px;
+
+}
+
+
+
+.chestImage {
+
+  width:260px;
+
+  height:180px;
+
+}
+
+
+}

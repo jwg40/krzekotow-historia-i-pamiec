@@ -1,0 +1,275 @@
+.page {
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+
+  background:
+    linear-gradient(
+      rgba(244,232,204,.84),
+      rgba(244,232,204,.84)
+    ),
+    url("/images/historia/stara-mapa-tlo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+.kronika {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  background:
+    rgba(255,248,230,.92);
+
+  padding: 45px 55px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(80,55,20,.18);
+
+}
+
+
+/* nagłówek */
+
+.header {
+
+  text-align:center;
+
+  margin-bottom:45px;
+
+}
+
+
+.label {
+
+  font-family:Georgia,serif;
+
+  font-size:14px;
+
+  letter-spacing:3px;
+
+  color:#7a4b22;
+
+  margin-bottom:15px;
+
+}
+
+
+.header h1 {
+
+  margin:0;
+
+  font-family:Georgia,serif;
+
+  font-size:42px;
+
+  color:#4b2e14;
+
+}
+
+
+.date {
+
+  margin-top:12px;
+
+  font-size:20px;
+
+  color:#8a5a2b;
+
+  font-style:italic;
+
+}
+
+
+
+/* tekst */
+
+.intro,
+.section {
+
+  margin-bottom:42px;
+
+}
+
+
+.intro h2,
+.section h2 {
+
+  font-family:Georgia,serif;
+
+  color:#563515;
+
+  font-size:28px;
+
+  margin-bottom:18px;
+
+}
+
+
+.intro p,
+.section p {
+
+  font-family:Georgia,serif;
+
+  font-size:19px;
+
+  line-height:1.85;
+
+  color:#3e3020;
+
+  text-align:justify;
+
+  margin-bottom:20px;
+
+}
+
+
+.intro strong,
+.section strong {
+
+  color:#4b2e14;
+
+}
+
+
+
+/* dolne skrzynie */
+
+.next {
+
+  margin-top:55px;
+
+  padding-top:35px;
+
+  border-top:
+    1px solid rgba(120,80,30,.25);
+
+  text-align:center;
+
+}
+
+
+.chestNavigation {
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:flex-start;
+
+  gap:70px;
+
+  margin-top:35px;
+
+}
+
+
+.chestLink {
+
+  width:220px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  text-decoration:none;
+
+  color:#4b2e14;
+
+  transition:.3s;
+
+}
+
+
+.chestLink:hover {
+
+  transform:translateY(-8px);
+
+}
+
+
+.chestLink img {
+
+  width:200px;
+
+  height:140px;
+
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 12px 10px rgba(60,40,20,.35)
+    );
+
+}
+
+
+.chestLink span {
+
+  margin-top:18px;
+
+  font-family:Georgia,serif;
+
+  font-size:20px;
+
+  font-weight:bold;
+
+}
+
+
+.chestLink small {
+
+  margin-top:8px;
+
+  color:#876039;
+
+}
+
+
+
+/* telefon */
+
+@media(max-width:700px){
+
+  .kronika {
+
+    padding:30px 22px;
+
+  }
+
+
+  .header h1 {
+
+    font-size:32px;
+
+  }
+
+
+  .intro p,
+  .section p {
+
+    font-size:17px;
+
+    text-align:left;
+
+  }
+
+
+  .chestNavigation {
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:35px;
+
+  }
+
+}

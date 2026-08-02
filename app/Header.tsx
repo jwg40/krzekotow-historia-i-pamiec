@@ -1,69 +1,103 @@
 import Link from "next/link";
 
+const menu = [
+  {
+    nazwa: "Start",
+    adres: "/",
+    widoczne: true,
+  },
+  {
+    nazwa: "Historia",
+    adres: "/historia/archiwum",
+    widoczne: true,
+  },
+  {
+    nazwa: "Monografia",
+    adres: "/monografia",
+    widoczne: true,
+  },
+  {
+    nazwa: "Dokumenty",
+    adres: "/dokumenty",
+    widoczne: true,
+  },
+  {
+    nazwa: "Galeria",
+    adres: "/galeria",
+    widoczne: true,
+  },
+  {
+    nazwa: "Mapy",
+    adres: "/mapy",
+    widoczne: true,
+  },
+  {
+    nazwa: "Mieszkańcy",
+    adres: "/mieszkancy",
+    widoczne: true,
+  },
+  {
+    nazwa: "Wojna",
+    adres: "/wojna",
+    widoczne: false,
+  },
+  {
+    nazwa: "Życie współczesne",
+    adres: "/zycie-wspolczesne",
+    widoczne: false,
+  },
+  {
+    nazwa: "KGW Żurawianki",
+    adres: "/kgw",
+    widoczne: true,
+  },
+  {
+    nazwa: "Kontakt",
+    adres: "/kontakt",
+    widoczne: true,
+  },
+];
+
+
 export default function Header() {
   return (
-    <header className="bg-green-100 border-b border-green-200 shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-green-200 bg-green-50/95 backdrop-blur shadow-sm">
 
-      <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-5 md:flex-row md:items-center md:justify-between">
 
-        {/* Logo / nazwa projektu */}
-        <Link href="/" className="mb-4 md:mb-0">
-          <div className="text-2xl font-extrabold text-amber-800 tracking-wide">
+
+        <Link href="/" className="group">
+
+          <h1 className="text-2xl font-extrabold tracking-wide text-amber-800 transition group-hover:text-amber-600">
             ARCHIWUM KRZEKOTOWA
-          </div>
+          </h1>
 
-          <div className="text-sm text-green-900 font-medium">
+          <p className="text-sm font-medium text-green-900">
             miejsce pamięci mieszkańców
-          </div>
+          </p>
+
         </Link>
 
 
-        {/* Menu */}
-        <nav className="flex flex-wrap gap-5 text-green-900 font-semibold">
 
-          <Link
-            href="/"
-            className="hover:text-amber-700 transition"
-          >
-            Start
-          </Link>
+        <nav className="flex flex-wrap items-center gap-5 text-sm font-semibold text-green-900">
 
-          <Link
-            href="/os-czasu"
-            className="hover:text-amber-700 transition"
-          >
-            Oś czasu
-          </Link>
+          {menu
+            .filter((element) => element.widoczne)
+            .map((element) => (
 
-          <Link
-            href="/galeria"
-            className="hover:text-amber-700 transition"
-          >
-            Galeria
-          </Link>
+              <Link
+                key={element.adres}
+                href={element.adres}
+                className="transition hover:text-amber-700"
+              >
+                {element.nazwa}
+              </Link>
 
-          <Link
-            href="/mapy"
-            className="hover:text-amber-700 transition"
-          >
-            Mapy
-          </Link>
-
-          <Link
-            href="/kgw"
-            className="hover:text-amber-700 transition"
-          >
-            KGW Żurawianki
-          </Link>
-
-          <Link
-            href="/kontakt"
-            className="hover:text-amber-700 transition"
-          >
-            Kontakt
-          </Link>
+            ))}
 
         </nav>
+
 
       </div>
 

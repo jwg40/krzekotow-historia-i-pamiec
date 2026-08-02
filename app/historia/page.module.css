@@ -1,0 +1,124 @@
+.historia {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-image: url("/images/historia/stara-mapa-tlo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(245, 230, 190, 0.75);
+  border-radius: 20px;
+}
+
+.historia h1 {
+  text-align: center;
+  color: #4b2e14;
+  font-size: 44px;
+}
+
+.wstep {
+  text-align: center;
+  color: #5a3518;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* główna skrzynia */
+
+.glownaSkrzynia {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.glownaSkrzynia img {
+  filter: drop-shadow(0 15px 20px rgba(0,0,0,.35));
+}
+
+
+/* OŚ CZASU */
+
+.osCzasu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.osCzasu::before {
+  content: "";
+  position: absolute;
+  top: 125px;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background: #7b5428;
+  z-index: 0;
+}
+
+
+/* pojedyncza skrzynia */
+
+.skrzynia {
+  position: relative;
+  z-index: 1;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  color: #4b2e14;
+}
+
+
+/* usunięcie białych kart */
+
+.skrzynia {
+  background: transparent;
+  padding: 0;
+}
+
+
+.skrzynia img {
+  width: 220px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 12px rgba(0,0,0,.35));
+}
+
+
+.skrzynia h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.skrzynia h3 {
+  font-size: 21px;
+  margin-top: 8px;
+}
+
+
+/* efekt otwarcia */
+
+.skrzynia:hover {
+  transform: translateY(-10px);
+  transition: .3s;
+}
+
+
+@media(max-width:900px) {
+
+  .osCzasu {
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .osCzasu::before {
+    display:none;
+  }
+
+}

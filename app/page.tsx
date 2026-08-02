@@ -3,26 +3,37 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-green-100 text-stone-800">
+    <main
+      className="min-h-screen text-stone-800 font-serif"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(220,232,210,0.88), rgba(220,232,210,0.88)), url('/images/historia/stara-mapa-tlo.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
 
       {/* Tytuł strony */}
-      <section className="max-w-5xl mx-auto px-6 pt-10 text-center">
+      <section className="max-w-5xl mx-auto px-6 pt-12 text-center">
 
-        <h1 className="text-6xl md:text-7xl font-extrabold text-amber-800 tracking-tight">
+        <h1 className="text-6xl md:text-7xl font-black text-amber-800 tracking-[0.12em]">
           Krzekotów
         </h1>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-green-900 mt-2 mb-8">
+        <h2 className="text-3xl md:text-4xl font-serif italic tracking-wide text-green-900 mt-4 mb-10">
           Historia miejsca i ludzi
         </h2>
 
       </section>
 
 
+
       {/* Zdjęcie główne */}
       <section className="max-w-5xl mx-auto px-6">
 
-        <div className="relative overflow-hidden rounded-2xl shadow-xl">
+        <div className="relative overflow-hidden rounded-xl shadow-xl">
+
           <Image
             src="/images/fotografie/krzekotow-wita.jpg"
             alt="Krzekotów"
@@ -31,78 +42,113 @@ export default function Home() {
             className="w-full h-[360px] object-cover"
             priority
           />
+
         </div>
 
       </section>
+
+
 
 
       {/* Główne przesłanie */}
-      <section className="max-w-4xl mx-auto px-6 py-12 text-center">
+      <section className="max-w-4xl mx-auto px-6 py-14 text-center">
 
-        <p className="text-2xl md:text-3xl font-bold text-green-900 leading-relaxed mb-8">
+        <p className="text-2xl md:text-3xl font-serif font-semibold tracking-wide text-green-900 leading-relaxed">
+
           Historia nie zawsze znajduje się w archiwach.
+
           <br />
-          Czasem kryje się na strychu, w starym albumie albo
-          w opowieści przekazywanej z pokolenia na pokolenie.
+
+          Czasem kryje się na strychu,
+          w starym albumie albo w opowieści
+          przekazywanej z pokolenia na pokolenie.
+
         </p>
 
 
-        <p className="text-xl font-semibold text-stone-700 leading-relaxed mb-10">
-          Cyfrowe Archiwum Krzekotowa powstaje, aby zachować pamięć
-          o miejscu, jego mieszkańcach oraz wydarzeniach, które przez
-          wieki tworzyły historię tej niewielkiej miejscowości.
+
+        <p className="mt-8 text-xl font-serif font-semibold text-stone-700 leading-relaxed">
+
+          Cyfrowe Archiwum Krzekotowa powstaje,
+          aby zachować pamięć o miejscu,
+          jego mieszkańcach oraz wydarzeniach,
+          które przez wieki tworzyły historię tej miejscowości.
+
         </p>
-
-
-        <Link
-          href="/kontakt"
-          className="inline-block bg-amber-700 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-amber-800 transition shadow-lg"
-        >
-          Podziel się swoją historią
-        </Link>
 
       </section>
 
 
-      {/* Zaproszenie */}
-      <section className="max-w-4xl mx-auto px-6 pb-12">
 
-        <div className="bg-white/90 rounded-2xl shadow-md p-8 border border-green-200">
 
-          <h2 className="text-3xl font-bold text-amber-800 text-center mb-6">
-            Szukamy śladów przeszłości
+      {/* Zaproszenie mieszkańców */}
+      <section className="max-w-4xl mx-auto px-6 pb-20 text-center">
+
+        <div className="pt-10">
+
+
+          <div className="text-4xl text-amber-800 mb-6">
+            ✒
+          </div>
+
+
+
+          <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-wide text-amber-800 mb-8">
+
+            Każdy dom ma swoją historię.
+
           </h2>
 
 
-          <p className="text-lg leading-relaxed text-center">
-            Nie tylko zdjęcia i dokumenty tworzą historię miejsca.
+
+          <div className="mx-auto mb-8 h-px w-32 bg-amber-700/40"></div>
+
+
+
+          <p className="text-xl md:text-2xl leading-relaxed text-green-900 font-semibold">
+
+            Za starymi fotografiami, dokumentami
+            i rodzinnymi opowieściami kryją się losy ludzi,
+            którzy tworzyli Krzekotów.
+
           </p>
 
 
-          <p className="text-lg leading-relaxed text-center mt-4">
-            Czasem historię opowiadają przedmioty, które przez lata
-            towarzyszyły mieszkańcom Krzekotowa.
+
+          <p className="mt-8 text-lg md:text-xl leading-relaxed text-stone-700">
+
+            Pomóż zachować te wspomnienia
+            dla przyszłych pokoleń.
+
           </p>
 
 
-          <p className="text-lg leading-relaxed text-center mt-4">
-            Stary klucz, narzędzie używane w gospodarstwie, książka
-            z rodzinną dedykacją, pamiątka przechowywana od pokoleń
-            albo zwykły przedmiot codziennego użytku – każdy z nich
-            może kryć własną opowieść.
-          </p>
 
+          <Link
+            href="/kontakt"
+            className="
+              inline-block
+              mt-10
+              text-3xl
+              md:text-4xl
+              font-bold
+              tracking-wide
+              text-amber-800
+              hover:text-amber-600
+              transition
+              drop-shadow-sm
+            "
+          >
 
-          <p className="mt-6 text-center text-lg font-bold text-green-900">
-            Masz zdjęcie, dokument, przedmiot lub wspomnienie związane
-            z Krzekotowem?
-            <br />
-            Pomóż zachować je dla przyszłych pokoleń.
-          </p>
+            Podziel się swoją historią →
+
+          </Link>
+
 
         </div>
 
       </section>
+
 
     </main>
   );

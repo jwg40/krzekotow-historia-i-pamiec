@@ -1,0 +1,63 @@
+.historia-page {
+  min-height: 100vh;
+  padding: 60px 40px 100px;
+
+  background: red !important;
+
+  color: #3b2a18;
+}
+
+
+.powrot {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #704214;
+  font-weight: bold;
+}
+
+
+.historia-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+
+.historia-header h1 {
+  font-size: 56px;
+  color: #5a3518;
+}
+
+
+.historia-header p {
+  font-size: 24px;
+}
+
+
+.timeline {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+
+.timeline-item {
+  width: 220px;
+  text-align: center;
+  color: #3b2a18;
+  text-decoration: none;
+}
+
+
+.skrzynia-image {
+  filter: drop-shadow(0 15px 15px rgba(0,0,0,.35));
+}
+
+
+.timeline-item h2 {
+  font-size: 22px;
+}
+
+
+.timeline-item p {
+  font-size: 16px;
+}

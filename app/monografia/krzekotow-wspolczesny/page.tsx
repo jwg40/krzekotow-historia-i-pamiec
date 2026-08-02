@@ -1,143 +1,121 @@
-import Header from "../../Header";
-import Footer from "../../Footer";
-
-export default function KrzekotowWspolczesny() {
+export default function KrzekotowWspolczesnyPage() {
   return (
-    <>
-      <Header />
+    <main className="min-h-screen bg-stone-50">
 
-      <main className="bg-stone-50 min-h-screen">
+      <section className="bg-gradient-to-b from-amber-100 to-white py-20">
 
-        <section className="bg-gradient-to-b from-amber-100 to-white py-20">
+        <div className="mx-auto max-w-5xl px-6 text-center">
 
-          <div className="mx-auto max-w-5xl px-6">
+          <h1 className="text-5xl font-bold text-stone-800">
+            Krzekotów współczesny
+          </h1>
 
-            <h1 className="text-5xl font-bold text-stone-800">
-              Krzekotów współczesny
-            </h1>
+          <p className="mt-6 text-xl text-stone-600">
+            Dzisiejsza miejscowość i zachowanie lokalnego dziedzictwa.
+          </p>
 
-            <p className="mt-6 text-xl text-stone-600">
-              Współczesność miejscowości, mieszkańcy i zachowanie lokalnego dziedzictwa.
+        </div>
+
+      </section>
+
+
+
+      <section className="mx-auto max-w-5xl px-6 py-16">
+
+
+        <div className="rounded-3xl bg-white p-8 shadow-lg">
+
+
+          <h2 className="text-3xl font-bold text-stone-800">
+            Krzekotów dzisiaj
+          </h2>
+
+
+          <p className="mt-6 text-lg leading-8 text-stone-700">
+            Współczesny Krzekotów łączy pamięć o przeszłości
+            z codziennym życiem mieszkańców. Historia miejscowości
+            jest nadal tworzona przez kolejne pokolenia.
+          </p>
+
+
+          <p className="mt-6 text-lg leading-8 text-stone-700">
+            Zachowanie fotografii, dokumentów i wspomnień pozwala
+            budować cyfrowe archiwum, które będzie służyć obecnym
+            oraz przyszłym mieszkańcom.
+          </p>
+
+
+        </div>
+
+
+
+
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+
+
+          <div className="rounded-3xl bg-white p-8 shadow">
+
+
+            <h2 className="text-2xl font-bold text-stone-800">
+              Życie mieszkańców
+            </h2>
+
+
+            <p className="mt-4 leading-7 text-stone-700">
+              Codzienność, wydarzenia lokalne i wspólne działania
+              tworzą współczesny obraz miejscowości.
             </p>
 
-          </div>
-
-        </section>
-
-
-        <section className="py-16">
-
-          <div className="mx-auto max-w-5xl px-6">
-
-            <article className="rounded-2xl bg-white p-8 shadow">
-
-
-              <h2 className="text-3xl font-bold text-stone-800">
-                Dzisiejszy Krzekotów
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-stone-700">
-                Współczesny Krzekotów jest miejscem, w którym historia
-                spotyka się z teraźniejszością. Dawne tradycje, pamięć
-                mieszkańców oraz zmieniający się świat tworzą obraz
-                miejscowości żyjącej własnym rytmem.
-              </p>
-
-
-              <p className="mt-5 text-lg leading-8 text-stone-700">
-                Zachowanie lokalnej historii pozwala lepiej zrozumieć
-                miejsce, w którym żyją obecni mieszkańcy, oraz docenić
-                dorobek poprzednich pokoleń.
-              </p>
-
-
-              <h2 className="mt-10 text-3xl font-bold text-stone-800">
-                Mieszkańcy i życie lokalne
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-stone-700">
-                Najważniejszym elementem każdej miejscowości są ludzie.
-                To ich praca, inicjatywy i zaangażowanie wpływają na
-                wygląd oraz charakter lokalnej społeczności.
-              </p>
-
-
-              <h2 className="mt-10 text-3xl font-bold text-stone-800">
-                Dziedzictwo i pamięć
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-stone-700">
-                Cyfrowe Archiwum Krzekotowa ma za zadanie zachować
-                fotografie, dokumenty i wspomnienia, które pokazują
-                przemiany miejscowości na przestrzeni lat.
-              </p>
-
-
-              <h2 className="mt-10 text-3xl font-bold text-stone-800">
-                Przyszłość archiwum
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-stone-700">
-                Archiwum będzie rozwijane razem z mieszkańcami.
-                Każde nowe zdjęcie, dokument lub wspomnienie może stać
-                się kolejnym elementem historii Krzekotowa.
-              </p>
-
-
-              <div className="mt-10 rounded-xl bg-amber-50 p-6">
-
-                <h3 className="text-2xl font-bold text-stone-800">
-                  Materiały do rozbudowy
-                </h3>
-
-                <ul className="mt-4 list-disc pl-6 text-stone-700">
-
-                  <li>współczesne fotografie miejscowości</li>
-                  <li>ważne wydarzenia lokalne</li>
-                  <li>inicjatywy mieszkańców</li>
-                  <li>porównania dawniej i dziś</li>
-
-                </ul>
-
-              </div>
-
-
-            </article>
 
           </div>
 
-        </section>
 
 
-        <section className="bg-white py-10">
 
-          <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:justify-between">
-
-
-            <a
-              href="/monografia/mieszkancy-wspomnienia"
-              className="rounded-xl border border-amber-600 px-6 py-3 text-center font-semibold text-amber-700 hover:bg-amber-50"
-            >
-              ← Mieszkańcy i wspomnienia
-            </a>
+          <div className="rounded-3xl bg-white p-8 shadow">
 
 
-            <a
-              href="/monografia"
-              className="rounded-xl bg-amber-600 px-6 py-3 text-center font-semibold text-white hover:bg-amber-700"
-            >
-              📖 Spis monografii
-            </a>
+            <h2 className="text-2xl font-bold text-stone-800">
+              Tradycja i przyszłość
+            </h2>
+
+
+            <p className="mt-4 leading-7 text-stone-700">
+              Pamięć o historii oraz troska o lokalne dziedzictwo
+              pozwalają zachować wyjątkowy charakter Krzekotowa.
+            </p>
 
 
           </div>
 
-        </section>
+
+        </div>
 
 
-      </main>
 
-      <Footer />
-    </>
+
+        <div className="mt-10 rounded-3xl bg-green-900 p-8 text-white">
+
+
+          <h2 className="text-3xl font-bold">
+            Cyfrowe Archiwum Krzekotowa
+          </h2>
+
+
+          <p className="mt-5 text-lg leading-8">
+            Projekt będzie rozwijany o kolejne fotografie,
+            dokumenty, mapy i historie mieszkańców.
+            Każdy materiał stanie się częścią wspólnej pamięci
+            miejscowości.
+          </p>
+
+
+        </div>
+
+
+      </section>
+
+
+    </main>
   );
 }

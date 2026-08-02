@@ -7,20 +7,74 @@ export const metadata: Metadata = {
   description: "Historia i wspomnienia Krzekotowa",
 };
 
+const menu = [
+  {
+    nazwa: "Start",
+    adres: "/",
+    aktywne: true,
+  },
+  {
+    nazwa: "Historia",
+    adres: "/historia/archiwum",
+    aktywne: true,
+  },
+  {
+    nazwa: "Galeria",
+    adres: "/galeria",
+    aktywne: true,
+  },
+  {
+    nazwa: "Mapy",
+    adres: "/mapy",
+    aktywne: true,
+  },
+  {
+    nazwa: "Mieszkańcy",
+    adres: "/mieszkancy",
+    aktywne: true,
+  },
+  {
+    nazwa: "Dokumenty",
+    adres: "/dokumenty",
+    aktywne: true,
+  },
+  {
+    nazwa: "KGW Żurawianki",
+    adres: "/kgw",
+    aktywne: true,
+  },
+  {
+    nazwa: "Kontakt",
+    adres: "/kontakt",
+    aktywne: true,
+  },
+
+  // Ukryte na razie:
+  // {
+  //   nazwa: "Monografia",
+  //   adres: "/monografia",
+  //   aktywne: false,
+  // },
+];
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="pl">
+
       <body className="bg-green-50 text-stone-800">
 
-        <header className="sticky top-0 z-50 border-b bg-green-50/95 backdrop-blur shadow-sm">
+
+        <header className="sticky top-0 z-50 border-b border-green-200 bg-green-50/95 backdrop-blur shadow-sm">
+
 
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-            {/* Nazwa projektu - powrót na stronę główną */}
 
             <Link href="/" className="group">
 
@@ -35,54 +89,28 @@ export default function RootLayout({
             </Link>
 
 
-            {/* Menu */}
 
-            <nav className="flex flex-wrap items-center gap-6 text-sm font-semibold text-green-900">
+            <nav className="flex flex-wrap items-center gap-5 text-sm font-semibold text-green-900">
 
+              {menu
+                .filter((element) => element.aktywne)
+                .map((element) => (
 
-              <Link
-                href="/historia"
-                className="transition hover:text-amber-700"
-              >
-                Historia
-              </Link>
+                  <Link
+                    key={element.adres}
+                    href={element.adres}
+                    className="transition hover:text-amber-700"
+                  >
+                    {element.nazwa}
+                  </Link>
 
-
-              <Link
-                href="/galeria"
-                className="transition hover:text-amber-700"
-              >
-                Galeria
-              </Link>
-
-
-              <Link
-                href="/mapy"
-                className="transition hover:text-amber-700"
-              >
-                Mapy
-              </Link>
-
-
-              <Link
-                href="/kgw"
-                className="transition hover:text-amber-700"
-              >
-                KGW Żurawianki
-              </Link>
-
-
-              <Link
-                href="/kontakt"
-                className="transition hover:text-amber-700"
-              >
-                Kontakt
-              </Link>
-
+                ))}
 
             </nav>
 
+
           </div>
+
 
         </header>
 
@@ -91,6 +119,7 @@ export default function RootLayout({
 
 
       </body>
+
     </html>
   );
 }

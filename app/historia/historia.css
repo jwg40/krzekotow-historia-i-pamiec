@@ -1,0 +1,14 @@
+.historia-tlo {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(244,232,204,.84),
+      rgba(244,232,204,.84)
+    ),
+    url("/images/historia/stara-mapa-tlo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

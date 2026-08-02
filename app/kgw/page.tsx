@@ -1,159 +1,209 @@
-"use client";
-
-import { useState } from "react";
-import { wydarzeniaKGW } from "./wydarzenia/dane";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function KGWPage() {
-  const [galeria, setGaleria] = useState<{
-    zdjecia: string[];
-    index: number;
-  } | null>(null);
-
-  function nastepne() {
-    if (!galeria) return;
-
-    setGaleria({
-      zdjecia: galeria.zdjecia,
-      index: (galeria.index + 1) % galeria.zdjecia.length,
-    });
-  }
-
-  function poprzednie() {
-    if (!galeria) return;
-
-    setGaleria({
-      zdjecia: galeria.zdjecia,
-      index:
-        galeria.index === 0
-          ? galeria.zdjecia.length - 1
-          : galeria.index - 1,
-    });
-  }
-
 
   return (
-    <main className="min-h-screen bg-[#f8f5ef]">
 
-      <section className="bg-white py-10 text-center">
+    <main className="strona-archiwum">
 
-        <img
-          src="/images/kgw/logo/logo-zurawianki.jpg"
-          className="mx-auto w-48 rounded-3xl shadow"
-        />
 
-        <h1 className="mt-6 text-5xl font-bold text-stone-800">
+      <section className="py-20 text-center">
+
+
+        <h1 className="text-5xl font-bold text-amber-800">
           KGW Żurawianki
         </h1>
 
-        <p className="text-xl text-stone-600">
-          Kronika wydarzeń
+
+        <p className="mt-4 text-2xl font-semibold text-green-900">
+          Tradycja, aktywność i mieszkańcy Krzekotowa
         </p>
 
-      </section>
-
-
-      <section className="mx-auto max-w-6xl px-6 py-12">
-
-        <div className="space-y-10">
-
-          {wydarzeniaKGW.map((w, index) => (
-
-            <div
-              key={index}
-              className="bg-white rounded-3xl shadow p-6 flex gap-8 items-center"
-            >
-
-              <img
-                src={w.folder + w.zdjecia[0]}
-                className="w-72 h-48 object-cover rounded-2xl cursor-pointer"
-                onClick={() =>
-                  setGaleria({
-                    zdjecia: w.zdjecia.map(z => w.folder + z),
-                    index: 0,
-                  })
-                }
-              />
-
-
-              <div>
-
-                <h2 className="text-3xl font-bold text-stone-800">
-                  {w.tytul}
-                </h2>
-
-                <div className="text-amber-700 font-bold mt-2">
-                  {w.rok}
-                </div>
-
-                <p className="mt-4 text-lg text-stone-700 leading-8">
-                  {w.opis}
-                </p>
-
-                <button
-                  className="mt-5 text-amber-700 font-bold"
-                  onClick={() =>
-                    setGaleria({
-                      zdjecia: w.zdjecia.map(z => w.folder + z),
-                      index: 0,
-                    })
-                  }
-                >
-                  📷 Zobacz galerię ({w.zdjecia.length})
-                </button>
-
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
 
       </section>
 
 
-      {galeria && (
-
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
-
-          <button
-            className="absolute top-5 right-5 text-white text-5xl"
-            onClick={() => setGaleria(null)}
-          >
-            ×
-          </button>
 
 
-          <button
-            className="absolute left-5 text-white text-8xl"
-            onClick={poprzednie}
-          >
-            ‹
-          </button>
+      <section className="mx-auto max-w-5xl px-6 py-12 space-y-10">
 
 
-          <img
-            src={galeria.zdjecia[galeria.index]}
-            className="max-h-[85vh] max-w-[85vw] rounded-2xl"
-          />
 
 
-          <button
-            className="absolute right-5 text-white text-8xl"
-            onClick={nastepne}
-          >
-            ›
-          </button>
+
+        <div className="
+          rounded-3xl
+          bg-[#F8F1DE]/90
+          shadow-lg
+          border
+          border-amber-200
+          p-8
+        ">
 
 
-          <div className="absolute bottom-5 text-white text-xl">
-            {galeria.index + 1}/{galeria.zdjecia.length}
+
+          <div className="flex justify-center mb-8">
+
+
+            <Image
+
+              src="/images/kgw/logo/logo-zurawianki.jpg"
+
+              alt="Logo KGW Żurawianki"
+
+              width={280}
+
+              height={280}
+
+              className="
+              rounded-2xl
+              shadow-lg
+              object-cover
+              "
+
+              priority
+
+            />
+
+
           </div>
 
+
+
+
+          <p className="text-lg leading-relaxed text-stone-700">
+
+            Koło Gospodyń Wiejskich Żurawianki jest ważną częścią
+            życia Krzekotowa. Działalność koła łączy mieszkańców,
+            pielęgnuje tradycje i dokumentuje wydarzenia,
+            które tworzą historię naszej miejscowości.
+
+          </p>
+
+
+
+
+          <p className="text-lg leading-relaxed mt-5 text-stone-700">
+
+            Cyfrowe Archiwum Krzekotowa współpracuje z KGW Żurawianki,
+            aby zachować wspomnienia, fotografie i wydarzenia
+            związane z lokalną społecznością.
+
+          </p>
+
+
+
         </div>
 
-      )}
+
+
+
+
+        <div className="
+          rounded-3xl
+          bg-[#F8F1DE]/90
+          shadow-lg
+          border
+          border-amber-200
+          p-8
+        ">
+
+
+          <h2 className="text-3xl font-bold text-amber-800 text-center">
+
+            Oficjalna strona KGW Żurawianki
+
+          </h2>
+
+
+
+          <p className="mt-5 text-lg text-center text-stone-700">
+
+            Pełne archiwum działalności koła znajduje się
+            na stronie prowadzonej przez KGW.
+
+          </p>
+
+
+
+          <div className="text-center mt-8">
+
+
+            <Link
+
+              href="https://www.facebook.com/profile.php?id=100064599375387"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              className="
+              inline-block
+              bg-amber-700
+              text-white
+              px-8
+              py-4
+              rounded-xl
+              font-bold
+              hover:bg-amber-800
+              transition
+              "
+
+            >
+
+              Odwiedź stronę KGW Żurawianki
+
+            </Link>
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+        <div className="
+          rounded-3xl
+          bg-green-900
+          text-white
+          shadow-lg
+          p-8
+        ">
+
+
+
+          <h2 className="text-3xl font-bold text-center">
+
+            Razem dla pamięci Krzekotowa
+
+          </h2>
+
+
+
+          <p className="mt-5 text-lg leading-relaxed text-center">
+
+            Cyfrowe Archiwum Krzekotowa pomaga zachować
+            historię ludzi, wydarzeń i miejsc naszej społeczności.
+
+          </p>
+
+
+
+        </div>
+
+
+
+
+      </section>
+
 
     </main>
+
   );
+
 }
