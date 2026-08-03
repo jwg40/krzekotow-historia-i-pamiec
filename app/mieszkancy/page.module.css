@@ -1,0 +1,277 @@
+.page {
+  min-height: 100vh;
+  padding: 50px 20px 90px;
+
+  background:
+    linear-gradient(
+      rgba(244,232,204,.88),
+      rgba(244,232,204,.88)
+    ),
+    url("/images/historia/stara-mapa-tlo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+.kronika {
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  background:
+    rgba(255,248,230,.94);
+
+  padding: 55px 65px;
+
+  border-radius: 20px;
+
+  border:
+    1px solid rgba(120,80,30,.25);
+
+  box-shadow:
+    0 20px 55px rgba(70,45,15,.25);
+
+}
+
+
+
+/* nagłówek */
+
+.header {
+
+  text-align: center;
+
+  margin-bottom: 55px;
+
+}
+
+
+.label {
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  letter-spacing: 4px;
+
+  color: #7a4b22;
+
+  margin-bottom: 18px;
+
+}
+
+
+.header h1 {
+
+  margin:0;
+
+  font-family: Georgia, serif;
+
+  font-size:48px;
+
+  color:#42260f;
+
+}
+
+
+
+.date {
+
+  margin-top:15px;
+
+  font-family:Georgia,serif;
+
+  font-size:22px;
+
+  color:#8a5a2b;
+
+  font-style:italic;
+
+}
+
+
+
+/* tekst */
+
+.intro {
+
+  margin-bottom:50px;
+
+}
+
+
+
+.intro h2 {
+
+  font-family:Georgia,serif;
+
+  font-size:30px;
+
+  color:#563515;
+
+  margin-bottom:20px;
+
+}
+
+
+
+.intro p {
+
+  font-size:19px;
+
+  line-height:1.85;
+
+  text-align:justify;
+
+  color:#3e3020;
+
+  margin-bottom:22px;
+
+}
+
+
+
+/* trzy działy */
+
+.boxes {
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:30px;
+
+}
+
+
+
+.box {
+
+  background:
+
+    rgba(255,255,255,.75);
+
+  padding:30px;
+
+  border-radius:18px;
+
+  box-shadow:
+
+    0 8px 25px rgba(70,45,15,.18);
+
+  transition:.3s;
+
+}
+
+
+
+.box:hover {
+
+  transform:translateY(-8px);
+
+}
+
+
+
+.box h2 {
+
+  font-family:Georgia,serif;
+
+  color:#4b2e14;
+
+  font-size:24px;
+
+  margin-bottom:18px;
+
+}
+
+
+
+.box p {
+
+  font-size:17px;
+
+  line-height:1.7;
+
+  color:#59452d;
+
+}
+
+
+
+/* dół */
+
+.next {
+
+  margin-top:55px;
+
+  padding-top:35px;
+
+  border-top:
+
+    1px solid rgba(120,80,30,.25);
+
+  text-align:center;
+
+  font-size:19px;
+
+  line-height:1.8;
+
+  color:#3e3020;
+
+}
+
+
+
+/* telefon */
+
+@media(max-width:900px){
+
+
+  .kronika {
+
+    padding:35px 25px;
+
+  }
+
+
+  .boxes {
+
+    grid-template-columns:1fr;
+
+  }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+  .header h1 {
+
+    font-size:34px;
+
+  }
+
+
+  .date {
+
+    font-size:18px;
+
+  }
+
+
+  .intro p {
+
+    font-size:17px;
+
+  }
+
+
+}

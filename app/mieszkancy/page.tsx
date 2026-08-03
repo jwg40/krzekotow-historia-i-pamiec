@@ -1,135 +1,126 @@
-export default function MieszkancyWspomnienia() {
+"use client";
+
+import styles from "./page.module.css";
+
+export default function MieszkancyPage() {
+
   return (
-    <main className="bg-stone-50 min-h-screen">
 
-      <section className="bg-gradient-to-b from-amber-100 to-white py-20">
+    <main className={styles.page}>
 
-        <div className="mx-auto max-w-5xl px-6">
+      <article className={styles.kronika}>
 
-          <h1 className="text-5xl font-bold text-stone-800">
-            Mieszkańcy i wspomnienia
+
+        <header className={styles.header}>
+
+          <div className={styles.label}>
+            CYFROWE ARCHIWUM KRZEKOTOWA
+          </div>
+
+          <h1>
+            Mieszkańcy
           </h1>
 
-          <p className="mt-6 text-xl text-stone-600">
-            Ludzie, rodziny i historie tworzące dzieje Krzekotowa.
+          <div className={styles.date}>
+            Ludzie, rodziny i wspomnienia tworzące historię wsi
+          </div>
+
+        </header>
+
+
+
+        <section className={styles.intro}>
+
+          <h2>
+            Ludzie Krzekotowa
+          </h2>
+
+          <p>
+            Historia miejscowości to nie tylko daty, mapy i budynki.
+            Najważniejsi zawsze byli ludzie, którzy tutaj mieszkali,
+            pracowali, zakładali rodziny i tworzyli codzienne życie.
           </p>
 
-        </div>
+          <p>
+            Ta część archiwum będzie miejscem pamięci o mieszkańcach
+            Krzekotowa — dawnych i współczesnych.
+          </p>
 
-      </section>
-
-
-      <section className="py-16">
-
-        <div className="mx-auto max-w-5xl px-6">
-
-          <article className="rounded-2xl bg-white p-8 shadow">
+        </section>
 
 
-            <h2 className="text-3xl font-bold text-stone-800">
-              Największa wartość archiwum
+
+        <section className={styles.boxes}>
+
+
+          <div className={styles.box}>
+
+            <h2>
+              👥 Rodziny Krzekotowa
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-stone-700">
-              Historia miejscowości to nie tylko daty i dokumenty.
-              Tworzą ją przede wszystkim ludzie — ich codzienna praca,
-              rodziny, zwyczaje oraz wydarzenia, które zapisały się
-              w pamięci kolejnych pokoleń.
+            <p>
+              Historie rodzin, nazwiska mieszkańców oraz wspomnienia
+              przekazywane przez kolejne pokolenia.
             </p>
 
-
-            <p className="mt-5 text-lg leading-8 text-stone-700">
-              Wspomnienia mieszkańców pozwalają zachować szczegóły,
-              których często nie znajdziemy w oficjalnych dokumentach.
-              Są świadectwem życia zwykłych ludzi i przemian zachodzących
-              w miejscowości.
-            </p>
+          </div>
 
 
-            <h2 className="mt-10 text-3xl font-bold text-stone-800">
-              Rodziny Krzekotowa
+
+          <div className={styles.box}>
+
+            <h2>
+              📷 Stare fotografie
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-stone-700">
-              W tej części archiwum będą gromadzone informacje
-              o rodzinach związanych z Krzekotowem, ich losach,
-              pracy oraz wkładzie w rozwój miejscowości.
+            <p>
+              Zdjęcia mieszkańców, uroczystości rodzinnych i wydarzeń
+              ważnych dla lokalnej społeczności.
             </p>
 
+          </div>
 
-            <h2 className="mt-10 text-3xl font-bold text-stone-800">
-              Wspomnienia mieszkańców
+
+
+          <div className={styles.box}>
+
+            <h2>
+              📝 Wspomnienia
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-stone-700">
-              Każde wspomnienie jest cennym fragmentem historii.
-              Opowieści o dawnym życiu, szkole, pracy, sąsiadach
-              i ważnych wydarzeniach pozwalają stworzyć obraz
-              Krzekotowa widziany oczami jego mieszkańców.
+            <p>
+              Opowieści mieszkańców o dawnym Krzekotowie,
+              pracy, szkole i codziennym życiu.
             </p>
 
-
-            <h2 className="mt-10 text-3xl font-bold text-stone-800">
-              Zachowanie pamięci
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-stone-700">
-              Cyfrowe Archiwum Krzekotowa ma być miejscem,
-              gdzie fotografie rodzinne, dokumenty oraz wspomnienia
-              będą mogły zostać zachowane i przekazane kolejnym
-              pokoleniom.
-            </p>
+          </div>
 
 
-            <div className="mt-10 rounded-xl bg-amber-50 p-6">
 
-              <h3 className="text-2xl font-bold text-stone-800">
-                Materiały do dodania
-              </h3>
-
-              <ul className="mt-4 list-disc pl-6 text-stone-700">
-
-                <li>historie rodzin mieszkańców</li>
-                <li>stare fotografie rodzinne</li>
-                <li>wspomnienia ustne</li>
-                <li>życiorysy zasłużonych osób</li>
-
-              </ul>
-
-            </div>
+        </section>
 
 
-          </article>
 
-        </div>
+        <section className={styles.next}>
 
-      </section>
+          <p>
+            To miejsce będzie stopniowo uzupełniane.
+          </p>
 
+          <p>
+            Każde zdjęcie i każda opowieść może stać się częścią
+            historii Krzekotowa.
+          </p>
 
-      <section className="bg-white py-10">
-
-        <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 md:flex-row md:justify-between">
-
-          <a
-            href="/monografia/okres-powojenny"
-            className="rounded-xl border border-amber-600 px-6 py-3 text-center font-semibold text-amber-700 hover:bg-amber-50"
-          >
-            ← Okres powojenny
-          </a>
+        </section>
 
 
-          <a
-            href="/monografia/krzekotow-wspolczesny"
-            className="rounded-xl border border-green-700 px-6 py-3 text-center font-semibold text-green-800 hover:bg-green-50"
-          >
-            Krzekotów współczesny →
-          </a>
-
-        </div>
-
-      </section>
+      </article>
 
 
     </main>
+
   );
+
 }

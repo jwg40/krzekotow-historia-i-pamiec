@@ -66,7 +66,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-5 md:flex-row md:items-center md:justify-between">
 
 
-        <Link href="/" className="group">
+        <Link href="/historia/archiwum" className="group">
 
           <h1 className="text-2xl font-extrabold tracking-wide text-amber-800 transition group-hover:text-amber-600">
             ARCHIWUM KRZEKOTOWA
