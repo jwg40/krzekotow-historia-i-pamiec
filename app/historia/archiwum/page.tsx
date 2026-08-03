@@ -12,6 +12,7 @@ export default function Archiwum() {
       opis: "Tam zaczyna się nasza opowieść. Pierwsze ślady osady, dawni mieszkańcy i chwile, gdy rodziła się historia tego miejsca.",
       obraz: "skrzynia-xiii.png",
       link: "/historia/skrzynia-1",
+      start: true,
     },
     {
       id: 2,
@@ -71,6 +72,7 @@ export default function Archiwum() {
           miejscach i wydarzeniach, które tworzyły Krzekotów.
         </p>
 
+
         <div className={styles.openInfo}>
           📦 Kliknij skrzynię i rozpocznij podróż przez historię Krzekotowa
         </div>
@@ -93,8 +95,15 @@ export default function Archiwum() {
           <Link
             key={item.id}
             href={item.link}
-            className={styles.chest}
+            className={`${styles.chest} ${item.start ? styles.firstChest : ""}`}
           >
+
+            {item.start && (
+              <div className={styles.startLabel}>
+                Zacznij tutaj
+              </div>
+            )}
+
 
             <div className={styles.year}>
               {item.rok}
