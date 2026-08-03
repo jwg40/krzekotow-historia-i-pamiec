@@ -13,7 +13,6 @@ export default function Archiwum() {
       obraz: "skrzynia-xiii.png",
       link: "/historia/skrzynia-1",
     },
-
     {
       id: 2,
       rok: "Średniowiecze",
@@ -22,7 +21,6 @@ export default function Archiwum() {
       obraz: "skrzynia-2.png",
       link: "/historia/skrzynia-2",
     },
-
     {
       id: 3,
       rok: "XIX – XX wiek",
@@ -31,7 +29,6 @@ export default function Archiwum() {
       obraz: "skrzynia-3.png",
       link: "/historia/skrzynia-3",
     },
-
     {
       id: 4,
       rok: "XX wiek",
@@ -40,7 +37,6 @@ export default function Archiwum() {
       obraz: "skrzynia-4.png",
       link: "/historia/skrzynia-4",
     },
-
     {
       id: 5,
       rok: "Współczesność",
@@ -55,11 +51,9 @@ export default function Archiwum() {
   return (
     <main className={styles.container}>
 
-
       <Link href="/historia" className={styles.back}>
         ← Powrót do głównej skrzyni
       </Link>
-
 
 
       <section className={styles.header}>
@@ -77,19 +71,21 @@ export default function Archiwum() {
           miejscach i wydarzeniach, które tworzyły Krzekotów.
         </p>
 
+        <div className={styles.openInfo}>
+          📦 Kliknij skrzynię i rozpocznij podróż przez historię Krzekotowa
+        </div>
+
       </section>
 
 
 
       <section className={styles.timeline}>
 
-
         <div className={styles.axis}></div>
 
         <div className={styles.arrow}>
           →
         </div>
-
 
 
         {skrzynie.map((item) => (
@@ -125,6 +121,11 @@ export default function Archiwum() {
             <p>
               {item.opis}
             </p>
+
+
+            <div className={styles.openButton}>
+              Otwórz skrzynię →
+            </div>
 
 
           </Link>

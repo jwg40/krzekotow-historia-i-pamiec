@@ -4,57 +4,34 @@ const menu = [
   {
     nazwa: "Start",
     adres: "/",
-    widoczne: true,
   },
   {
     nazwa: "Historia",
     adres: "/historia/archiwum",
-    widoczne: true,
-  },
-  {
-    nazwa: "Monografia",
-    adres: "/monografia",
-    widoczne: true,
   },
   {
     nazwa: "Dokumenty",
     adres: "/dokumenty",
-    widoczne: true,
   },
   {
     nazwa: "Galeria",
     adres: "/galeria",
-    widoczne: true,
   },
   {
     nazwa: "Mapy",
     adres: "/mapy",
-    widoczne: true,
   },
   {
     nazwa: "Mieszkańcy",
     adres: "/mieszkancy",
-    widoczne: true,
-  },
-  {
-    nazwa: "Wojna",
-    adres: "/wojna",
-    widoczne: false,
-  },
-  {
-    nazwa: "Życie współczesne",
-    adres: "/zycie-wspolczesne",
-    widoczne: false,
   },
   {
     nazwa: "KGW Żurawianki",
     adres: "/kgw",
-    widoczne: true,
   },
   {
     nazwa: "Kontakt",
     adres: "/kontakt",
-    widoczne: true,
   },
 ];
 
@@ -66,7 +43,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-5 md:flex-row md:items-center md:justify-between">
 
 
-        <Link href="/historia/archiwum" className="group">
+        <Link href="/" className="group inline-block">
 
           <h1 className="text-2xl font-extrabold tracking-wide text-amber-800 transition group-hover:text-amber-600">
             ARCHIWUM KRZEKOTOWA
@@ -82,19 +59,17 @@ export default function Header() {
 
         <nav className="flex flex-wrap items-center gap-5 text-sm font-semibold text-green-900">
 
-          {menu
-            .filter((element) => element.widoczne)
-            .map((element) => (
+          {menu.map((element) => (
 
-              <Link
-                key={element.adres}
-                href={element.adres}
-                className="transition hover:text-amber-700"
-              >
-                {element.nazwa}
-              </Link>
+            <Link
+              key={element.adres}
+              href={element.adres}
+              className="transition hover:text-amber-700"
+            >
+              {element.nazwa}
+            </Link>
 
-            ))}
+          ))}
 
         </nav>
 
