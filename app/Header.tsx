@@ -42,7 +42,6 @@ export default function Header() {
 
       <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-5 md:flex-row md:items-center md:justify-between">
 
-
         <Link href="/" className="group inline-block">
 
           <h1 className="text-2xl font-extrabold tracking-wide text-amber-800 transition group-hover:text-amber-600">
@@ -54,7 +53,6 @@ export default function Header() {
           </p>
 
         </Link>
-
 
 
         <nav className="flex flex-wrap items-center gap-5 text-sm font-semibold text-green-900">
@@ -72,7 +70,6 @@ export default function Header() {
           ))}
 
         </nav>
-
 
       </div>
 
