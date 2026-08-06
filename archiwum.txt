@@ -1,0 +1,141 @@
+﻿import Image from "next/image";
+import Link from "next/link";
+import styles from "./page.module.css";
+
+export default function Archiwum() {
+
+  const skrzynie = [
+    {
+      id: 1,
+      rok: "1263",
+      tytul: "Narodziny Krzekotowa",
+      opis: "Tam zaczyna siÄ™ nasza opowieĹ›Ä‡. Pierwsze Ĺ›lady osady, dawni mieszkaĹ„cy i chwile, gdy rodziĹ‚a siÄ™ historia tego miejsca.",
+      obraz: "skrzynia-xiii.png",
+      link: "/historia/skrzynia-1",
+    },
+    {
+      id: 2,
+      rok: "Ĺšredniowiecze",
+      tytul: "Ĺšlady dawnych pokoleĹ„",
+      opis: "WieĹ›, ktĂłra zmieniaĹ‚a siÄ™ przez stulecia. Dawne mapy, zapomniane miejsca i historie ludzi, ktĂłrzy tworzyli KrzekotĂłw.",
+      obraz: "skrzynia-2.png",
+      link: "/historia/skrzynia-2",
+    },
+    {
+      id: 3,
+      rok: "XIX â€“ XX wiek",
+      tytul: "Ludzie i codziennoĹ›Ä‡",
+      opis: "Domy, rodziny, praca i zwyczaje. OpowieĹ›Ä‡ o mieszkaĹ„cach, ktĂłrych ĹĽycie zostawiĹ‚o Ĺ›lad w historii wsi.",
+      obraz: "skrzynia-3.png",
+      link: "/historia/skrzynia-3",
+    },
+    {
+      id: 4,
+      rok: "XX wiek",
+      tytul: "Czas prĂłby i przemian",
+      opis: "Wojna, trudne wybory i nowe poczÄ…tki. Historia mieszkaĹ„cĂłw, ktĂłrzy poĹ›rĂłd zmian budowali swoje ĹĽycie od nowa.",
+      obraz: "skrzynia-4.png",
+      link: "/historia/skrzynia-4",
+    },
+    {
+      id: 5,
+      rok: "WspĂłĹ‚czesnoĹ›Ä‡",
+      tytul: "PamiÄ™Ä‡, ktĂłra trwa",
+      opis: "Dzisiejszy KrzekotĂłw ĹĽyje dalej. MieszkaĹ„cy, wspomnienia i historie, ktĂłre dopiero czekajÄ… na zapisanie.",
+      obraz: "skrzynia-5.png",
+      link: "/historia/skrzynia-5",
+    },
+  ];
+
+
+  return (
+    <main className={styles.container}>
+
+      <Link href="/historia" className={styles.back}>
+        â† PowrĂłt do gĹ‚Ăłwnej skrzyni
+      </Link>
+
+
+      <section className={styles.header}>
+
+        <h1>
+          Skrzynie Czasu Krzekotowa
+        </h1>
+
+        <p>
+          Otwierasz kolejne rozdziaĹ‚y historii naszej miejscowoĹ›ci.
+        </p>
+
+        <p>
+          KaĹĽda skrzynia przechowuje wspomnienia o ludziach,
+          miejscach i wydarzeniach, ktĂłre tworzyĹ‚y KrzekotĂłw.
+        </p>
+
+        <div className={styles.openInfo}>
+          đź“¦ Kliknij skrzyniÄ™ i rozpocznij podrĂłĹĽ przez historiÄ™ Krzekotowa
+        </div>
+
+      </section>
+
+
+
+      <section className={styles.timeline}>
+
+        <div className={styles.axis}></div>
+
+        <div className={styles.arrow}>
+          â†’
+        </div>
+
+
+        {skrzynie.map((item) => (
+
+          <Link
+            key={item.id}
+            href={item.link}
+            className={styles.chest}
+          >
+
+            <div className={styles.year}>
+              {item.rok}
+            </div>
+
+
+            <div className={styles.dot}></div>
+
+
+            <Image
+              src={`/images/historia/${item.obraz}`}
+              alt={item.tytul}
+              width={260}
+              height={260}
+              className={styles.chestImage}
+            />
+
+
+            <h2>
+              {item.tytul}
+            </h2>
+
+
+            <p>
+              {item.opis}
+            </p>
+
+
+            <div className={styles.openButton}>
+              OtwĂłrz skrzyniÄ™ â†’
+            </div>
+
+
+          </Link>
+
+        ))}
+
+
+      </section>
+
+
+    </main>
+  );
+}

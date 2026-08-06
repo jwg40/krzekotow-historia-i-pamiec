@@ -1,0 +1,1 @@
+export default function Skrzynia3(){return <div>Skrzynia3</div>}
