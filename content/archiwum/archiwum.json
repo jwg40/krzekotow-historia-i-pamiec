@@ -1,0 +1,36 @@
+{
+  "materialy": [
+    {
+      "id": 1,
+      "tytul": "Mapa Głogowa i okolic z 1928 roku",
+      "kategoria": "mapy",
+      "okres": "1928",
+      "opis": "Mapa przedstawiająca dawny układ miejscowości, dróg, pól i zabudowy przed zmianami XX wieku.",
+      "plik": "/images/historia/glogau-1928.jpg"
+    },
+    {
+      "id": 2,
+      "tytul": "Mapa sytuacji wojskowej 1945",
+      "kategoria": "mapy",
+      "okres": "1945",
+      "opis": "Mapa przedstawiająca rozmieszczenie wojsk niemieckich i rosyjskich w końcowym okresie II wojny światowej.",
+      "plik": "/images/historia/mapa-1945.jpg"
+    },
+    {
+      "id": 3,
+      "tytul": "Lista ostatnich niemieckich mieszkańców Krzekotowa",
+      "kategoria": "dokumenty",
+      "okres": "1945",
+      "opis": "Dokument przedstawiający ostatnich niemieckich mieszkańców przed zajęciem miejscowości przez wojska rosyjskie.",
+      "plik": "/images/historia/lista-1945.jpeg"
+    },
+    {
+      "id": 4,
+      "tytul": "Brama dawnego gospodarstwa",
+      "kategoria": "fotografie",
+      "okres": "XX wiek",
+      "opis": "Jedno z nielicznych zachowanych zdjęć Krzekotowa. Widoczna brama gospodarstwa w miejscu obecnej świetlicy. Brama i mur ze zdjęcia już nie istnieją.",
+      "plik": "/images/historia/stara-brama-świetlica.jpeg"
+    }
+  ]
+}
