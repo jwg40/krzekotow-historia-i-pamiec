@@ -1,0 +1,22 @@
+{
+  "materialy": [
+    {
+      "id": 1,
+      "tytul": "Brama dawnego gospodarstwa",
+      "plik": "/images/historia/stara-brama-świetlica.jpeg",
+      "informacje_od_ciebie": "Jedyne znane zachowane zdjęcie dawnego Krzekotowa. Na fotografii widoczna jest brama i fragment zabudowy dawnego gospodarstwa.\nSprawdzono układ zabudowy dawnego gospodarstwa.",
+      "zalaczniki": [
+        "/images/historia/stara-brama-świetlica.jpeg"
+      ],
+      "zrodla": "Zbiory prywatne; Pan Wiesław Babisz",
+      "moje_ustalenia": "",
+      "projekt_koncowy": "",
+      "uwagi_korekty": "",
+      "miejsce_docelowe": "Skrzynia IV",
+      "status": "Nowy",
+      "opracowanie": "",
+      "informacje_dodatkowe": "",
+      "proponowane_miejsce": ""
+    }
+  ]
+}

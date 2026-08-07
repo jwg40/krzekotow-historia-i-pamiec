@@ -1,0 +1,19 @@
+{
+  "materialy": [
+    {
+      "id": 1,
+      "tytul": "znak",
+      "rodzaj": "Zdjęcie",
+      "plik": "/materialy-robocze/zdjecia/1786108664749-628f7432-a904-4b18-8c0d-4ea5d78b7533.jpg",
+      "zrodlo": "zbiory prywatne",
+      "przekazal": "Ryszard ŁUCZYŃSKI",
+      "opis": "znaleziono nad drzwiami wejściowymi domu nr 14 wg. obecnej numeracji",
+      "status": "W opracowaniu",
+      "data_przyjecia": "2026-08-07T13:17:44.751Z",
+      "moje_ustalenia": "Sprawdzono układ zabudowy dawnego gospodarstwa.",
+      "opracowanie": "",
+      "projekt_koncowy": "",
+      "uwagi_korekty": ""
+    }
+  ]
+}
