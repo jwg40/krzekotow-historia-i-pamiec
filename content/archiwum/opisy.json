@@ -1,0 +1,49 @@
+{
+  "materialy": [
+    {
+      "id": 1,
+      "historia": "Mapa Głogowa i okolic z 1928 roku przedstawia dawny układ miejscowości, dróg, pól oraz zabudowy przed zmianami, które przyniósł XX wiek.",
+      "znaczenie": "Materiał pozwala odtworzyć wygląd okolic Krzekotowa w okresie międzywojennym.",
+      "zrodlo": "Zbiory archiwalne",
+      "powiazanie": [
+        "Historia",
+        "Skrzynia Czasu II",
+        "Dawne mapy"
+      ],
+      "uzupelnienie": "Jeśli posiadasz dodatkowe informacje, wspomnienia, stare mapy lub fotografie związane z tym materiałem — podziel się nimi z nami i pomóż uzupełnić historię Krzekotowa."
+    },
+    {
+      "id": 2,
+      "historia": "Mapa sytuacji wojskowej z 1945 roku pokazuje wydarzenia końcowego okresu II wojny światowej na terenie ziemi głogowskiej.",
+      "znaczenie": "Pomaga zrozumieć wydarzenia, które wpłynęły na zmianę mieszkańców i historii miejscowości.",
+      "zrodlo": "Materiały historyczne",
+      "powiazanie": [
+        "Wojna",
+        "Skrzynia Czasu IV"
+      ],
+      "uzupelnienie": "Jeśli posiadasz wiedzę o wydarzeniach wojennych, rodzinnych wspomnieniach lub dokumentach — podziel się nimi z nami."
+    },
+    {
+      "id": 3,
+      "historia": "Lista mieszkańców Krzekotowa z okresu zmian w 1945 roku jest świadectwem końca dawnej historii miejscowości.",
+      "znaczenie": "Dokument pomaga zachować pamięć o osobach związanych z dawnym Krzekotowem.",
+      "zrodlo": "Dokument archiwalny",
+      "powiazanie": [
+        "Mieszkańcy",
+        "Skrzynia Czasu IV"
+      ],
+      "uzupelnienie": "Masz informacje o osobach, rodzinach lub historii tego dokumentu? Pomóż uzupełnić archiwum."
+    },
+    {
+      "id": 4,
+      "historia": "Fotografia dawnej bramy gospodarstwa przedstawia fragment zabudowy Krzekotowa, który już nie istnieje.",
+      "znaczenie": "Zdjęcie zachowuje obraz dawnej przestrzeni miejscowości i codziennego życia mieszkańców.",
+      "zrodlo": "Zbiory prywatne",
+      "powiazanie": [
+        "Galeria",
+        "Życie codzienne"
+      ],
+      "uzupelnienie": "Jeśli rozpoznajesz miejsce, osoby lub posiadasz dodatkowe zdjęcia — podziel się swoją wiedzą."
+    }
+  ]
+}
