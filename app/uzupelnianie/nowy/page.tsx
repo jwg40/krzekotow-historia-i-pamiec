@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function NowyMaterialPage() {
+
+  const router = useRouter();
+
   const [tytul, setTytul] = useState("");
   const [rodzaj, setRodzaj] = useState("Zdjęcie");
   const [zrodlo, setZrodlo] = useState("");
@@ -11,14 +15,20 @@ export default function NowyMaterialPage() {
   const [plik, setPlik] = useState<File | null>(null);
 
   const [komunikat, setKomunikat] = useState("");
+  const [idMaterialu, setIdMaterialu] = useState<number | null>(null);
+
 
   async function przyjmijMaterial() {
+
     if (!tytul || !plik) {
+
       setKomunikat(
         "Podaj tytuł i wybierz plik."
       );
+
       return;
     }
+
 
     const dane = new FormData();
 
@@ -30,6 +40,7 @@ export default function NowyMaterialPage() {
     dane.append("plik", plik);
 
 
+
     const odpowiedz = await fetch(
       "/api/materialy-robocze",
       {
@@ -39,31 +50,45 @@ export default function NowyMaterialPage() {
     );
 
 
+    const wynik = await odpowiedz.json();
+
+
     if (odpowiedz.ok) {
+
+      setIdMaterialu(wynik.id);
+
       setKomunikat(
         "Materiał został przyjęty do warsztatu."
       );
+
 
       setTytul("");
       setZrodlo("");
       setPrzekazal("");
       setOpis("");
       setPlik(null);
+
+
     } else {
+
       setKomunikat(
         "Wystąpił błąd podczas zapisu."
       );
+
     }
+
   }
 
 
+
   return (
+
     <main
       style={{
-        maxWidth: "900px",
-        margin: "0 auto",
-        padding: "40px 20px",
-        fontFamily: "Georgia, serif",
+        maxWidth:"900px",
+        margin:"0 auto",
+        padding:"40px 20px",
+        fontFamily:"Georgia, serif",
       }}
     >
 
@@ -71,68 +96,55 @@ export default function NowyMaterialPage() {
         📥 Przyjmij nowy materiał
       </h1>
 
+
       <p>
         Tutaj zaczyna się droga każdego zdjęcia,
         dokumentu lub wspomnienia.
       </p>
 
 
+
       <section
         style={{
-          background: "rgba(255,255,255,0.85)",
-          padding: "30px",
-          borderRadius: "15px",
+          background:"rgba(255,255,255,0.85)",
+          padding:"30px",
+          borderRadius:"15px",
         }}
       >
 
-        <h3>
-          Tytuł roboczy
-        </h3>
+
+        <h3>Tytuł roboczy</h3>
 
         <input
           value={tytul}
-          onChange={(e) =>
-            setTytul(e.target.value)
-          }
+          onChange={(e)=>setTytul(e.target.value)}
           placeholder="np. Brama dawnego gospodarstwa"
           style={{
-            width: "100%",
-            padding: "12px",
+            width:"100%",
+            padding:"12px",
           }}
         />
 
 
-        <h3>
-          Rodzaj materiału
-        </h3>
+
+        <h3>Rodzaj materiału</h3>
 
         <select
           value={rodzaj}
-          onChange={(e) =>
-            setRodzaj(e.target.value)
-          }
+          onChange={(e)=>setRodzaj(e.target.value)}
         >
-          <option>
-            Zdjęcie
-          </option>
-
-          <option>
-            Skan dokumentu
-          </option>
-
-          <option>
-            Dokument
-          </option>
+          <option>Zdjęcie</option>
+          <option>Skan dokumentu</option>
+          <option>Dokument</option>
         </select>
 
 
-        <h3>
-          Wybierz plik
-        </h3>
+
+        <h3>Wybierz plik</h3>
 
         <input
           type="file"
-          onChange={(e) =>
+          onChange={(e)=>
             setPlik(
               e.target.files?.[0] || null
             )
@@ -140,74 +152,69 @@ export default function NowyMaterialPage() {
         />
 
 
-        <h3>
-          Źródło materiału
-        </h3>
+
+        <h3>Źródło materiału</h3>
 
         <input
           value={zrodlo}
-          onChange={(e) =>
-            setZrodlo(e.target.value)
-          }
+          onChange={(e)=>setZrodlo(e.target.value)}
           placeholder="np. zbiory prywatne"
           style={{
-            width: "100%",
-            padding: "12px",
+            width:"100%",
+            padding:"12px",
           }}
         />
 
 
-        <h3>
-          Przekazał
-        </h3>
+
+        <h3>Przekazał</h3>
 
         <input
           value={przekazal}
-          onChange={(e) =>
-            setPrzekazal(e.target.value)
-          }
-          placeholder="Imię i nazwisko (jeżeli znane)"
+          onChange={(e)=>setPrzekazal(e.target.value)}
+          placeholder="Imię i nazwisko"
           style={{
-            width: "100%",
-            padding: "12px",
+            width:"100%",
+            padding:"12px",
           }}
         />
 
 
-        <h3>
-          Pierwsze informacje
-        </h3>
+
+        <h3>Pierwsze informacje</h3>
 
         <textarea
           value={opis}
-          onChange={(e) =>
-            setOpis(e.target.value)
-          }
+          onChange={(e)=>setOpis(e.target.value)}
           rows={6}
           placeholder="Co wiemy na początku..."
           style={{
-            width: "100%",
-            padding: "12px",
+            width:"100%",
+            padding:"12px",
           }}
         />
 
 
-        <br /><br />
+
+        <br />
+        <br />
+
 
 
         <button
           onClick={przyjmijMaterial}
           style={{
-            padding: "15px 25px",
-            background: "#355834",
-            color: "white",
-            border: "none",
-            borderRadius: "8px",
-            cursor: "pointer",
+            padding:"15px 25px",
+            background:"#355834",
+            color:"white",
+            border:"none",
+            borderRadius:"8px",
+            cursor:"pointer",
           }}
         >
           📥 Przyjmij materiał do opracowania
         </button>
+
 
 
         {komunikat && (
@@ -216,8 +223,36 @@ export default function NowyMaterialPage() {
           </p>
         )}
 
+
+
+        {idMaterialu && (
+
+          <button
+            onClick={() =>
+              router.push(
+                `/uzupelnianie/${idMaterialu}`
+              )
+            }
+            style={{
+              marginTop:"15px",
+              padding:"15px 25px",
+              background:"#5b4636",
+              color:"white",
+              border:"none",
+              borderRadius:"8px",
+              cursor:"pointer",
+            }}
+          >
+            🔎 Otwórz materiał i rozpocznij opracowanie
+          </button>
+
+        )}
+
+
       </section>
 
     </main>
+
   );
+
 }

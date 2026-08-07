@@ -14,6 +14,39 @@
       "opracowanie": "",
       "projekt_koncowy": "",
       "uwagi_korekty": ""
+    },
+    {
+      "id": 2,
+      "tytul": "Znak znad drzwi domu nr 14",
+      "rodzaj": "Zdjęcie",
+      "plik": "/materialy-robocze/zdjecia/1786126891337-235b912d-cb0f-46e4-86f2-d4f52c8e491a.jpg",
+      "zrodlo": "Zbiory prywatne",
+      "przekazal": "Pan Ryszard ŁUCZYŃSKI",
+      "opis": "Znaleziono nad drzwiami wejściowymi domu nr 14 według obecnej numeracji.",
+      "status": "Nowy",
+      "data_przyjecia": "2026-08-07T18:21:31.339Z"
+    },
+    {
+      "id": 3,
+      "tytul": "Znak nad drzwiami domu nr 14",
+      "rodzaj": "Zdjęcie",
+      "plik": "/materialy-robocze/zdjecia/1786130475744-628f7432-a904-4b18-8c0d-4ea5d78b7533.jpg",
+      "zrodlo": "zbiory prywatne",
+      "przekazal": "Ryszard ŁUCZYŃSKI",
+      "opis": "Znaleziono nad drzwiami wejściowymi domu nr 14 według obecnej numeracji.",
+      "status": "Nowy",
+      "data_przyjecia": "2026-08-07T19:21:15.746Z"
+    },
+    {
+      "id": 4,
+      "tytul": "Znak nad drzwiami domu nr 14",
+      "rodzaj": "Zdjęcie",
+      "plik": "/materialy-robocze/zdjecia/1786130899770-235b912d-cb0f-46e4-86f2-d4f52c8e491a.jpg",
+      "zrodlo": "zbiory prywatne",
+      "przekazal": "Ryszard ŁUCZYŃSKI",
+      "opis": "Znaleziono nad drzwiami wejściowymi domu nr 14 według obecnej numeracji.",
+      "status": "Nowy",
+      "data_przyjecia": "2026-08-07T19:28:19.772Z"
     }
   ]
 }
