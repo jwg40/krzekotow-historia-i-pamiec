@@ -20,30 +20,6 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
   const [otwarte, setOtwarte] = useState<Material | null>(null);
   const [formularz, setFormularz] = useState<number | null>(null);
 
-  const [imie, setImie] = useState("");
-  const [kontakt, setKontakt] = useState("");
-  const [tresc, setTresc] = useState("");
-  const [plik, setPlik] = useState<File | null>(null);
-
-  function wyslij(material: Material) {
-    console.log("ZGŁOSZENIE ARCHIWUM", {
-      material: material.tytul,
-      imie,
-      kontakt,
-      tresc,
-      plik: plik?.name || "brak załącznika",
-    });
-
-    alert(
-      "Dziękujemy. Informacja została przygotowana do przekazania do archiwum."
-    );
-
-    setImie("");
-    setKontakt("");
-    setTresc("");
-    setPlik(null);
-  }
-
   return (
     <>
       <section
@@ -92,11 +68,14 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
 
             <hr />
 
-            <h3>Podziel się swoją wiedzą</h3>
+            <h3>
+              Podziel się swoją wiedzą
+            </h3>
 
             <p>
-              Jeśli posiadasz informacje, wspomnienia, fotografie lub dokumenty
-              związane z tym materiałem — pomóż nam uzupełnić historię
+              Jeśli posiadasz dodatkowe informacje, wspomnienia,
+              fotografie lub dokumenty związane z tym materiałem —
+              podziel się nimi z nami. Pomóż uzupełnić historię
               Krzekotowa.
             </p>
 
@@ -133,71 +112,20 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
                 </h4>
 
                 <p>
-                  Materiał:
-                  <br />
-                  <strong>{material.tytul}</strong>
+                  Na tym etapie przygotowujemy skrzynkę zgłoszeń.
+                  Wkrótce będzie można tutaj przesłać:
                 </p>
 
-                <input
-                  placeholder="Twoje imię (opcjonalnie)"
-                  value={imie}
-                  onChange={(e) => setImie(e.target.value)}
-                  style={{ width: "100%", marginBottom: "10px" }}
-                />
+                <ul>
+                  <li>wspomnienia rodzinne,</li>
+                  <li>informacje o osobach i miejscach,</li>
+                  <li>stare fotografie i dokumenty.</li>
+                </ul>
 
-                <input
-                  placeholder="Kontakt (opcjonalnie)"
-                  value={kontakt}
-                  onChange={(e) => setKontakt(e.target.value)}
-                  style={{ width: "100%", marginBottom: "10px" }}
-                />
-
-                <textarea
-                  placeholder="Twoja informacja, wspomnienie lub uzupełnienie historii..."
-                  value={tresc}
-                  onChange={(e) => setTresc(e.target.value)}
-                  rows={6}
-                  style={{ width: "100%", marginBottom: "10px" }}
-                />
-
-                <label>
-                  <strong>Dołącz zdjęcie, skan lub dokument:</strong>
-                </label>
-
-                <input
-                  type="file"
-                  accept="image/*,.pdf,.doc,.docx"
-                  onChange={(e) =>
-                    setPlik(e.target.files?.[0] || null)
-                  }
-                  style={{
-                    width: "100%",
-                    marginTop: "10px",
-                    marginBottom: "10px",
-                  }}
-                />
-
-                {plik && (
-                  <p>
-                    Wybrany plik:
-                    <br />
-                    <strong>{plik.name}</strong>
-                  </p>
-                )}
-
-                <button
-                  onClick={() => wyslij(material)}
-                  style={{
-                    padding: "10px 15px",
-                    cursor: "pointer",
-                    borderRadius: "8px",
-                    border: "none",
-                    background: "#355834",
-                    color: "white",
-                  }}
-                >
-                  Wyślij informację
-                </button>
+                <p>
+                  Dziękujemy za pomoc w tworzeniu Cyfrowego
+                  Archiwum Krzekotowa.
+                </p>
               </div>
             )}
           </article>
@@ -219,7 +147,7 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
           }}
         >
           <Image
-            src={otwarte.pliku}
+            src={otwarte.plik}
             alt={otwarte.tytul}
             width={1400}
             height={1000}

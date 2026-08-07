@@ -23,7 +23,6 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
   const [imie, setImie] = useState("");
   const [kontakt, setKontakt] = useState("");
   const [tresc, setTresc] = useState("");
-  const [plik, setPlik] = useState<File | null>(null);
 
   function wyslij(material: Material) {
     console.log("ZGŁOSZENIE ARCHIWUM", {
@@ -31,7 +30,6 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
       imie,
       kontakt,
       tresc,
-      plik: plik?.name || "brak załącznika",
     });
 
     alert(
@@ -41,7 +39,6 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
     setImie("");
     setKontakt("");
     setTresc("");
-    setPlik(null);
   }
 
   return (
@@ -160,31 +157,6 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
                   style={{ width: "100%", marginBottom: "10px" }}
                 />
 
-                <label>
-                  <strong>Dołącz zdjęcie, skan lub dokument:</strong>
-                </label>
-
-                <input
-                  type="file"
-                  accept="image/*,.pdf,.doc,.docx"
-                  onChange={(e) =>
-                    setPlik(e.target.files?.[0] || null)
-                  }
-                  style={{
-                    width: "100%",
-                    marginTop: "10px",
-                    marginBottom: "10px",
-                  }}
-                />
-
-                {plik && (
-                  <p>
-                    Wybrany plik:
-                    <br />
-                    <strong>{plik.name}</strong>
-                  </p>
-                )}
-
                 <button
                   onClick={() => wyslij(material)}
                   style={{
@@ -219,7 +191,7 @@ export default function ArchiwumMaterialy({ materialy }: Props) {
           }}
         >
           <Image
-            src={otwarte.pliku}
+            src={otwarte.plik}
             alt={otwarte.tytul}
             width={1400}
             height={1000}
